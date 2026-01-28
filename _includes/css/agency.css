@@ -363,7 +363,7 @@ section h3.section-subheading {
 
 
 .courses img {
-    height: 250px; /* 圖片高度，可選 */
+    background-image: url('{{ site.baseurl }}/img/courses/onshape.jpg);
 }
 
 
