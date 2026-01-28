@@ -362,6 +362,10 @@ section h3.section-subheading {
 }
 
 
+.courses img {
+    height: 250px; /* 圖片高度，可選 */
+}
+
 
 #portfolio {
     background-color: #{{ site.data.template.color.background1 }};
