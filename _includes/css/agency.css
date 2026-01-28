@@ -435,7 +435,7 @@ section h3.section-subheading {
     }
 }
 
-.timeline {
+/*.timeline {
     position: relative;
     padding: 0;
     list-style: none;
@@ -633,7 +633,7 @@ section h3.section-subheading {
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 100px 20px 20px;
     }
-}
+}*/
 
 .team-member {
     margin-bottom: 50px;
