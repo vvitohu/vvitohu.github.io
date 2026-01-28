@@ -726,7 +726,7 @@ section h3.section-subheading {
     background-color: #{{ site.data.template.color.background }};
 }
 
-.about-member img {
+.team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
     width: 150px;  /* 圖片寬度 */
@@ -734,18 +734,14 @@ section h3.section-subheading {
     border-radius: 50%; /* 圓形頭像 */
 }
 
-.about-member h4 {
+.team-member h4 {
     margin-top: 25px;
     margin-bottom: 0;
     text-transform: none;
 }
 
-.about-member p {
+.team-member p {
     margin-top: 0;
-}
-
-aside.clients img {
-    margin: 50px auto;
 }
 
 section#contact {
