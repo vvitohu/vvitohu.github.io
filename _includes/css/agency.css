@@ -356,6 +356,7 @@ section h3.section-subheading {
     margin: 15px 0;
     text-transform: none;
 }
+
 #courses {
     background-color: #{{ site.data.template.color.background }};
 }
@@ -440,7 +441,7 @@ section h3.section-subheading {
 
 
 #portfolio {
-    background-color: #{{ site.data.template.color.background }};
+    background-color: #{{ site.data.template.color.background1 }};
 }
 
 #portfolio .portfolio-item {
@@ -720,6 +721,10 @@ section h3.section-subheading {
         padding: 0 100px 20px 20px;
     }
 }*/
+
+#team {
+    background-color: #{{ site.data.template.color.background }};
+}
 
 .team-member {
     margin-bottom: 50px;

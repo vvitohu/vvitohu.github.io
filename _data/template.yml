@@ -5,6 +5,7 @@ color:
   secondary-dark: 333
   muted: 777
   background: d2b48c
+  background1: c6a374
 
 # Font Families
 font:
