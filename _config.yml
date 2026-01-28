@@ -12,25 +12,25 @@ people:
   pic: 1
   position: Lead Designer
   social:
-    - title: twitter
-      url: #
+    - title: Instagram
+      url: https://www.instagram.com/otis.vito/
     - title: facebook
       url: #
-    - title: stack-overflow
+    - title: github
       url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
+  - title: Instagram
+    url: https://www.instagram.com/otis.vito/
   - title: facebook
     url:
   - title: stack-overflow
     url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/vvitohu
+  - title: github
+    url: https://github.com/vvitohu
 
 # Postal address (add as many lines as necessary)
 address:
