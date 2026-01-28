@@ -8,19 +8,19 @@
                 </div>
             </div>
             <div class="row">
-            {% for post in site.postsc %}
+            {% for course in site.courses %}
                 <div class="col-md-4 col-sm-6 courses-item">
-                    <a href="#coursesModal{{ postc.modal-id }}" class="courses-link" data-toggle="modal">
+                    <a href="#coursesModal{{ courses.modal-id }}" class="courses-link" data-toggle="modal">
                         <div class="courses-hover">
                             <div class="courses-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/{{ postc.thumbnail }}" class="img-responsive img-centered" alt="">
+                        <img src="img/portfolio/{{ courses.thumbnail }}" class="img-responsive img-centered" alt="">
                     </a>
                     <div class="courses-caption">
-                        <h4>{{ postc.title }}</h4>
-                        <p class="text-muted">{{ postc.subtitle }}</p>
+                        <h4>{{ courses.title }}</h4>
+                        <p class="text-muted">{{ courses.subtitle }}</p>
                     </div>
                 </div>
             {% endfor %}

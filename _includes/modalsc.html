@@ -1,6 +1,6 @@
  <!-- Portfolio Modals -->
- {% for post in site.postsc %}
-    <div class="courses-modal modal fade" id="coursesModal{{ postc.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+ {% for course in site.courses %}
+    <div class="courses-modal modal fade" id="coursesModal{{ courses.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -12,21 +12,21 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>{{ postc.title }}</h2>
+                            <h2>{{ courses.title }}</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/{{ postc.img }}" class="img-responsive img-centered" alt="{{ postc.alt }}">
-                            <p>{{ postc.description }}</p>
+                            <img src="img/portfolio/{{ courses.img }}" class="img-responsive img-centered" alt="{{ courses.alt }}">
+                            <p>{{ courses.description }}</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
-                                    <strong><a href="http://startbootstrap.com">{{ postc.client }}</a>
+                                    <strong><a href="http://startbootstrap.com">{{ courses.client }}</a>
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">{{ postc.project-date }}</a>
+                                    <strong><a href="http://startbootstrap.com">{{ courses.project-date }}</a>
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong><a href="http://startbootstrap.com">{{ postc.category }}</a>
+                                    <strong><a href="http://startbootstrap.com">{{ courses.category }}</a>
                                     </strong>
                                 </li>
                             </ul>

@@ -40,3 +40,9 @@ address:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+collections:
+  portfolio:
+    output: false
+  courses:
+    output: false
