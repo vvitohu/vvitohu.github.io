@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #{{ site.data.template.color.secondary-dark }};
+    background-color: #{{ site.data.template.color.background }};
 }
 
 .text-muted {
@@ -167,7 +168,7 @@ fieldset[disabled] .btn-xl.active {
 
 .btn-xl .badge {
     color: #{{ site.data.template.color.primary }};
-    background-color: #{{ site.data.template.color.background }};
+    background-color: #fff
 }
 
 .navbar-default {
