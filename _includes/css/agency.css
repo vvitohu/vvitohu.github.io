@@ -734,6 +734,11 @@ section h3.section-subheading {
     border-radius: 50%; /* 圓形頭像 */
 }
 
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 .team-member h4 {
     margin-top: 25px;
     margin-bottom: 0;
