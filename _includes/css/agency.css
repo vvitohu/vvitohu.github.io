@@ -359,7 +359,6 @@ section h3.section-subheading {
 
 #courses {
     background-color: #{{ site.data.template.color.background }};
-    background-image: url('{{ site.baseurl }}/img/courses/onshape.jpg);
 }
 
 
