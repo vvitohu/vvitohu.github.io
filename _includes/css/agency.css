@@ -361,6 +361,21 @@ section h3.section-subheading {
     background-color: #{{ site.data.template.color.background }};
 }
 
+.card {
+    border-radius: 10px;
+    overflow: hidden; /* 確保內容不會超出圓角 */
+}
+
+.card-body {
+    padding: 1.25rem;
+    min-height: 120px; /* 確保文字區塊有固定高度 */
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
 
 
 #portfolio {
