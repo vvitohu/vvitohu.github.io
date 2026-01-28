@@ -176,9 +176,10 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700; /* 加粗會更有力道 */
+    letter-spacing: 1px; /* 稍微增加字距會更有質感 */
     color: #{{ site.data.template.color.primary }};
-    font-size: 28px;
 }
 
 .navbar-default .navbar-brand:hover,
