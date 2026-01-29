@@ -384,7 +384,11 @@ section h3.section-subheading {
         grid-template-columns: 1fr; /* 手機單欄 */
     }
 }
-
+@media(min-width:767px) {
+    #courses .courses-item {
+        margin: 0 0 30px;
+    }
+}
 
 .course-img {
     width: 100%;
