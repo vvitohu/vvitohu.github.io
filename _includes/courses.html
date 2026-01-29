@@ -9,7 +9,7 @@
             </div>
             <div class="row g-4">
                 {% for course in site.courses %}
-                    <div class="course-grid">
+                    <div class="col-md-4 col-sm-6 course-grid">
                         <div class="card h-100 border-0 shadow-sm course-card">
                             <img src="{{ site.baseurl }}/img/courses/{{ course.image }}" class="card-img-top course-img" style="">
                             <div class="card-body" style="background-color: #{{ site.data.template.color.background1 }}; color: #222; padding: 20px;">
