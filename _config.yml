@@ -45,5 +45,3 @@ collections:
   courses:
     output: true
     permalink: /courses/:name/
-  projects:
-    output: true
