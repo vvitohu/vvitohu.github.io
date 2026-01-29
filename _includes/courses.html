@@ -10,23 +10,13 @@
             <div class="row">
                 {% for course in site.courses %}
                     <div class="col-md-4 col-sm-6 mb-4">
-                        <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
-                            
-                            <div style="width: 100%; height: 180px; overflow: hidden;">
-                                <img src="{{ site.baseurl }}/img/courses/{{ course.image }}" 
-                                    class="card-img-top w-100" 
-                                    style="height: 100%; object-fit: cover;" 
-                                    alt="{{ course.title }}">
+                        <div class="card h-100 border-0 shadow-sm" style="width: 300px; border-radius: 10px; overflow: hidden;">
+                            <img src="{{ site.baseurl }}/img/courses/{{ course.image }}" class="card-img-top" style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="card-body" style="background-color: #{{ site.data.template.color.background1 }}; color: #222; padding: 20px;">
+                                <h5 class="card-title">{{ course.title }}</h5>
+                                <p class="card-text" style="font-size: 14px; color: #bbb;">{{ course.desc }}</p>
+                                <p class="card-text"><small style="color: #777;">{{ course.date }}</small></p>
                             </div>
-
-                            <div class="card-body" style="background-color: #222; color: #fff; padding: 20px; flex-grow: 1;">
-                                <h5 class="card-title" style="margin-bottom: 10px;">{{ course.title }}</h5>
-                                <p class="card-text" style="font-size: 14px; color: #bbb; line-height: 1.5;">{{ course.desc }}</p>
-                                <p class="card-text" style="margin-top: auto;">
-                                    <small style="color: #777;">{{ course.date }}</small>
-                                </p>
-                            </div>
-                            
                         </div>
                     </div>
                 {% endfor %}
