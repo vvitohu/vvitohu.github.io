@@ -3,7 +3,7 @@ title: "Onshape 基礎建模"
 image: "onshape.jpg"
 desc: "從基礎介面開始，學習 3D 建模的核心邏輯。"
 date: "2026-01-29"
-permalink: /courses/onshape-basic1/
+permalink: /db/index.html
 ---
 ### 課程簡介
 這門課會教你如何從零開始使用 Onshape。
