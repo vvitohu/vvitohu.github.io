@@ -393,6 +393,11 @@ section h3.section-subheading {
     object-fit: cover;
 }
 
+#courses .card {
+    margin-bottom: 30px !important;
+}
+
+
 
 #portfolio {
     background-color: #{{ site.data.template.color.background1 }};
