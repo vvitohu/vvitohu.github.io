@@ -393,10 +393,32 @@ section h3.section-subheading {
     object-fit: cover;
 }
 
-#courses .card {
-    margin-bottom: 30px !important;
+ /* 讓卡片本身有動畫效果 */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+
+/* 滑鼠移到卡片時的動畫 */
+.card:hover {
+    transform: translateY(-8px); /* 往上移動 8px */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* 陰影變深，製造浮起來的效果 */
+}
+
+/* 如果要讓圖片在 Hover 時也微縮放 */
+.card img {
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* 連結樣式修正 */
+.card-link {
+    text-decoration: none; /* 移除下劃線 */
+    color: inherit; /* 繼承父元素文字顏色 */
+    display: block; /* 讓整個連結區塊是可點擊的 */
+}
 
 
 #portfolio {
