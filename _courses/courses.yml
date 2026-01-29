@@ -1,0 +1,14 @@
+
+courses:
+  - title: "Onshape 基礎建模"
+    image: "onshape.jpg"
+    desc: "從基礎介面開始，學習 3D 建模的核心邏輯。"
+    date: "3 mins ago"
+  - title: "進階零件設計"
+    image: "course2.jpg"
+    desc: "掌握複雜幾何構造與參數化設計。"
+    date: "1 hour ago"
+  - title: "進階零件設計"
+    image: "course2.jpg"
+    desc: "掌握複雜幾何構造與參數化設計。"
+    date: "1 hour ago"
