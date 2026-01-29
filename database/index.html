@@ -1,74 +1,13 @@
 ---
-layout: default
+layout: none
 title: 資料庫展示頁
 ---
-
-<div class="container" style="margin-top: 50px;">
-    <div id="loading">載入中...</div>
-    
-    <div id="course-detail" style="display: none;">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../">首頁</a></li>
-                <li class="breadcrumb-item active" id="breadcrumb-title">課程詳情</li>
-            </ol>
-        </nav>
-
-        <h1 id="display-title"></h1>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-                <img id="display-image" src="" class="img-fluid rounded" alt="">
-            </div>
-            <div class="col-md-6">
-                <h3>介紹</h3>
-                <p id="display-desc"></p>
-                <p class="text-muted">更新日期：<span id="display-date"></span></p>
-                
-                <div class="mt-4">
-                    <button class="btn btn-primary" onclick="alert('執行資料庫運算...')">測試功能</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script id="course-data" type="application/json">
-[
-  {% for course in site.courses %}
-    {
-      "id": "{{ course.slug }}",
-      "title": "{{ course.title }}",
-      "desc": "{{ course.desc | escape }}",
-      "image": "{{ site.baseurl }}/img/courses/{{ course.image }}",
-      "date": "{{ course.date | date: '%Y-%m-%d' }}"
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-]
-</script>
-
-<script>
-    // 1. 取得網址參數 id
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetId = urlParams.get('id');
-
-    // 2. 解析 Jekyll 生成的 JSON 資料
-    const courses = JSON.parse(document.getElementById('course-data').innerHTML);
-
-    // 3. 尋找對應的資料
-    const currentCourse = courses.find(c => c.id === targetId);
-
-    if (currentCourse) {
-        // 渲染畫面
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('course-detail').style.display = 'block';
-        
-        document.getElementById('display-title').innerText = currentCourse.title;
-        document.getElementById('breadcrumb-title').innerText = currentCourse.title;
-        document.getElementById('display-desc').innerText = currentCourse.desc;
-        document.getElementById('display-image').src = currentCourse.image;
-        document.getElementById('display-date').innerText = currentCourse.date;
-    } else {
-        document.getElementById('loading').innerHTML = "<h1>找不到該筆資料</h1><a href='../'>回首頁</a>";
-    }
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>資料庫測試</title>
+</head>
+<body>
+    <h1>這是獨立的資料庫頁面</h1>
+    </body>
+</html>
