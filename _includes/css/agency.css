@@ -363,10 +363,28 @@ section h3.section-subheading {
 
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 320px));
+    grid-template-columns: repeat(4, 320px); /* 4 欄固定寬度 */
     gap: 24px;
-    justify-content: center;
+    justify-content: center; /* 置中整排 */
+    padding: 16px;
 }
+
+@media (max-width: 1200px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 欄，平均分 */
+    }
+}
+@media (max-width: 900px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .course-grid {
+        grid-template-columns: 1fr; /* 手機單欄 */
+    }
+}
+
 
 .course-img {
     width: 100%;
