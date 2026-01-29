@@ -1,0 +1,25 @@
+---
+layout: default
+title: 我的資料庫展示
+---
+
+<div class="container">
+    <h1 id="db-title">正在載入資料...</h1>
+    <div id="db-content">
+        </div>
+</div>
+
+<script>
+    // 1. 取得網址上的參數 (例如 ?id=course1)
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseId = urlParams.get('id');
+
+    // 2. 這裡開始寫你的資料庫程式邏輯
+    // 你可以根據 courseId 去 Fetch JSON 資料，或是做其他處理
+    console.log("當前要展示的資料 ID 是:", courseId);
+    
+    // 範例：簡單顯示 ID
+    if (courseId) {
+        document.getElementById('db-title').innerText = "展示項目：" + courseId;
+    }
+</script>
