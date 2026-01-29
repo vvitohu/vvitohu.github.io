@@ -367,6 +367,7 @@ section h3.section-subheading {
     gap: 24px;
     justify-content: center; /* 置中整排 */
     padding: 16px;
+    margin: 0 0 15px;
 }
 
 @media (max-width: 1200px) {
@@ -382,11 +383,6 @@ section h3.section-subheading {
 @media (max-width: 600px) {
     .course-grid {
         grid-template-columns: 1fr; /* 手機單欄 */
-    }
-}
-@media(min-width:767px) {
-    #courses .courses-item {
-        margin: 0 0 30px;
     }
 }
 
