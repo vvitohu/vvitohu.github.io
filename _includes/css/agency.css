@@ -392,24 +392,24 @@ section h3.section-subheading {
     object-fit: cover;
 }
 
-.card-body {
+/*.card-body {
     padding: 20px;
 }
 
 .card {
     border-radius: 10px;
-    overflow: hidden; /* 確保內容不會超出圓角 */
+    overflow: hidden; 
 }
 
 .card-body {
     padding: 1.25rem;
-    min-height: 120px; /* 確保文字區塊有固定高度 */
+    min-height: 120px; 
 }
 
 .card-title {
     font-weight: bold;
     margin-bottom: 0.75rem;
-}
+}*/
 
 
 
