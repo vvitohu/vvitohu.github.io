@@ -10,7 +10,7 @@
             <div class="row justify-content-center">
                 {% for course in site.courses %}
                     <div class="col-8 col-md-4 col-sm-6 mb-5 mx-auto">
-                        <a href="{{ '/database/' | relative_url }}?id={{ course.slug }}" class="card-link" style="text-decoration: none; color: inherit;">
+                        <a href="{{ course.url | relative_url }}" class="card-link" style="text-decoration: none; color: inherit;">
 
                             <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden; margin-bottom: 20px !important;">
                                 
