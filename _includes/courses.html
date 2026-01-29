@@ -11,11 +11,11 @@
                 {% for course in site.courses.courses %}
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                            <img src="{{ site.baseurl }}/img/courses/{{ courses.image }}" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <img src="{{ site.baseurl }}/img/courses/{{ course.image }}" class="card-img-top" style="height: 180px; object-fit: cover;">
                             <div class="card-body" style="background-color: #222; color: #fff; padding: 20px;">
-                                <h5 class="card-title">{{ courses.title }}</h5>
-                                <p class="card-text" style="font-size: 14px; color: #bbb;">{{ courses.desc }}</p>
-                                <p class="card-text"><small style="color: #777;">更新於 {{ courses.date }}</small></p>
+                                <h5 class="card-title">{{ course.title }}</h5>
+                                <p class="card-text" style="font-size: 14px; color: #bbb;">{{ course.desc }}</p>
+                                <p class="card-text"><small style="color: #777;">更新於 {{ course.date }}</small></p>
                             </div>
                         </div>
                     </div>
