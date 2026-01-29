@@ -42,7 +42,5 @@ markdown: kramdown
 permalink: pretty
 
 collections:
-  portfolio:
-    output: false
   courses:
-    output: false
+    output: true
