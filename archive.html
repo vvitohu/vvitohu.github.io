@@ -1,0 +1,22 @@
+---
+layout: default
+title: "所有課程資料庫"
+permalink: /archive/
+---
+<section class="bg-light">
+    <div class="container" style="padding-top: 100px;">
+        <h2 class="text-center">資源資料庫</h2>
+        <div class="row g-4">
+            {% for course in site.courses %}
+            <div class="col-md-3"> <div class="card h-100 shadow-sm">
+                    <img src="{{ site.baseurl }}/img/courses/{{ course.image }}" class="card-img-top" style="height:150px; object-fit:cover;">
+                    <div class="card-body">
+                        <h6 class="card-title">{{ course.title }}</h6>
+                        <a href="{{ course.url | relative_url }}" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -413,11 +413,34 @@ section h3.section-subheading {
     transform: scale(1.05);
 }
 
+
 /* 連結樣式修正 */
 .card-link {
     text-decoration: none; /* 移除下劃線 */
     color: inherit; /* 繼承父元素文字顏色 */
     display: block; /* 讓整個連結區塊是可點擊的 */
+}
+
+
+/* 左側選單 Hover 效果 */
+.nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+/* 右側 TOC 滾動監控 */
+#TableOfContents a:hover {
+    color: #fed136 !important; /* 使用你原本主題的黃色 */
+}
+
+/* 內容區圖片放大動畫 */
+.course-content img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+.course-content img:hover {
+    transform: scale(1.02);
 }
 
 
