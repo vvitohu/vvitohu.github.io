@@ -361,6 +361,23 @@ section h3.section-subheading {
     background-color: #{{ site.data.template.color.background }};
 }
 
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 12px;
+}
+
+.course-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;   /* 關鍵 */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
 .card {
     border-radius: 10px;
     overflow: hidden; /* 確保內容不會超出圓角 */
