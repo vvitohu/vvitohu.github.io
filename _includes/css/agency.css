@@ -171,6 +171,7 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+
 .navbar-default {
     border-color: transparent;
     background-color: #222;
@@ -267,6 +268,8 @@ fieldset[disabled] .btn-xl.active {
         font-size: 1.5em;
     }
 }
+
+
 
 header {
     text-align: center;
