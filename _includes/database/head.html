@@ -1,0 +1,86 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Database</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --sidebar-width: 260px; /* 這裡定義你的側邊欄寬度 */
+            --nav-height: 70px;
+        }
+        body {  background: #{{ site.data.template.color.background }}; }
+        
+        /* 上方導覽列 */
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1030; height: 60px; background: #222 !important; }
+        
+        /* 側邊欄基本樣式 */
+        .sidebar-left {
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            width: var(--sidebar-width);
+            height: calc(100vh - var(--nav-height));
+            border-right: 1px solid #ffffff;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        /* 中間內文區：最關鍵的修正 */
+        .main-content {
+            margin-top: var(--nav-height);
+            margin-left: var(--sidebar-width); /* 這裡必須等於 sidebar-width */
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        /* 右側邊欄 (小標題導覽) */
+        .sidebar-right {
+            position: fixed; top: 60px; right: 0; bottom: 0;
+            width: var(--toc-width); border-left: 1px solid #dee2e6;
+            padding: 20px; font-size: 0.9rem; overflow-y: auto;
+        }
+        
+        /* 響應式修正：當螢幕變小時（手機/平板） */
+        @media (max-width: 992px) {
+            .sidebar-left {
+                transform: translateX(-100%); /* 小螢幕預設隱藏 */
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar-left.show {
+                transform: translateX(0); /* 點擊按鈕才滑出來 */
+            }
+
+            .main-content {
+                margin-left: 0; /* 手機版內文不需要左邊距 */
+                padding: 20px;
+            }
+        }
+
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
