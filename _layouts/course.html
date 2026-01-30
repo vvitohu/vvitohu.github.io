@@ -1,21 +1,49 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="{{ site.baseurl }}/img/courses/{{ page.image }}" class="card-img-top">
+                <div class="card-body">
+                    <h3>{{ page.title }}</h3>
+                    <p class="text-muted">{{ page.desc }}</p>
+                </div>
+            </div>
+        </div>
 
-  <head>
-    <title>OXXOSTUDIO</title>
-    <!-- 修改 base 的 href -->
-    <base href="/course/">
-  </head>
+        <div class="col-md-8">
+            <div class="p-4 bg-white rounded shadow-sm">
+                <h2>資料庫展示區</h2>
+                <hr>
+                <div id="db-app">
+                    <p>正在處理編號：<strong>{{ page.database_id }}</strong> 的數據...</p>
+                </div>
+                
+                <script>
+                    // 你可以透過 Liquid 把 Jekyll 的變數傳給 JavaScript
+                    const dbId = "{{ page.database_id }}";
+                    
+                    // 開始寫你的資料庫邏輯
+                    console.log("正在為課程啟動資料庫功能，ID:", dbId);
+                    
+                    // 舉例：你可以根據 ID 去 fetch 不同的 API 或資料
+                    function runDatabaseAnalysis() {
+                        document.getElementById('db-app').innerHTML += "<p>分析完成！</p>";
+                    }
+                    
+                    runDatabaseAnalysis();
+                </script>
+            </div>
+        </div>
+    </div>
 
-    <body>
-
-    {% include header.html %}
-    {% include portfolio_grid.html %}
-    {% include about.html %}
-    {% include contact.html %}
-    {% include footer.html %}
-    {% include modals.html %}
-    {% include js.html %}
-
-    </body>
-</html>
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="content-area">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>
