@@ -15,6 +15,13 @@ layout: none
         /* 上方導覽列 */
         .navbar { position: fixed; top: 0; width: 100%; z-index: 1030; height: 60px; background: #2c3e50 !important; }
         
+        /* 中間主內容 */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            margin-right: var(--toc-width);
+            margin-top: 60px; padding: 40px; min-height: 100vh; background: #fff;
+        }
+        
         /* 左側邊欄 (課程大綱) */
         .sidebar-left {
             position: fixed; top: 60px; left: 0; bottom: 0;
@@ -29,12 +36,6 @@ layout: none
             padding: 20px; font-size: 0.9rem; overflow-y: auto;
         }
 
-        /* 中間主內容 */
-        .main-content {
-            margin-left: var(--sidebar-width);
-            margin-right: var(--toc-width);
-            margin-top: 60px; padding: 40px; min-height: 100vh; background: #fff;
-        }
     </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
