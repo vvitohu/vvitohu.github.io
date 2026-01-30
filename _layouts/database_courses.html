@@ -62,30 +62,7 @@ layout: none
     {% include database/sidebar-left.html %}
     {% include database/main-content.html %}
     {% include database/sidebar-right.html %}
+    
 
-    // 1. 自動生成右側小標題的程式碼 (之前寫的那段)
-        document.addEventListener("DOMContentLoaded", function() {
-            // ... (省略) ...
-        });
-
-        // 2. 把手機版側邊欄控制程式碼放在這裡
-        const sidebarToggle = document.getElementById('sidebarToggle');
-        const sidebarLeft = document.querySelector('.sidebar-left');
-        const mainContent = document.querySelector('.main-content');
-
-        if (sidebarToggle) {
-            sidebarToggle.addEventListener('click', function() {
-                sidebarLeft.classList.toggle('show');
-            });
-        }
-
-        if (mainContent) {
-            mainContent.addEventListener('click', function() {
-                // 如果在手機模式且側邊欄是開啟狀態，點擊內容區就關閉它
-                if (window.innerWidth <= 768) {
-                    sidebarLeft.classList.remove('show');
-                }
-            });
-        }
 </body>
 </html>
