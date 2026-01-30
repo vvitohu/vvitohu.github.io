@@ -785,7 +785,7 @@ body {
     }
     .main-content {
         margin-right: 0; /* 右邊邊距歸零 */
-        margin-left: 260px; /* 左邊維持縮進 */
+        margin-left: 0; /* 左邊維持縮進 */
     }
 }
 
