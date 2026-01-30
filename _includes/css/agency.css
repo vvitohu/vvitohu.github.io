@@ -269,15 +269,6 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-@media(min-width:768px) and (max-width:991px) {
-    .navbar-default .navbar-brand {
-        font-size: 1.5em; /* 縮小 Logo */
-    }
-    .navbar-default .nav li a {
-        padding: 10px 8px; /* 縮小選項間的距離 */
-        font-size: 12px;   /* 稍微縮小字體 */
-    }
-}
 
 
 header {
