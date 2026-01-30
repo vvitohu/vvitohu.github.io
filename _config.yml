@@ -42,6 +42,6 @@ markdown: kramdown
 permalink: pretty
 
 collections:
-  database:
+  courses:
     output: true
-    permalink: /database/:path/
+    permalink: /courses/:path/
