@@ -25,7 +25,6 @@ layout: none
             left: 0;
             width: var(--sidebar-width);
             height: calc(100vh - var(--nav-height));
-            background-color: #d2b48c; /* 配合你截圖的咖啡色系 */
             border-right: 1px solid #ffffff;
             overflow-y: auto;
             z-index: 1000;
@@ -36,7 +35,6 @@ layout: none
             margin-top: var(--nav-height);
             margin-left: var(--sidebar-width); /* 這裡必須等於 sidebar-width */
             padding: 40px;
-            background-color: #d2b48c; /* 配合背景色 */
             min-height: 100vh;
         }
 
@@ -92,7 +90,7 @@ layout: none
     <![endif]-->
 </head>
 <body>
-    {% include database/navbar.html %}
+    {% include header.html %}
     {% include database/sidebar-left.html %}
     {% include database/main-content.html %}
     {% include database/sidebar-right.html %}
