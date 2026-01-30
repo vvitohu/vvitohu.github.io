@@ -44,4 +44,4 @@ permalink: pretty
 collections:
   courses:
     output: true
-    permalink: /courses/:name/
+    permalink: /courses/:path/
