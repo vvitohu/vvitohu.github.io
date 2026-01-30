@@ -9,51 +9,31 @@ layout: none
     <title>{{ page.title }} | Database</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 基本設定：預設在大螢幕上的樣子 */
-        :root { 
-            --sidebar-width: 260px; 
-            --toc-width: 200px; 
-            --nav-height: 60px;
+        :root { --sidebar-width: 260px; --toc-width: 200px; }
+        body { font-family: sans-serif; background: #f8f9fa; }
+        
+        /* 上方導覽列 */
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1030; height: 60px; background: #2c3e50 !important; }
+        
+        /* 左側邊欄 (課程大綱) */
+        .sidebar-left {
+            position: fixed; top: 60px; left: 0; bottom: 0;
+            width: var(--sidebar-width); background: #fff;
+            border-right: 1px solid #dee2e6; overflow-y: auto; padding: 20px;
+        }
+        
+        /* 右側邊欄 (小標題導覽) */
+        .sidebar-right {
+            position: fixed; top: 60px; right: 0; bottom: 0;
+            width: var(--toc-width); border-left: 1px solid #dee2e6;
+            padding: 20px; font-size: 0.9rem; overflow-y: auto;
         }
 
-        /* --- 中間主內容的響應式邊距 --- */
+        /* 中間主內容 */
         .main-content {
-            margin-top: var(--nav-height);
-            padding: 30px;
-            transition: margin 0.3s ease; /* 增加平滑感 */
-        }
-
-        /* 寬螢幕 (電腦)：顯示左右側邊欄，主內容縮進 */
-        @media (min-width: 1200px) {
-            .main-content {
-                margin-left: var(--sidebar-width);
-                margin-right: var(--toc-width);
-            }
-        }
-
-        /* 中等螢幕 (平板)：隱藏右側 TOC，主內容只縮進左側 */
-        @media (max-width: 1199px) {
-            .sidebar-right { display: none; }
-            .main-content {
-                margin-left: var(--sidebar-width);
-                margin-right: 0;
-            }
-        }
-
-        /* 小螢幕 (手機)：兩側邊欄全部隱藏，主內容佔滿全螢幕 */
-        @media (max-width: 768px) {
-            .sidebar-left {
-                transform: translateX(-100%); /* 移出螢幕外 */
-                transition: transform 0.3s ease;
-                z-index: 1040;
-            }
-            .sidebar-left.show {
-                transform: translateX(0); /* 點擊後滑入 */
-            }
-            .main-content {
-                margin-left: 0 !important;
-                padding: 15px;
-            }
+            margin-left: var(--sidebar-width);
+            margin-right: var(--toc-width);
+            margin-top: 60px; padding: 40px; min-height: 100vh; background: #fff;
         }
     </style>
 </head>
@@ -62,7 +42,6 @@ layout: none
     {% include database/sidebar-left.html %}
     {% include database/main-content.html %}
     {% include database/sidebar-right.html %}
-    
 
 </body>
 </html>
