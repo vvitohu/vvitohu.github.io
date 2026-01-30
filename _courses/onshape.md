@@ -1,5 +1,5 @@
 ---
-layout: courses
+layout: database
 title: "Onshape 基礎建模"
 image: "onshape.jpg"
 desc: "從基礎介面開始，學習 3D 建模的核心邏輯。"
