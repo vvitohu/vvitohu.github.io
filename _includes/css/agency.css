@@ -769,58 +769,41 @@ body {
 }
 
 
-/* 基礎結構設定 */
-#wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    transition: all 0.3s;
-}
-
-/* 左側邊欄樣式 */
-.sidebar-left {
-    min-width: 250px;
-    max-width: 250px;
-    background: #c5a982; /* 配合你圖片中的底色 */
-    color: #333;
-    transition: all 0.3s;
-    position: fixed; /* 固定在左側 */
-    height: 100vh;
-    z-index: 1000;
-}
-
-/* 當側邊欄隱藏時的狀態 */
-.sidebar-left.active {
-    margin-left: -250px;
-}
-
-/* 內文區域 */
-.main-content {
-    width: 100%;
-    padding: 40px;
-    min-height: 100vh;
-    transition: all 0.3s;
-    /* 預設在電腦版留出側邊欄空間 */
-    margin-left: 250px; 
-}
-
-/* 當側邊欄隱藏時，內文佔滿全螢幕 */
-.main-content.active {
-    margin-left: 0;
-}
-
-/* 響應式調整：小螢幕下預設縮進去 */
-@media (max-width: 992px) {
+@media (min-width: 1200px) {
     .sidebar-left {
-        margin-left: -250px;
-    }
-    .sidebar-left.active {
-        margin-left: 0;
+        transform: translateX(0); /* 確保它是顯示的 */
+        width: 260px; /* 你可以在這裡調整側邊欄的寬度 */
     }
     .main-content {
-        margin-left: 0;
+        margin-left: 260px; /* 這裡的數值要跟側邊欄寬度一致，內文才不會被遮住 */
     }
-    .main-content.active {
-        margin-left: 0; /* 手機版通常讓側邊欄浮在上面，不推擠內文 */
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .sidebar-right {
+        display: none; /* 隱藏右側側邊欄 */
+    }
+    .main-content {
+        margin-right: 0; /* 右邊邊距歸零 */
+        margin-left: 260px; /* 左邊維持縮進 */
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar-left {
+        position: fixed;
+        width: 80%; /* 手機版側邊欄佔螢幕寬度的比例 */
+        z-index: 1050; /* 確保它在最上層 */
+        transform: translateX(-100%); /* 預設推到螢幕左側外面 */
+        transition: transform 0.3s ease; /* 讓滑入動畫變順滑 */
+    }
+
+    /* 當我們透過 JS 加入 .show 這個類別時，側邊欄會滑進來 */
+    .sidebar-left.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important; /* 手機版內容要全寬 */
     }
 }
