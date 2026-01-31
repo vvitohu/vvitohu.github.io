@@ -774,9 +774,7 @@ body {
         transform: translateX(0); /* 確保它是顯示的 */
         width: 260px; /* 你可以在這裡調整側邊欄的寬度 */
     }
-    .main-content {
-        margin-left: 260px; /* 這裡的數值要跟側邊欄寬度一致，內文才不會被遮住 */
-    }
+    
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
