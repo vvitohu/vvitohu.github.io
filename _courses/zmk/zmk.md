@@ -25,7 +25,7 @@ permalink: /database_courses/zmk
     
     出現提示時，輸入你想要鍵盤配置對應的號碼：
     
-    ![image.png]({{ site.baseurl }}img/courses/zmk/image.png)
+    ![image.png]({{ site.baseurl }}/img/courses/zmk/image.png)
     
 3. **MCU Board Selection**
     
