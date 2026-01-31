@@ -25,8 +25,8 @@ permalink: /database_courses/zmk
     
     出現提示時，輸入你想要鍵盤配置對應的號碼：
 
-    <div style="text-align: center;">
-        <img src="{{ site.baseurl }}/img/courses/zmk/image.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+    <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image.png" style="width: 100%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
         <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
     </div>
 
