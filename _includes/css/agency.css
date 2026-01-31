@@ -773,6 +773,7 @@ body {
     .sidebar-left {
         transform: translateX(0); /* 確保它是顯示的 */
         width: 260px; /* 你可以在這裡調整側邊欄的寬度 */
+        border-right: 1px solid #eee;
     }
     
 }
@@ -785,6 +786,9 @@ body {
         margin-right: 0; /* 右邊邊距歸零 */
         margin-left: 0; /* 左邊維持縮進 */
     }
+    .sidebar-left {
+            border-right: 1px solid #eee; 
+        }
 }
 
 @media (max-width: 767px) {
