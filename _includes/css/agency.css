@@ -801,7 +801,5 @@ body {
         transform: translateX(0);
     }
 
-    .main-content {
-        margin-left: 0 !important; /* 手機版內容要全寬 */
-    }
+    
 }
