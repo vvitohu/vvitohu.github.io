@@ -42,6 +42,6 @@ markdown: kramdown
 permalink: pretty
 
 collections:
-  onshape:
+  courses:
     output: true
-    permalink: /onshape/:path/
+    permalink: /courses/:path/

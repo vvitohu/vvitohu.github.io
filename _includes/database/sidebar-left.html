@@ -1,7 +1,7 @@
 <aside class="sidebar-left shadow-sm">
         <h6 class="text-uppercase text-muted fw-bold">課程章節</h6>
         <ul class="nav flex-column">
-            {% for item in site.onshape %}
+            {% for item in site.courses %}
             <li class="nav-item">
                 <a class="nav-link {% if item.url == page.url %}fw-bold text-primary{% else %}text-dark{% endif %}" 
                    href="{{ item.url | relative_url }}">
