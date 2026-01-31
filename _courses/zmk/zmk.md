@@ -34,8 +34,10 @@ permalink: /database_courses/zmk
     
     出現提示時，輸入你想要定位的對應 MCU 板的編號：
     
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image%201.png)
-    
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%201.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
     <aside>
     💡
     
@@ -47,28 +49,36 @@ permalink: /database_courses/zmk
     
     在下一個提示符號下，你將決定是否要複製原先選擇的鍵盤映射檔案到GitHub檔案裡以進行進一步的設定 :
     
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image%202.png)
-    
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%202.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
     按 `Enter` 或輸入 `yes/y` 接受。如果您想保留原先鍵盤映射，或從頭開始編寫鍵盤映射，請輸入 `no/n`。
     
 5. **GitHub Details**
     
     為了自動推送新配置，然後使用 GitHub Actions 構建，請輸入一些有關你的特定 GitHub 資訊的資訊：
     
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image%203.png)
-    
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%203.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
     - **檔案的SSH連結**
         
         當你建好GitHub檔案時會跳出這個畫面，按下圖中`SSH` 選項，後面出現之文字即為SSH連結
         
-        ![image.png]({{ site.baseurl }}/img/courses/zmk/image%204.png)
-        
+        <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%204.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
 6. **確認選擇**
     
     在執行安裝之前，安裝腳本將最後一次確認你的所有選擇：
-    
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image%205.png)
-    
+
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%205.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
     按下 `Enter` 或輸入 `y`後，腳本將在以 repo 名稱命名的目錄中建立初始配置，更新 GitHub Action YAML 文件，提交初始版本，然後推送到您的 repo。
     
 
@@ -77,13 +87,17 @@ permalink: /database_courses/zmk
 1. **下載檔案**
     
     一旦安裝腳本完成並且新的用戶配置存儲庫被推送，GitHub 將自動運行操作來建立您的鍵盤韌體檔案。您可以透過點擊 GitHub 儲存庫上的「`Actions`」標籤來查看操作。
-    
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image%206.png)
-    
+
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%206.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
     進入“`Actions`”標籤後，從清單中選擇頂部建置，將在右側面板下的`firmware`下載：
     
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image%207.png)
-    
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image%207.png" style="width: 100%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
     下載完成後，解壓縮 zip 文件，在文件中包含一個或多個 uf2 文件，這些文件將複製到您的鍵盤。
     
 2. **燒錄UF2文件**
