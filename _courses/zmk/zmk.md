@@ -24,9 +24,11 @@ permalink: /database_courses/zmk
 2. **Keyboard Selection**
     
     出現提示時，輸入你想要鍵盤配置對應的號碼：
-    
-    ![image.png]({{ site.baseurl }}/img/courses/zmk/image.png)
-    
+
+    <div style="text-align: center;">
+        <img src="{{ site.baseurl }}/img/courses/zmk/image.png" style="width: 60%;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 0.9rem;">這是圖片的說明文字</p>
+    </div>
 3. **MCU Board Selection**
     
     出現提示時，輸入你想要定位的對應 MCU 板的編號：
