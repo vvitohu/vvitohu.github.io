@@ -13,31 +13,39 @@
         /* 上方導覽列 */
         .navbar { position: fixed; top: 0; width: 100%; z-index: 1030;  background: #222 !important; }
         
-        /* 側邊欄基本樣式 */
+       /* 2. 核心容器：限制最大寬度並居中 */
+        .docs-container {
+            max-width: 1320px; /* 你可以根據喜好調整這個寬度，例如 1200px 或 1400px */
+            margin: 0 auto;
+            display: flex;
+        }
+
+        /* 3. 左側課程選單 (Sticky) */
         .sidebar-left {
-            position: fixed;
-            top: var(--nav-height);
-            left: 0;
-            width: var(--sidebar-width);
-            height: calc(100vh - var(--nav-height));
-            border-right: 1px solid #ffffff;
+            width: 280px;
+            position: sticky;
+            top: 56px; /* 避開 Navbar */
+            height: calc(100vh - 56px);
             overflow-y: auto;
-            z-index: 1000;
+            padding: 2rem 1.5rem 2rem 0; /* 左側貼齊容器 */
+            border-right: 1px solid #eee;
         }
 
-        /* 中間內文區：最關鍵的修正 */
+        /* 4. 中間主內容區 (彈性寬度) */
         .main-content {
-            margin-top: var(--nav-height);
-            margin-left: var(--sidebar-width); /* 這裡必須等於 sidebar-width */
-            padding: 40px;
-            min-height: 100vh;
+            flex: 1; /* 自動填滿剩餘空間 */
+            min-width: 0; /* 防止內容撐破 flex */
+            padding: 2rem 3rem;
         }
 
-        /* 右側邊欄 (小標題導覽) */
+        /* 5. 右側本頁導覽 (Sticky) */
         .sidebar-right {
-            position: fixed; top: 60px; right: 0; bottom: 0;
-            width: var(--toc-width); border-left: 1px solid #dee2e6;
-            padding: 20px; font-size: 0.9rem; overflow-y: auto;
+            width: 240px;
+            position: sticky;
+            top: 56px;
+            height: calc(100vh - 56px);
+            padding: 2rem 0 2rem 1.5rem;
+            font-size: 0.875rem;
         }
         
         /* 響應式修正：當螢幕變小時（手機/平板） */
