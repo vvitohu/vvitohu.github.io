@@ -5,8 +5,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
-            --sidebar-width: 260px; /* 這裡定義你的側邊欄寬度 */
-            --nav-height: 100px;
+            --nav-height: 80px;
+            --sidebar-left-width: 260px;
+            --sidebar-right-width: 220px;
+            --content-max-width: 850px;
         }
         body {  background: #{{ site.data.template.color.background }}; }
         
@@ -19,7 +21,7 @@
             justify-content: center; /* 這是讓三者「組合在一起」後置中的關鍵 */
             margin-top: var(--nav-height);
             min-height: calc(100vh - var(--nav-height));
-            background-color: #fff;
+            
         }
 
         /* 3. 左側邊欄：現在它會黏著內文的左邊 */
