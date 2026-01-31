@@ -787,8 +787,9 @@ body {
         margin-left: 0; /* 左邊維持縮進 */
     }
     .sidebar-left {
-            border-right: 1px solid #eee; 
-        }
+        display: none;
+        border-right: 1px solid #eee; 
+    }
 }
 
 @media (max-width: 767px) {
