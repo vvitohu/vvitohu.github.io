@@ -13,33 +13,46 @@
         /* 上方導覽列 */
         .navbar { position: fixed; top: 0; width: 100%; z-index: 1030;  background: #222 !important; }
         
-        /* 側邊欄基本樣式 */
-        .sidebar-left {
-            position: fixed;
-            top: var(--nav-height);
-            width: var(--sidebar-width);
-            height: calc(100vh - var(--nav-height));
-            border-right: 1px solid #ffffff;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-
-        /* 修正後的內文區 */
-        .main-content {
-            margin-top: var(--nav-height);
-            /* padding-left 確保內容不會被 fixed 的側邊欄遮住 */
-            
-            width: 100%;
-            min-height: 100vh;
+        /* 2. 建立一個包覆容器，讓所有內容垂直並排並置中 */
+        .main-wrapper {
             display: flex;
-            justify-content: center; /* 水平居中 */
+            justify-content: center; /* 這是讓三者「組合在一起」後置中的關鍵 */
+            margin-top: var(--nav-height);
+            min-height: calc(100vh - var(--nav-height));
+            background-color: #fff;
         }
 
-        /* 右側邊欄 (小標題導覽) */
+        /* 3. 左側邊欄：現在它會黏著內文的左邊 */
+        .sidebar-left {
+            flex: 0 0 var(--sidebar-left-width);
+            position: sticky; /* 改用 sticky，它會隨容器滾動但卡在頂部 */
+            top: var(--nav-height);
+            height: calc(100vh - var(--nav-height));
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+            /* 移除原本的 fixed，改用 border 與內文相連 */
+            border-right: 1px solid #eee; 
+        }
+
+        /* 4. 中間內文：控制整體的寬度主軸 */
+        .main-content {
+            flex: 0 0 var(--content-max-width);
+            width: var(--content-max-width);
+            padding: 2rem 3rem;
+            min-height: 100vh;
+            /* 不再需要 justify-content: center，因為父層已經幫你置中了 */
+        }
+
+        /* 5. 右側邊欄：現在它會黏著內文的右邊 */
         .sidebar-right {
-            position: fixed; top: 60px; bottom: 0;
-            width: var(--toc-width); border-left: 1px solid #dee2e6;
-            padding: 20px; font-size: 0.9rem; overflow-y: auto;
+            flex: 0 0 var(--sidebar-right-width);
+            position: sticky;
+            top: var(--nav-height);
+            height: calc(100vh - var(--nav-height));
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            border-left: 1px solid #eee;
+            font-size: 0.875rem;
         }
         
         /* 響應式修正：當螢幕變小時（手機/平板） */
