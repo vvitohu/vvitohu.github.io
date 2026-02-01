@@ -1,7 +1,7 @@
 ---
 layout: database_courses
 title: "ZMK 設定教學"
-image: "onshape.jpg"
+image: "zmk.png"
 desc: "從基礎介面開始，學習 3D 建模的核心邏輯。"
 date: "2026-01-29"
 permalink: /database_courses/zmk
