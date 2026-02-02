@@ -10,8 +10,6 @@
                 </a>
             </li>
             {% endfor %}
-        </ul>
-        <ul class="nav flex-column">
             {% assign onshape_menu = site.courses | where_exp: "item", "item.path contains 'onshape/menu' " %}
             {% for item in onshape_menu %}
             <li class="nav-item">
