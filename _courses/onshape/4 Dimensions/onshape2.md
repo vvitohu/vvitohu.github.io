@@ -1,10 +1,7 @@
 ---
 layout: database_courses
 title: "Onshape 基礎建模"
-type: 'onshape/'
-image: "onshape.jpg"
-desc: "從基礎介面開始，學習 3D 建模的核心邏輯。"
-date: "2026-01-29"
+type: onshape_menu
 permalink: /database_courses/onshape-basic2
 ---
 ### 課程簡介
