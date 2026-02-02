@@ -11,7 +11,9 @@
             </li>
             {% endfor %}
             {% assign onshape_menu = site.courses | where_exp: "item", "item.path contains 'onshape/onshape_menu' " %}
-            {% for item in onshape_menu %}
+        </ul>
+        <ul class="nav flex-column">
+            {% for item in site.data.onshape_menu %}
             <li class="nav-item">
                 <div class="nav-link fw-bold text-dark mt-2">{{ item.title }}</div>
                 
