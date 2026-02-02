@@ -1,11 +1,11 @@
 - title: "🏠 首頁"
-  url: "/database_courses/onshape/index"
+  url: ""
 - title: "🚀 快速開始"
   subitems:
     - name: "Onshape 是什麼？"
-      url: "/database_courses/onshape/what-is-onshape"
+      url: "/database_courses/onshape-basic"
     - name: "註冊與登入"
-      url: "/database_courses/onshape/login"
+      url: "/database_courses/Quick_start/Registration_and_Login"
 - title: "✏️ 草圖（Sketch）"
   subitems:
     - name: "建立第一個草圖"
