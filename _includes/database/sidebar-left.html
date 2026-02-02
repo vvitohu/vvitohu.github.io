@@ -10,5 +10,34 @@
                 </a>
             </li>
             {% endfor %}
+            {% for item in site.data.onshape_menu %}
+            <li class="nav-item">
+                <div class="nav-link fw-bold text-dark mt-2">{{ item.title }}</div>
+                
+                {% if item.subitems %}
+                <ul class="nav flex-column ms-3">
+                    {% for sub in item.subitems %}
+                    <li class="nav-item">
+                        {% if sub.url %}
+                        <a class="nav-link py-1 text-muted" href="{{ sub.url | relative_url }}">{{ sub.name }}</a>
+                        {% else %}
+                        <div class="nav-link py-1 text-secondary small">{{ sub.name }}</div>
+                        {% endif %}
+
+                        {% if sub.children %}
+                        <ul class="nav flex-column ms-3 border-start">
+                            {% for child in sub.children %}
+                            <li class="nav-item">
+                                <a class="nav-link py-0 my-1 text-muted smaller" href="{{ child.url | relative_url }}">{{ child.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
         </ul>
     </aside>
