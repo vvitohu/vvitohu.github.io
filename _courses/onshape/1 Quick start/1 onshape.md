@@ -1,7 +1,7 @@
 ---
 layout: database_courses
 title: "Onshape 基礎建模"
-type: 'onshape/'
+type: onshape_menu
 image: "onshape.jpg"
 desc: "從基礎介面開始，學習 3D 建模的核心邏輯。"
 date: "2026-01-29"
