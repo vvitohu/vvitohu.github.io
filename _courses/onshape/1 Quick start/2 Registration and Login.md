@@ -4,9 +4,7 @@ title: "註冊與登入"
 type: onshape_menu
 permalink: /database_courses/Quick_start/Registration_and_Login
 ---
-###  快速上手：註冊與基礎設定
-
-# 註冊帳號
+#  快速上手：註冊與基礎設定
 
 ## **第一階段：帳號註冊**
 
