@@ -808,3 +808,32 @@ body {
 
     
 }
+
+/* 針對主內容區域的文字進行優化 */
+.main-content {
+    font-size: 18px;          /* 增加基礎字體大小 */
+    line-height: 1.8;         /* 增加行高，閱讀起來更不費力 */
+    color: #333;              /* 使用深灰色而非全黑，降低眼睛疲勞 */
+}
+
+/* 針對 Markdown 產生的具體標籤進行微調 */
+#article-content p {
+    margin-bottom: 1.5rem;    /* 段落之間的間距 */
+}
+
+#article-content h1, 
+#article-content h2, 
+#article-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+#article-content li {
+    margin-bottom: 0.5rem;    /* 列表項目的間距 */
+}
+
+/* 針對程式碼區塊（如果有的話） */
+#article-content code {
+    font-size: 0.9em;         /* 程式碼通常稍微小一點點 */
+}
