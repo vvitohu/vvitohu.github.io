@@ -41,10 +41,7 @@
             width: var(--content-max-width);
             padding: 2rem 3rem;
             min-height: 100vh;
-            /* 不再需要 justify-content: center，因為父層已經幫你置中了 */
-            font-size: 18px;          /* 增加基礎字體大小 */
-            line-height: 1.8;         /* 增加行高，閱讀起來更不費力 */
-            color: #333;
+            
         }
 
         /* 5. 右側邊欄：現在它會黏著內文的右邊 */
@@ -59,26 +56,37 @@
             
         }
 
-        /* 針對 Markdown 產生的具體標籤進行微調 */
-        #article-content p {
-            margin-bottom: 1.5rem;    /* 段落之間的間距 */
+        /* 1. 只針對文章內的「內文」進行放大 */
+        #article-content p, 
+        #article-content li, 
+        #article-content span,
+        #article-content strong {
+            font-size: 1.25rem !important; /* 約 20px，讓內文明顯變大 */
+            line-height: 1.8;             /* 增加行距，讓大字讀起來不擁擠 */
+            letter-spacing: 0.5px;        /* 微調字距提升質感 */
+            color: #333;
         }
 
+        /* 2. 針對粗體字（你的優點清單常用） */
+        #article-content strong {
+            font-weight: 700;
+            color: #000; /* 讓粗體更黑一點，與內文區分 */
+        }
+
+        /* 3. 標題保持原本大小（或是稍微加強間距） */
         #article-content h1, 
         #article-content h2, 
         #article-content h3 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-top: 2.5rem;   /* 增加標題上方的呼吸空間 */
+            margin-bottom: 1.2rem;
             font-weight: 700;
         }
 
-        #article-content li {
-            margin-bottom: 0.5rem;    /* 列表項目的間距 */
-        }
-
-        /* 針對程式碼區塊（如果有的話） */
-        #article-content code {
-            font-size: 0.9em;         /* 程式碼通常稍微小一點點 */
+        /* 4. 針對列表項目的調整 */
+        #article-content ul, 
+        #article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem; /* 確保縮進足夠 */
         }
 
         /* 響應式修正：當螢幕變小時（手機/平板） */
