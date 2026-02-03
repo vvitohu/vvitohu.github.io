@@ -42,8 +42,6 @@
             padding: 2rem 3rem;
             min-height: 100vh;
             /* 不再需要 justify-content: center，因為父層已經幫你置中了 */
-            font-size: 4rem;    /* 約等於 18.4px，讓字體更有份量 */
-            line-height: 1.8;      /* 增加行高，閱讀起來不擁擠 */
         }
 
         /* 5. 右側邊欄：現在它會黏著內文的右邊 */
@@ -56,37 +54,6 @@
             padding: 2rem 1rem;
             border-left: 1px solid #eee;
             
-        }
-        
-        /* 針對內容文字進行優化 */
-        .content {
-            font-size: 1.2rem;    /* 約等於 18.4px，讓字體更有份量 */
-            line-height: 1.8;      /* 增加行高，閱讀起來不擁擠 */
-            color: #333;           /* 深灰色文字，比純黑更耐看 */
-        }
-
-        /* 針對 Markdown 生成的段落與清單 */
-        .content p, .content li {
-            margin-bottom: 1.5rem; /* 增加段落間的距離 */
-        }
-
-        /* 針對標題（h2, h3）同步放大 */
-        .content h2 {
-            font-size: 2rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1.2rem;
-            font-weight: 700;
-        }
-
-        .content h3 {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            font-weight: 600;
-        }
-
-        /* 程式碼區塊也要跟著調整，才不會顯得字太小 */
-        .content code, .content pre {
-            font-size: 1rem;
         }
 
         /* 響應式修正：當螢幕變小時（手機/平板） */
