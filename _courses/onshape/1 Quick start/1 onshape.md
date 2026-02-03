@@ -29,7 +29,7 @@ permalink: /database_courses/onshape-basic
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
         <img src="{{ site.baseurl }}/img/courses/onshape/image%201.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-        <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 ### 2. 徹底告別「存檔」與「崩潰」
 
@@ -37,7 +37,7 @@ permalink: /database_courses/onshape-basic
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
         <img src="{{ site.baseurl }}/img/courses/onshape/image%202.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-        <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 ### 3. 像 Google Docs 一樣的協作功能
 
@@ -45,7 +45,7 @@ permalink: /database_courses/onshape-basic
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
         <img src="{{ site.baseurl }}/img/courses/onshape/image%203.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-        <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 ### 4. Part Studio 全域設計概念
 
@@ -53,6 +53,6 @@ permalink: /database_courses/onshape-basic
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
         <img src="{{ site.baseurl }}/img/courses/onshape/image_(2).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-        <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 ---

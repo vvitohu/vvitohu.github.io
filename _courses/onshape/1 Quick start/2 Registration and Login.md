@@ -11,37 +11,37 @@ permalink: /database_courses/Quick_start/Registration_and_Login
 1. **開始註冊：** 在 Google 搜尋 **"Onshape"** 並進入官方網站，點選頁面右上角的 **"SIGN UP NOW"**。
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
-            <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
-        </div>
+        <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
+    </div>
     
 2. **填寫基本資料：** 輸入你的姓名與 Email。填寫完畢後點選 "NEXT"（資料之後還可修改）。
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
-            <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(1).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
-        </div>
+        <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(1).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
+    </div>
     
 3. **選擇用途類別：** 軟體會詢問使用的意圖，選擇最右邊的 **"Fun"** 就可以了。
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
-            <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(2).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
-        </div>
+        <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(2).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
+    </div>
     
 4. **軟體方案選擇：**
     - 身分選擇 **"New to CAD"**。
         
         <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(3).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
         
     - 在確認方案頁面（Free Plan）直接點選 **"NEXT"**。
         
         <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(4).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
         
 5. **填寫聯繫資訊：**
@@ -50,7 +50,7 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(5).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 6. **完成註冊程序：**
@@ -60,7 +60,7 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(6).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 
@@ -70,7 +70,7 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(7).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 2. **設定密碼：** 密碼至少要 10 個字，而且要包含數字、大寫和小寫字母。
@@ -78,7 +78,7 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(8).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 
@@ -90,28 +90,28 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(9).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 - **STEP 2 滑鼠操作：** 它是預設的 Onshape 模式（包含右鍵旋轉、中鍵平移），直接按 **"Next"**。
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(10).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 - **STEP 3 個人資料：** 視需求修改暱稱或上傳大頭照（亦可稍後再改），點選 **"Next"**。
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(11).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 - **STEP 4 最終確認：** 系統確認瀏覽器相容後，點選 **"Done"** 完成基礎設定。
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(12).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 
@@ -123,7 +123,7 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(13).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
     
 2. 看左邊選單，點第三個選項 **"Preferences"**。
@@ -131,5 +131,5 @@ permalink: /database_courses/Quick_start/Registration_and_Login
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/login/Onshape_軟體設定_(14).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;">這是圖片的說明文字</p>
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
