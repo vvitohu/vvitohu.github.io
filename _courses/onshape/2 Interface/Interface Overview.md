@@ -77,7 +77,7 @@ permalink: /database_courses/interface/interface_overview
         - **Origin (原點)：** 空間中的絕對座標 (0,0,0)。
         - **Top / Front / Right (基準面)：** 提供繪製草圖的初始平面。
         
-        <div class="alert alert-light" role="alert">
+        <div class="alert alert-warning" role="alert">
         💡
         
          **小撇步：** 點擊旁邊的「眼睛圖示」，可以快速隱藏這些平面，讓畫面更乾淨。
@@ -91,7 +91,7 @@ permalink: /database_courses/interface/interface_overview
         - **Sketch (草圖)：** 所有的 2D 幾何形狀。
         - **Features (特徵)：** 如 Extrude (擠出)、Fillet (圓角)、Shell (薄殼) 等 3D 指令。
         
-        <div class="alert alert-light" role="alert">
+        <div class="alert alert-warning" role="alert">
         ⚠️
         
         - **順序重要性：** 列表是由上而下執行的。如果你把「圓角」移到「擠出」之前，圓角就會失效。
