@@ -6,7 +6,7 @@ permalink: /database_courses/interface/control
 ---
 # 視角與軟體操作
 
-## 視角控制
+## 一、視角控制
 
 在Onshape中，我們可以透過旋轉畫面來查看模型的各個地方，而控制畫面的方式有兩種**：滑鼠及視角方塊**
 
@@ -39,3 +39,11 @@ permalink: /database_courses/interface/control
         <img src="{{ site.baseurl }}/img/courses/onshape/control/2.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
+
+## **二、軟體操控秘訣**
+
+熟記以下操作能讓你的建模流程更流暢：
+
+1. **取消所有選取：** 按下鍵盤的 **空白鍵**，可以快速清除目前選中的所有物件。
+2. **取消工具：** 如果選錯了工具，按下 **ESC** 鍵即可退出目前的工具模式。
+3. **確認操作：** 當你在特徵面板設定好參數（如擠出高度）後，按下 **Enter** 鍵即可確認完成
