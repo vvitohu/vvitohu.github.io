@@ -33,7 +33,6 @@ permalink: /database_courses/interface/interface_overview
 
 這裡有**通知中心**、**學習中心**（官方教學片都在這）、**說明功能表**（快捷鍵表在這找），還有最關鍵的**個人帳號資訊**（切換中文、改單位都在這）。
 
-![Onshape 教學內容 (2).png](Onshape_%E6%95%99%E5%AD%B8%E5%85%A7%E5%AE%B9_(2).png)
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
         <img src="{{ site.baseurl }}/img/courses/onshape/ifov/Onshape_教學內容_(2).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
         <p class="text-muted" style="font-size: 1.2rem;"></p>
@@ -78,12 +77,12 @@ permalink: /database_courses/interface/interface_overview
         - **Origin (原點)：** 空間中的絕對座標 (0,0,0)。
         - **Top / Front / Right (基準面)：** 提供繪製草圖的初始平面。
         
-        <aside>
+        <div class="alert alert-light" role="alert">
         💡
         
          **小撇步：** 點擊旁邊的「眼睛圖示」，可以快速隱藏這些平面，讓畫面更乾淨。
         
-        </aside>
+        <div>
         
     2. **特徵** 
         
@@ -92,11 +91,11 @@ permalink: /database_courses/interface/interface_overview
         - **Sketch (草圖)：** 所有的 2D 幾何形狀。
         - **Features (特徵)：** 如 Extrude (擠出)、Fillet (圓角)、Shell (薄殼) 等 3D 指令。
         
-        <aside>
+        <div class="alert alert-light" role="alert">
         ⚠️
         
         - **順序重要性：** 列表是由上而下執行的。如果你把「圓角」移到「擠出」之前，圓角就會失效。
-        </aside>
+        <div>
         
     
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
