@@ -120,7 +120,7 @@ permalink: /database_courses/interface/interface_overview
             <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
 
-### **D. 下方分頁欄 **
+### D. 下方分頁欄 
 
 - Onshape 採「多頁籤」設計。一個文件內可以包含多個 **Part Studios**（零件設計）、**Assemblies**（組合件）以及 **Drawings**（工程圖）。
     
