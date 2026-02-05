@@ -6,7 +6,7 @@ permalink: /database_courses/interface/interface_overview
 ---
 # 介面總覽
 
-# 一、文件管理中心
+## 一、文件管理中心
 
 當你登入 Onshape 後，首先映入眼簾的是「文件管理中心」。這裡就像是你的雲端檔案櫃。
 
@@ -47,7 +47,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-# 二、零件設計工作區 (Part Studio)
+## 二、零件設計工作區 (Part Studio)
 
 點開文件後，你會進入核心設計介面。這裡的配置非常直覺，分為四大區塊：
 
