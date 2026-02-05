@@ -10,8 +10,6 @@
       url: "/database_courses/interface/interface_overview"
     - name: "視角與軟體操作"
       url: "/database_courses/interface/control"
-    - name: "特徵列表管理"
-      url: ""
     - name: "協作與分享"
       url: ""
 - title: "✏️ 草圖（Sketch）"
