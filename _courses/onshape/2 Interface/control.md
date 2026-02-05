@@ -10,7 +10,7 @@ permalink: /database_courses/interface/control
 
 在Onshape中，我們可以透過旋轉畫面來查看模型的各個地方，而控制畫面的方式有兩種**：滑鼠及視角方塊**
 
-### **1. 滑鼠操作**
+### **A. 滑鼠操作**
 
 在軟體的 3D 空間中，所有的移動都靠滑鼠完成。
 
@@ -26,7 +26,7 @@ permalink: /database_courses/interface/control
     </div>
     
 
-### **2.視角方塊**
+### **B.視角方塊**
 
 位於畫面右上角的「視角方塊」是另一種控制視角的方式，點擊它可以快速切換到不同的標準視角。
 
