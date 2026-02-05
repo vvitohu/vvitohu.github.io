@@ -75,7 +75,7 @@ permalink: /database_courses/interface/interface_overview
 
 ### C. 左側列表 
 
-#### 1.**特徵列表：**
+1. **特徵列表：**
 特徵列表不僅是清單，它代表了建模的**先後順序**。在 Onshape 中，修改過去的步驟，後續的模型會隨之連動更新。
     1.  **預設幾何**
     在列表的最上方，預設會有四個項目：
@@ -108,7 +108,7 @@ permalink: /database_courses/interface/interface_overview
             <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
 
-#### 2.**零件清單：**
+2.**零件清單：**
     
     位於特徵列表的下方：
     
