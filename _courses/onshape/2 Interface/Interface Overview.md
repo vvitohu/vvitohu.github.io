@@ -108,7 +108,7 @@ permalink: /database_courses/interface/interface_overview
             <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
 
-2.**零件清單：**
+2. **零件清單：**
     
     位於特徵列表的下方：
     
