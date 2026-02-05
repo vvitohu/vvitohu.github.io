@@ -80,7 +80,7 @@ permalink: /database_courses/interface/interface_overview
         <div class="alert alert-warning" role="alert">
         💡
         
-         **小撇步：** 點擊旁邊的「眼睛圖示」，可以快速隱藏這些平面，讓畫面更乾淨。
+         小撇步： 點擊旁邊的「眼睛圖示」，可以快速隱藏這些平面，讓畫面更乾淨。
         
         <div>
         
@@ -94,7 +94,7 @@ permalink: /database_courses/interface/interface_overview
         <div class="alert alert-warning" role="alert">
         ⚠️
         
-        - **順序重要性：** 列表是由上而下執行的。如果你把「圓角」移到「擠出」之前，圓角就會失效。
+        - 順序重要性： 列表是由上而下執行的。如果你把「圓角」移到「擠出」之前，圓角就會失效。
         <div>
         
     
