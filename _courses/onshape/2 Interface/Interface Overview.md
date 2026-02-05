@@ -89,7 +89,7 @@ permalink: /database_courses/interface/interface_overview
         
         <div>
         
-    2.  **特徵** 
+    2. **特徵** 
         
         當你開始繪圖或建模，這裡會依序出現：
         
