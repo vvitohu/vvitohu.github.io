@@ -8,9 +8,7 @@
   subitems:
     - name: "介面總覽"
       url: "/database_courses/interface/interface_overview"
-    - name: "視角與滑鼠操作"
-      url: ""
-    - name: "常用快捷鍵"
+    - name: "視角與軟體操作"
       url: ""
     - name: "特徵列表管理"
       url: ""
