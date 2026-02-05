@@ -47,3 +47,8 @@ permalink: /database_courses/interface/control
 1. **取消所有選取：** 按下鍵盤的 **空白鍵**，可以快速清除目前選中的所有物件。
 2. **取消工具：** 如果選錯了工具，按下 **ESC** 鍵即可退出目前的工具模式。
 3. **確認操作：** 當你在特徵面板設定好參數（如擠出高度）後，按下 **Enter** 鍵即可確認完成
+
+<div style="text-align: center; margin-left: -5%; margin-right: -5%;">
+        <img src="{{ site.baseurl }}/img/courses/onshape/control/3.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
+    </div>
