@@ -77,7 +77,7 @@ permalink: /database_courses/interface/interface_overview
 
 1. **特徵列表：**
 特徵列表不僅是清單，它代表了建模的**先後順序**。在 Onshape 中，修改過去的步驟，後續的模型會隨之連動更新。
-    a.  **預設幾何**
+    1.  **預設幾何**
     在列表的最上方，預設會有四個項目：
         - **Origin (原點)：** 空間中的絕對座標 (0,0,0)。
         - **Top / Front / Right (基準面)：** 提供繪製草圖的初始平面。
@@ -89,7 +89,7 @@ permalink: /database_courses/interface/interface_overview
         
         <div>
         
-    b. **特徵** 
+    2. **特徵** 
         
         當你開始繪圖或建模，這裡會依序出現：
         
