@@ -15,7 +15,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-### **1. 左側導覽欄**
+### 1. 左側導覽欄
 
 這裡就像是你的 3D 檔案圖書館，左邊的選單是你找檔案的好幫手：
 
@@ -29,7 +29,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-### **2.右上角小圖示：**
+### 2.右上角小圖示
 
 這裡有**通知中心**、**學習中心**（官方教學片都在這）、**說明功能表**（快捷鍵表在這找），還有最關鍵的**個人帳號資訊**（切換中文、改單位都在這）。
 
@@ -38,7 +38,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-### **3.建立文件**
+### 3.建立文件
 
  點下大大的藍色「建立」，就能開新文件或是資料夾來分類。
 
@@ -51,7 +51,7 @@ permalink: /database_courses/interface/interface_overview
 
 點開文件後，你會進入核心設計介面。這裡的配置非常直覺，分為四大區塊：
 
-### **A. 中間繪圖區 **
+### A. 中間繪圖區 
 
 - **視覺中心：** 預設會有前 (Front)、上 (Top)、右 (Right) 三個基準面。
 - **導覽方塊 (View Cube)：** 右上角的方塊可以讓你快速切換視角（如：等角視圖 Isometric）。
@@ -61,7 +61,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-### **B. 上方工具列 **
+### B. 上方工具列 
 
 這是你的工具箱。根據目前的模式，它會自動切換：
 
@@ -73,7 +73,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-### **C. 左側列表 **
+### C. 左側列表 
 
 1. **特徵列表：**
 特徵列表不僅是清單，它代表了建模的**先後順序**。在 Onshape 中，修改過去的步驟，後續的模型會隨之連動更新。
