@@ -51,12 +51,17 @@ permalink: /database_courses/interface/interface_overview
 
 點開文件後，你會進入核心設計介面。這裡的配置非常直覺，分為四大區塊：
 
-### **A. 中間繪圖區 (Graphics Area)**
+### **A. 中間繪圖區 **
 
 - **視覺中心：** 預設會有前 (Front)、上 (Top)、右 (Right) 三個基準面。
 - **導覽方塊 (View Cube)：** 右上角的方塊可以讓你快速切換視角（如：等角視圖 Isometric）。
 
-### **B. 上方工具列 (Toolbar)**
+<div style="text-align: center; margin-left: -5%; margin-right: -5%;">
+        <img src="{{ site.baseurl }}/img/courses/onshape/ifov/Onshape_課程簡報_(7).png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+        <p class="text-muted" style="font-size: 1.2rem;"></p>
+    </div>
+
+### **B. 上方工具列 **
 
 這是你的工具箱。根據目前的模式，它會自動切換：
 
@@ -68,7 +73,7 @@ permalink: /database_courses/interface/interface_overview
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
 
-### **C. 左側列表 (Feature List)**
+### **C. 左側列表 **
 
 1. **特徵列表：**
 特徵列表不僅是清單，它代表了建模的**先後順序**。在 Onshape 中，修改過去的步驟，後續的模型會隨之連動更新。
@@ -115,7 +120,7 @@ permalink: /database_courses/interface/interface_overview
             <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
 
-### **D. 下方分頁欄 (Document Tabs)**
+### **D. 下方分頁欄 **
 
 - Onshape 採「多頁籤」設計。一個文件內可以包含多個 **Part Studios**（零件設計）、**Assemblies**（組合件）以及 **Drawings**（工程圖）。
     
