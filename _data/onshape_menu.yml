@@ -24,7 +24,7 @@
 - title: "🧱 3D 建模"
   subitems:
     - name: "基礎特徵操作"
-      url: ""
+      url: "/database_courses/modeling/basic"
     - name: "修飾特徵"
       url: ""
     - name: "多本體建模"
