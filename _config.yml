@@ -3,7 +3,7 @@ baseurl:
 # Site settings
 title: Dev Diaries
 email: otis.vito@gmail.com
-description: "胡勝紘的個人作品集與技術筆記。這裡記錄了我從零自學的成長軌跡，分享深入淺出的 CAD 教學與實踐案例，展現解決問題的邏輯與數位製造的熱情。"
+description: "胡勝紘的個人作品集與技術筆記"
 
 
 # Team names, titles and social links
@@ -34,8 +34,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: 
+  - line: 
 
 # Build settings
 markdown: kramdown
