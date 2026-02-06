@@ -16,11 +16,9 @@
   subitems:
     - name: "草圖與基本繪圖工具"
       url: "/database_courses/sketch/tool"
-    - name: "📐 幾何約束與尺寸"
-      url: ""
+    - name: "幾何約束與尺寸標註"
+      url: "/database_courses/sketch/geometric_constraints_and_dimensioning"
       children:
-        - name: "尺寸標註"
-          url: ""
         - name: "完全定義草圖"
           url: ""
 - title: "🧱 3D 建模"
