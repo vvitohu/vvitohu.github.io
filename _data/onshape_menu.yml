@@ -20,7 +20,7 @@
       url: "/database_courses/sketch/geometric_constraints_and_dimensioning"
       children:
         - name: "完全定義草圖"
-          url: ""
+          url: "/database_courses/interface/fully_defined"
 - title: "🧱 3D 建模"
   subitems:
     - name: "基礎特徵操作"
