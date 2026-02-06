@@ -19,12 +19,12 @@ permalink: /database_courses/sketch/tool
 - 預設的三個基準面（Front, Top, Right）。
 - 零件上的任何一個平整表面。
 
-<aside>
+<div class="alert alert-warning" role="alert">
 💡
 
 **小撇步 :** 剛開始繪製時，建議使用**TOP平面**開始畫草圖，並按下視角方塊的**上視視角**方便繪圖
 
-</aside>
+<div>
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/tool/1.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
