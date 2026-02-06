@@ -4,7 +4,7 @@ title: "草圖與基本繪圖工具"
 type: onshape_menu
 permalink: /database_courses/sketch/tool
 ---
-# 草圖繪製
+# 草圖與基本繪圖工具
 
 ## 草圖基礎：從 2D 到 3D 的起點
 

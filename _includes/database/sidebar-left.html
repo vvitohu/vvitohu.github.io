@@ -12,7 +12,10 @@
                     {% for sub in item.subitems %}
                     <li class="nav-item">
                         {% if sub.url %}
-                        <a class="nav-link py-1 text-muted" href="{{ sub.url | relative_url }}">{{ sub.name }}</a>
+                        <a class="nav-link py-1 {% if sub.url == page.url %}fw-bold text-primary{% else %}text-muted{% endif %}" 
+                            href="{{ sub.url | relative_url }}">
+                            {{ sub.name }}
+                        </a>
                         {% else %}
                         <div class="nav-link py-1 text-secondary small">{{ sub.name }}</div>
                         {% endif %}
@@ -21,7 +24,10 @@
                         <ul class="nav flex-column ms-3 border-start">
                             {% for child in sub.children %}
                             <li class="nav-item">
-                                <a class="nav-link py-0 my-1 text-muted smaller" href="{{ child.url | relative_url }}">{{ child.name }}</a>
+                                <a class="nav-link py-0 my-1 smaller {% if child.url == page.url %}fw-bold text-primary{% else %}text-muted{% endif %}" 
+                                    href="{{ child.url | relative_url }}">
+                                    {{ child.name }}
+                                </a>
                             </li>
                             {% endfor %}
                         </ul>
