@@ -15,7 +15,7 @@
 - title: "✏️ 草圖（Sketch）"
   subitems:
     - name: "草圖與基本繪圖工具"
-      url: ""
+      url: "/database_courses/sketch/tool"
     - name: "📐 幾何約束與尺寸"
       url: ""
       children:
