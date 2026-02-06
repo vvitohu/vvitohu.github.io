@@ -11,7 +11,7 @@
     - name: "視角與軟體操作"
       url: "/database_courses/interface/control"
     - name: "協作與分享"
-      url: ""
+      url: "/database_courses/interface/share"
 - title: "✏️ 草圖（Sketch）"
   subitems:
     - name: "草圖與基本繪圖工具"
