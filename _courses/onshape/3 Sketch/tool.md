@@ -20,10 +20,9 @@ permalink: /database_courses/sketch/tool
 - 零件上的任何一個平整表面。
 
 <div class="alert alert-warning" role="alert">
-    💡
+💡
 
-    小撇步 : 剛開始繪製時，建議使用**TOP平面**開始畫草圖，並按下視角方塊的**上視視角**方便繪圖
-
+小撇步 : 剛開始繪製時，建議使用TOP平面開始畫草圖，並按下視角方塊的上視視角方便繪圖
 <div>
 
     <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
