@@ -22,12 +22,16 @@ permalink: /database_courses/sketch/tool
 <div class="alert alert-warning" role="alert">
 💡
 
-小撇步 : 剛開始繪製時，建議使用TOP平面開始畫草圖，並按下視角方塊的上視視角方便繪圖<div>
+小撇步 : 剛開始繪製時，建議使用TOP平面開始畫草圖，並按下視角方塊的上視視角方便繪圖
+</div>
+
+
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
             <img src="{{ site.baseurl }}/img/courses/onshape/tool/1.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
             <p class="text-muted" style="font-size: 1.2rem;"></p>
         </div>
+
 
 ### 2. 核心繪圖工具
 
