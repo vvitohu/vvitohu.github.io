@@ -25,10 +25,10 @@ permalink: /database_courses/sketch/tool
 小撇步 : 剛開始繪製時，建議使用TOP平面開始畫草圖，並按下視角方塊的上視視角方便繪圖
 <div>
 
-    <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
-                <img src="{{ site.baseurl }}/img/courses/onshape/tool/1.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-                <p class="text-muted" style="font-size: 1.2rem;"></p>
-            </div>
+<div style="text-align: center; margin-left: -5%; margin-right: -5%;">
+            <img src="{{ site.baseurl }}/img/courses/onshape/tool/1.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+            <p class="text-muted" style="font-size: 1.2rem;"></p>
+        </div>
 
 ### 2. 核心繪圖工具
 
@@ -42,7 +42,7 @@ permalink: /database_courses/sketch/tool
 - **三點定弧 (快捷鍵 A)：** 適合畫圓弧狀的線條。
 - **虛線 (快捷鍵 Q)：** 這是**輔助繪圖用的**，它不會影響之後變成立體，但能幫你定位或對齊。
 
-<div style="text-align: center; margin-left: -5%; margin-right: -5%;">
-            <img src="{{ site.baseurl }}/img/courses/onshape/tool/2.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
-            <p class="text-muted" style="font-size: 1.2rem;"></p>
-        </div>
+    <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
+                <img src="{{ site.baseurl }}/img/courses/onshape/tool/2.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
+                <p class="text-muted" style="font-size: 1.2rem;"></p>
+            </div>
