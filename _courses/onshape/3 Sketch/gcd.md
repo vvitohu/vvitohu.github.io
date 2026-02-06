@@ -8,6 +8,8 @@ permalink: /database_courses/sketch/geometric_constraints_and_dimensioning
 
 在 Onshape 或任何參數化建模軟體中，**「草圖 (Sketch)」** 是所有 3D 零件的靈魂。而要畫出精準的草圖，靠的不是手感，而是**幾何約束**與 **尺寸**。
 
+在設計一個零件時，最重要的東西是這個零件要有一個確定的尺寸，才可以在製作時保持零件的精準與精細。
+
 你可以把這兩者想像成你與電腦溝通的方式：**幾何約束規定了形狀的關係，而尺寸規定了形狀的大小**，透過這樣告訴電腦你的圖形要長甚麼樣子**。**
 
 <div style="text-align: center; margin-left: -5%; margin-right: -5%;">
@@ -72,6 +74,7 @@ permalink: /database_courses/sketch/geometric_constraints_and_dimensioning
 Q : 為什麼要先幾何約束再標尺寸？ 
 
 A : 如果先給尺寸再給約束，有時候草圖會因為幾何關係的變動而產生劇烈的扭曲。
+
 </div>
 
 
