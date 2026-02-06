@@ -14,9 +14,7 @@
       url: ""
 - title: "✏️ 草圖（Sketch）"
   subitems:
-    - name: "草圖是什麼？"
-      url: ""
-    - name: "基本繪圖工具"
+    - name: "草圖與基本繪圖工具"
       url: ""
     - name: "📐 幾何約束與尺寸"
       url: ""
