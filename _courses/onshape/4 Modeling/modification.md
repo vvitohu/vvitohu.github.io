@@ -8,7 +8,7 @@ permalink: /database_courses/modeling/modification
 
 在 Onshape 中，「修飾特徵」是指在基礎建模完成後，用來**優化模型**、增加細節的進階工具。這些功能可以讓你的設計看起來更像一個完整的產品。
 
-### 1. 圓角 (Fillet) 與 倒角 (Chamfer)
+### 1. 圓角 與 倒角
 
 這是最常用來增加模型細節的功能，可以讓原本生硬的邊緣變得圓滑或有稜有角。
 
