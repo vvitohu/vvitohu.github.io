@@ -26,12 +26,4 @@
     - name: "基礎特徵操作"
       url: "/database_courses/modeling/basic"
     - name: "修飾特徵"
-      url: ""
-    - name: "多本體建模"
-      url: ""
-- title: "📤 匯出與製作"
-  subitems:
-    - name: "如何產出我的模型"
-      url: ""
-    - name: "匯出設定建議"
-      url: ""
+      url: "/database_courses/modeling/modification"
