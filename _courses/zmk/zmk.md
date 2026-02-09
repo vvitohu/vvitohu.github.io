@@ -135,7 +135,3 @@ ZMK-CONFIG-"BORADNAME"
   使用與Github檔案相同的名稱
   要修改的檔案**
 ```
-
-### “BORADNAME”資料夾
-
-## 分體鍵盤
