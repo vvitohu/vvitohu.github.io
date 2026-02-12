@@ -60,14 +60,14 @@ permalink: /database_courses/matlab
 
 | **範例** | **說明** |
 | --- | --- |
-| `[1 2; 3 4] + 1
-ans =
-     2     3
-     4     5` | 執行[數組加法](https://www.mathworks.com/help/matlab/ref/plus.html)。 |
-| `[1 1; 1 1]*[2 2; 2 2]
-ans =
-     4     4
-     4     4` | 執行[矩陣乘法](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html#btyv9yp-4)。 |
+| `[1 2; 3 4] + 1`
+`ans =`
+    ` 2     3`
+    ` 4     5` | 執行[數組加法](https://www.mathworks.com/help/matlab/ref/plus.html)。 |
+| `[1 1; 1 1]*[2 2; 2 2]`
+`ans =`
+     `4     4`
+     `4     4` | 執行[矩陣乘法](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html#btyv9yp-4)。 |
 | `[1 1; 1 1].*[2 2; 2 2]
 ans =
      2     2
