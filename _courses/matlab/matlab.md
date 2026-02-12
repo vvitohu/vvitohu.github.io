@@ -11,23 +11,6 @@ permalink: /database_courses/matlab
 | [`x = pi`](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html) | 使用等號 (`=`) 建立變數並給其值。左側 (`x`) 是變數名稱，右側 (`pi`) 是其值。 |
 | [`y = sin(-5)`](https://www.mathworks.com/help/matlab/learn_matlab/calling-functions.html) | 使用括號`( )`提供函數輸入。 |
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">範例</th>
-      <th scope="col">說明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">[`x = pi`](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html)</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <p><abbr title="attribute">attr</abbr></p>
-    </tr>
-  </tbody>
-</table>
-
 ## **桌面管理**
 
 | **函数** | **範例** | **說明** |
