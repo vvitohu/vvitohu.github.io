@@ -812,18 +812,3 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-table th, table td {
-  border: 1px solid #dfe2e5; /* 這是 GitHub 標誌性的淡灰色線條 */
-  padding: 6px 13px;
-}
-
-table tr:nth-child(2n) {
-  background-color: #f6f8fa; /* 讓偶數行有淺色背景，更易讀 */
-}
