@@ -58,11 +58,6 @@
 
         /* 響應式修正：當螢幕變小時（手機/平板） */
         @media (max-width: 991px) {
-            .sidebar-left {
-                transform: translateX(-100%); /* 小螢幕預設隱藏 */
-                transition: transform 0.3s ease;
-            }
-
             .main-content {
                 flex: 0 0 100% !important;
                 width: 100% !important;
@@ -74,29 +69,6 @@
             
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                max-height: none !important; /* 允許導覽列隨內容伸長 */
-            }
-            .navbar-collapse {
-                background: #222; /* 確保下拉選單區域也有背景色 */
-                padding: 1rem;    /* 給選單一點留白比較好看 */
-                margin-top: 50px;
-                text-align: center;
-            }
-            .navbar-brand {
-                position: absolute;
-                left: 50%;
-                top: 2px;
-                transform: translateX(-50%);
-                
-            }
-            .navbar-toggler {
-                position: absolute;
-                right: 10%;
-                top: 15px;
-            }
-        }
         .main-content table {
             border-collapse: collapse !important;
             width: 100%;
