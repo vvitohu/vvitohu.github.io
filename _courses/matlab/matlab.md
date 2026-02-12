@@ -36,22 +36,22 @@ permalink: /database_courses/matlab
 | --- | --- |
 | `1:4` | 使用冒號運算子 (`:`)，建立一個從 `1` 到 `4`，間距為 `1` 的向量。 |
 | `1:0.5:4` | 建立一個從 `1` 到 `4`，間距為 `0.5` 的向量。 |
-| [`linspace](https://www.mathworks.com/help/matlab/ref/double.linspace.html)(1,10,5)` | 建立一個包含 `5` 個元素的向量。這些值從 `1` 到 `10` 等間距間隔。 |
+| [`linspace`](https://www.mathworks.com/help/matlab/ref/double.linspace.html)`(1,10,5)` | 建立一個包含 `5` 個元素的向量。這些值從 `1` 到 `10` 等間距間隔。 |
 
 ## **矩陣建立**
 
 | **範例** | **說明** |
 | --- | --- |
-| [`rand](https://www.mathworks.com/help/matlab/ref/double.rand.html)(2)` | 建立一個`2`行`2`列 數值介於`0-1`的隨機方陣。 |
-| [`zeros](https://www.mathworks.com/help/matlab/ref/zeros.html)(2,3)` | 建立一個 `3` 行 `2` 列的零矩陣。 |
-| [`ones](https://www.mathworks.com/help/matlab/ref/ones.html)(2,3)` | 建立一個`3`行`2`列的全一矩陣。 |
+| [`rand`](https://www.mathworks.com/help/matlab/ref/double.rand.html)`(2)` | 建立一個`2`行`2`列 數值介於`0-1`的隨機方陣。 |
+| [`zeros`](https://www.mathworks.com/help/matlab/ref/zeros.html)`(2,3)` | 建立一個 `3` 行 `2` 列的零矩陣。 |
+| [`ones`](https://www.mathworks.com/help/matlab/ref/ones.html)`(2,3)` | 建立一個`3`行`2`列的全一矩陣。 |
 | `eye(3)` | 建立一個`3`行`3`列的單位矩陣 |
 
 ## 數組索引
 
 | **範例** | **說明** |
 | --- | --- |
-| `A([end](https://www.mathworks.com/help/matlab/ref/end.html),2)` | 最後一列第二行的元素。 |
+| `A(`[`end`](https://www.mathworks.com/help/matlab/ref/end.html)`,2)` | 最後一列第二行的元素。 |
 | `A(2,:)` | 第二列所有元素。 |
 | `A(1:3,:)` | 前三列所有元素。 |
 | `A(2) = 11` | 將數組中第二個元素改為11。 |
