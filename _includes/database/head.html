@@ -31,7 +31,7 @@
             top: var(--nav-height);
             height: calc(100vh - var(--nav-height));
             overflow-y: auto;
-            padding: 2rem 1rem;
+            padding: 2rem 0.8rem;
             /* 移除原本的 fixed，改用 border 與內文相連 */
         }
 
@@ -46,7 +46,7 @@
         /* 5. 右側邊欄：現在它會黏著內文的右邊 */
         .sidebar-right {
             flex: 0 1 var(--sidebar-right-width);
-            position: sticky;
+            position: absolute;
             top: var(--nav-height);
             height: calc(100vh - var(--nav-height));
             overflow-y: auto;

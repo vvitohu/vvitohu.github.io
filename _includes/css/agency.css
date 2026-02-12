@@ -776,7 +776,6 @@ body {
 @media (min-width: 1200px) {
     .sidebar-left {
         transform: translateX(0); /* 確保它是顯示的 */
-        width: 260px; /* 你可以在這裡調整側邊欄的寬度 */
         border-right: 1px solid #eee;
     }
     
