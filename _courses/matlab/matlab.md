@@ -13,7 +13,6 @@ ___
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| :--- | :--- |
 | [`x = pi`](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html) | 使⽤等號 ( = ) 建⽴變數並給其值。左側 ( x ) 是變數名稱，右側 ( pi ) 是其值。 |
 | [`y = sin(-5)`](https://www.mathworks.com/help/matlab/learn_matlab/calling-functions.html) | 使⽤括號 ( ) 提供函數輸⼊。 |
 
