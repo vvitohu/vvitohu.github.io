@@ -71,7 +71,7 @@ permalink: /database_courses/sketch/geometric_constraints_and_dimensioning
 💡
 
 Q : 為什麼要先幾何約束再標尺寸？ 
-
+<br>
 A : 如果先給尺寸再給約束，有時候草圖會因為幾何關係的變動而產生劇烈的扭曲。
 
 </div>
