@@ -26,7 +26,7 @@
 
         /* 3. 左側邊欄：現在它會黏著內文的左邊 */
         .sidebar-left {
-            flex: 0 0 var(--sidebar-left-width);
+            flex: 1;
             position: sticky; /* 改用 sticky，它會隨容器滾動但卡在頂部 */
             top: var(--nav-height);
             height: calc(100vh - var(--nav-height));
@@ -46,7 +46,7 @@
 
         /* 5. 右側邊欄：現在它會黏著內文的右邊 */
         .sidebar-right {
-            flex: 0 0 var(--sidebar-right-width);
+            flex: 1;
             position: sticky;
             top: var(--nav-height);
             height: calc(100vh - var(--nav-height));
