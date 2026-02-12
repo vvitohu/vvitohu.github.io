@@ -13,7 +13,7 @@
         body {  background: #fff !important; }
         
         /* 上方導覽列 */
-        .navbar { position: fixed; top: 0; width: 100%; z-index: 1030; max-height: 80px; background: #222 !important; }
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1030; max-height: 80px; background: #222 !important; z-index: 1050 !important; /* 提高層級，確保壓在所有內容上方 */}
         
         /* 2. 建立一個包覆容器，讓所有內容垂直並排並置中 */
         .main-wrapper {
@@ -57,7 +57,7 @@
         }
 
         /* 響應式修正：當螢幕變小時（手機/平板） */
-        @media (max-width: 992px) {
+        @media (max-width: 991px) {
             .sidebar-left {
                 transform: translateX(-100%); /* 小螢幕預設隱藏 */
                 transition: transform 0.3s ease;
@@ -70,6 +70,14 @@
             padding: 20px 15px !important; /* 縮小內邊距，避免文字太擠 */
             margin-left: 0 !important;
             margin-right: 0 !important;
+            }
+            .navbar {
+                max-height: none !important; /* 允許導覽列隨內容伸長 */
+            }
+            .navbar-collapse {
+                background: #222; /* 確保下拉選單區域也有背景色 */
+                padding: 1rem;    /* 給選單一點留白比較好看 */
+                margin-top: 10px;
             }
         }
 
