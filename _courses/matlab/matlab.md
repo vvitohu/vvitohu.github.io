@@ -6,133 +6,118 @@ permalink: /database_courses/matlab
 ---
 # MATLAB
 
-|     |     |
-| --- | --- |
-| 建⽴時間 | 2026年2⽉12⽇ 上午11 32 |
-| 標籤  |     |
-
-基本語法
+### 基本語法
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| [x = pi](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html) | 使⽤等號 ( = ) 建⽴變數並給其值。左側 ( x ) 是變數名稱，右側 ( pi ) 是其值。 |
-| [y = sin(-5)](https://www.mathworks.com/help/matlab/learn_matlab/calling-functions.html) | 使⽤括號 ( ) 提供函數輸⼊。 |
+| [`x = pi`](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html) | 使⽤等號 ( = ) 建⽴變數並給其值。左側 ( x ) 是變數名稱，右側 ( pi ) 是其值。 |
+| [`y = sin(-5)`](https://www.mathworks.com/help/matlab/learn_matlab/calling-functions.html) | 使⽤括號 ( ) 提供函數輸⼊。 |
 
-桌⾯管理
+### 桌⾯管理
 
 |     |     |     |
 | --- | --- | --- |
 | **函数** | **範例** | **說明** |
-| [save](https://www.mathworks.com/help/matlab/ref/save.html) | save data.mat | 將⽬前⼯作區保存到MAT⽂件中。 |
-| [load](https://www.mathworks.com/help/matlab/ref/load.html) | load data.mat | 將MAT⽂件中的變數載⼊到⼯作區。 |
-| [clear](https://www.mathworks.com/help/matlab/ref/clear.html) | clear | 清除⼯作區的所有變數。 |
-| [clc](https://www.mathworks.com/help/matlab/ref/clc.html) | clc | 清除命令⾏窗⼝中的所有⽂本。 |
-| [format](https://www.mathworks.com/help/matlab/ref/format.html) | format long | 更改命令⾏窗⼝中數值輸出的顯⽰⽅式。 |
+| [`save`](https://www.mathworks.com/help/matlab/ref/save.html) | `save data.mat` | 將⽬前⼯作區保存到MAT⽂件中。 |
+| [`load`](https://www.mathworks.com/help/matlab/ref/load.html) | `load data.mat` | 將MAT⽂件中的變數載⼊到⼯作區。 |
+| [`clear`](https://www.mathworks.com/help/matlab/ref/clear.html) | `clear` | 清除⼯作區的所有變數。 |
+| [`clc`](https://www.mathworks.com/help/matlab/ref/clc.html) | `clc` | 清除命令⾏窗⼝中的所有⽂本。 |
+| [`format`](https://www.mathworks.com/help/matlab/ref/format.html) | `format long` | 更改命令⾏窗⼝中數值輸出的顯⽰⽅式。 |
 
-數組類別
-
-|     |     |
-| --- | --- |
-| **範例** | **說明** |
-| 4   | 標量  |
-| \[3 5\] | 列向量 |
-| \[1;3\] | ⾏向量 |
-| \[3 4 5; 6 7 8\] | 矩陣  |
-
-等間距向量
+### 數組類別
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| 1:4 | 使⽤冒號運算⼦ ( : )，建⽴⼀個從 1 到 4 ，間距為 1 的向量。 |
+| `4`   | 標量  |
+| `[3 5]` | 列向量 |
+| `[1;3]` | ⾏向量 |
+| `[3 4 5; 6 7 8]` | 矩陣  |
+
+### 等間距向量
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| 1:0.5:4 | 建⽴⼀個從 1 到 4 ，間距為 0.5 的向量。 |
-| [linspace](https://www.mathworks.com/help/matlab/ref/double.linspace.html) (1,10,5) | 建⽴⼀個包含 5 個元素的向量。這些值從 1 到 10 等間距間隔。 |
+| `1:4` | 使⽤冒號運算⼦ (`:`)，建⽴⼀個從`1`到`4`，間距為`1`的向量。 |
+| `1:0.5:4` | 建⽴⼀個從`1`到`4`，間距為`0.5`的向量。 |
+| [`linspace`](https://www.mathworks.com/help/matlab/ref/double.linspace.html)`(1,10,5)` | 建⽴⼀個包含`5`個元素的向量。這些值從`1`到`10`等間距間隔。 |
 
-矩陣建⽴
-
-|     |     |
-| --- | --- |
-| **範例** | **說明** |
-| [rand](https://www.mathworks.com/help/matlab/ref/double.rand.html) (2) | 建⽴⼀個 2 ⾏ 2 列 數值介於 0-1 的隨機⽅陣。 |
-| [zeros](https://www.mathworks.com/help/matlab/ref/zeros.html) (2,3) | 建⽴⼀個 3 ⾏ 2 列的零矩陣。 |
-| [ones](https://www.mathworks.com/help/matlab/ref/ones.html) (2,3) | 建⽴⼀個 3 ⾏ 2 列的全⼀矩陣。 |
-| eye(3) | 建⽴⼀個 3 ⾏ 3 列的單位矩陣 |
-
-數組索引
+### 矩陣建⽴
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| A( [end](https://www.mathworks.com/help/matlab/ref/end.html) ,2) | 最後⼀列第⼆⾏的元素。 |
-| A(2,:) | 第⼆列所有元素。 |
-| A(1:3,:) | 前三列所有元素。 |
-| A(2) = 11 | 將數組中第⼆個元素改為11。 |
+| [`rand`](https://www.mathworks.com/help/matlab/ref/double.rand.html)`(2)` | 建⽴⼀個 `2` ⾏ `2` 列 數值介於 `0-1` 的隨機⽅陣。 |
+| [`zeros`](https://www.mathworks.com/help/matlab/ref/zeros.html)`(2,3)` | 建⽴⼀個 `3` ⾏ `2` 列的零矩陣。 |
+| [`ones`](https://www.mathworks.com/help/matlab/ref/ones.html)`(2,3)` | 建⽴⼀個 `3` ⾏ `2` 列的全⼀矩陣。 |
+| `eye``(3)` | 建⽴⼀個 `3` ⾏ `3` 列的單位矩陣 |
 
-數組運算
-
-|     |     |
-| --- | --- |
-| **範例** | **說明** |
-| \[1 2; 3 4\] + 1 |     |
-| ans =<br><br>2 3 | 執⾏[數組加法](https://www.mathworks.com/help/matlab/ref/plus.html)。 |
-| 4 5 |     |
-| \[1 1; 1 1\]\*\[2 2; 2 2\] |     |
-| ans =<br><br>4 4 | 執⾏[矩陣乘法](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html#btyv9yp-4)。 |
-| 4 4 |     |
-| \[1 1; 1 1\].\*\[2 2; 2 2\] |     |
-| ans =<br><br>2 2 | 執⾏[按元素乘法](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html#bu90xxy-1)。 |
-| 2 2 |     |
-
-多個輸出
-
-⽂檔繪圖
+### 數組索引
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| \[xrow,xcol\] = [size](https://www.mathworks.com/help/matlab/ref/double.size.html) (x) | 將 x 中的⾏數和列數儲存為兩個不同變數。 |
-| \[xMax,idx\] = [max](https://www.mathworks.com/help/matlab/ref/double.max.html) (x) | 計算 x 的最⼤值( xMax )及其對應的索引值( idx )。 |
+| `A(`[`end`](https://www.mathworks.com/help/matlab/ref/end.html)`,2)` | 最後⼀列第⼆⾏的元素。 |
+| `A(2,: )` | 第⼆列所有元素。 |
+| `A(1 : 3,: )` | 前三列所有元素。 |
+| `A(2) = 11` | 將數組中第⼆個元素改為11。 |
+
+### 數組運算
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| [doc](https://www.mathworks.com/help/matlab/ref/doc.html) randi | 開啟 randi 函數的說明⽂檔⾴。 |
+| `[1 2; 3 4] + 1` <br>`ans =2 3`<br>`4 5`| 執⾏[數組加法](https://www.mathworks.com/help/matlab/ref/plus.html)。 |
+| `[1 1; 1 1]*[2 2; 2 2]`<br>`ans =4 4`<br>`4 4` | 執⾏[矩陣乘法](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html#btyv9yp-4)。 |
+| `[1 1; 1 1].*[2 2; 2 2]`<br>`ans =2 2`<br>`2 2` | 執⾏[按元素乘法](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html#bu90xxy-1)。 |
+
+### 多個輸出
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| [plot](https://www.mathworks.com/help/matlab/ref/plot.html) (x,y,"ro-- ",LineWidth=5) | 绘制⼀条红⾊ ( r ) 虚线 ( -- )并使⽤圆形 ( o ) 标记，线宽很⼤。 |
-| [hold](https://www.mathworks.com/help/matlab/ref/hold.html) on<br><br>…<br><br>hold off | 在此區間內的所有動作都會再同⼀張圖上進⾏。 |
-| [title](https://www.mathworks.com/help/matlab/ref/title.html) ("My Title") | 在圖上添加標題。 |
-| [xlabel](https://www.mathworks.com/help/matlab/ref/xlabel.html) ("x") [y label](https://www.mathworks.com/help/matlab/ref/ylabel.html) ("y") | 在坐標軸上添加標籤。 |
-| [legend](https://www.mathworks.com/help/matlab/ref/legend.html) ("a","b","c") | 在圖上添加圖例。 |
+| `[xrow,xcol] = `[`size`](https://www.mathworks.com/help/matlab/ref/double.size.html)`(x)` | 將 `x` 中的⾏數和列數儲存為兩個不同變數。 |
+| `[xMax,idx] = `[`max`](https://www.mathworks.com/help/matlab/ref/double.max.html)`(x)` | 計算 `x` 的最⼤值(`xMax`)及其對應的索引值(`idx`)。 |
 
-表格
+### ⽂檔
+|     |     |
+| --- | --- |
+| **範例** | **說明** |
+| [`doc`](https://www.mathworks.com/help/matlab/ref/doc.html)`randi` | 開啟 `randi` 函數的說明⽂檔⾴。 |
+
+### 繪圖
+|     |     |
+| --- | --- |
+| **範例** | **說明** |
+| [`plot`](https://www.mathworks.com/help/matlab/ref/plot.html)`(x,y,"ro-- ",LineWidth=5)`| 绘制⼀条红⾊ (`r`) 虚线 (`--`)并使⽤圆形 (`o`) 标记，线宽很⼤。 |
+| [`hold`](https://www.mathworks.com/help/matlab/ref/hold.html)` on`<br>`…`<br>`hold off` | 在此區間內的所有動作都會再同⼀張圖上進⾏。 |
+| [`title`](https://www.mathworks.com/help/matlab/ref/title.html) ("My Title") | 在圖上添加標題。 |
+| [`xlabel`](https://www.mathworks.com/help/matlab/ref/xlabel.html)`("x")`<br>[`ylabel`](https://www.mathworks.com/help/matlab/ref/ylabel.html)`("y")` | 在坐標軸上添加標籤。 |
+| [`legend`](https://www.mathworks.com/help/matlab/ref/legend.html)`("a","b","c")` | 在圖上添加圖例。 |
+
+### 表格
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| [data.HeightYards](https://www.mathworks.com/help/matlab/matlab_prog/access-data-in-a-table.html) | 從表格 data 中提取變數 HeightYards 。 |
-| data.HeightMeters = data.HeightYards\*0.9144 | 從表格( data )中的數據( HeightYards )去定義另⼀個數據( HeightMeters )。 |
+| [`data.HeightYards`](https://www.mathworks.com/help/matlab/matlab_prog/access-data-in-a-table.html) | 從表格 `data` 中提取變數 `HeightYards` 。 |
+| `data.HeightMeters = data.HeightYards * 0.9144` | 從表格(`data`)中的數據(`HeightYards`)去定義另⼀個數據(`HeightMeters`)。 |
 
-邏輯索引
-
-|     |     |
-| --- | --- |
-| **範例** | **說明** |
-| [\[5 10 15\] > 12](https://www.mathworks.com/help/matlab/matlab_prog/array-comparison-with-relational-operators.html) | 將向量元素去和 12 進⾏⽐較。 |
-| [v1(v1 > 6)](https://www.mathworks.com/help/matlab/matlab_prog/find-array-elements-that-meet-a-condition.html) | 提取 v1 中⼤於 6 的所有元素。 |
-| x(x==999) = 1 | 將 x 中所有等於 999 的值，替換為值 1 。 |
-
-編程
+### 邏輯索引
 
 |     |     |
 | --- | --- |
 | **範例** | **說明** |
-| [if](https://www.mathworks.com/help/matlab/ref/if.html) x > 0.5 y = 3<br><br>else y = 4 end | 如果 x ⼤於 0.5 ，則將 y 設為 3 。否則，將 y 設定為 4 。 |
-| [for](https://www.mathworks.com/help/matlab/ref/for.html) c = 1:3 disp(c)<br><br>end | 迴圈計數器的值 ( c )依序為 1 3 1 到 3 間隔 1 ）。迴圈顯⽰ c 的每個值。 |
+| [`[5 10 15] > 12`](https://www.mathworks.com/help/matlab/matlab_prog/array-comparison-with-relational-operators.html) | 將向量元素去和 `12` 進⾏⽐較。 |
+| [`v1(v1 > 6)`](https://www.mathworks.com/help/matlab/matlab_prog/find-array-elements-that-meet-a-condition.html) | 提取 `v1` 中⼤於 `6` 的所有元素。 |
+| `x(x==999) = 1` | 將 `x` 中所有等於 `999` 的值，替換為值 `1` 。 |
+
+### 編程
+
+|     |     |
+| --- | --- |
+| **範例** | **說明** |
+| [`if`](https://www.mathworks.com/help/matlab/ref/if.html)` x > 0.5` <br>`y = 3`<br>`else` <br>`y = 4` <br>`end` | 如果 `x` ⼤於 `0.5` ，則將 `y` 設為 `3` 。<br>否則，將 `y` 設定為 `4` 。 |
+| [`for`](https://www.mathworks.com/help/matlab/ref/for.html)` c = 1:3` <br>`disp(c)`<br>end | 迴圈計數器的值 (`c`)依序為 `1:3`  ( `1`到`3` 間隔`1`)。<br>迴圈顯⽰ `c` 的每個值。 |
