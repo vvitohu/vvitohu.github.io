@@ -6,6 +6,8 @@ permalink: /database_courses/matlab
 ---
 # MATLAB
 
+___
+
 ### 基本語法
 
 |     |     |
