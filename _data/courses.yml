@@ -3,11 +3,11 @@
   permalink: /database_courses/onshape-basic
   img: /img/courses/onshape/onshape.jpg
 - title: "ZMK 設定教學"
-  content: 從基礎介面開始，學習 3D 建模的核心邏輯
+  content: 從零掌握韌體編寫，打造專屬無線客製化鍵盤軟體
   permalink: /database_courses/zmk
   img: /img/courses/zmk/zmk.png
 - title: "MATLAB"
-  content: 工程與科學運算設計程式平台
+  content: 工程與科學運算設計程式平台，語法筆記整理
   permalink: /database_courses/matlab
   img: /img/courses/matlab/MATLAB.png
 - title: "Ergogen 鍵盤設計"
