@@ -73,11 +73,24 @@
             }
         }
 
+        .main-content table {
+            border-collapse: collapse !important;
+            width: 100%;
+        }
+
+        .main-content table,
+        .main-content th,
+        .main-content td {
+            border: 1px solid #000 !important;
+        }
+
+        .main-content th,
+        .main-content td {
+            padding: 8px;
+        }
     </style>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
