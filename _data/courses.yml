@@ -6,7 +6,11 @@
   content: 從基礎介面開始，學習 3D 建模的核心邏輯
   permalink: /database_courses/zmk
   img: /img/courses/zmk/zmk.png
-- title: "草圖與基本繪圖工具"
-  content: 從基礎介面開始，學習 3D 建模的核心邏輯
-  permalink: /database_courses/modeling/basic
-  img: /img/courses/onshape/onshape.jpg
+- title: "MATLAB"
+  content: 工程與科學運算設計程式平台
+  permalink: /database_courses/matlab
+  img: /img/courses/matlab/MATLAB.jpg
+- title: "Ergogen 鍵盤設計"
+  content: 開源鍵盤參數化繪圖工具
+  permalink: /database_courses/ergogen
+  img: /img/courses/ergogen/ergogen.png
