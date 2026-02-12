@@ -8,7 +8,7 @@
             --nav-height: 100px;
             --sidebar-left-width: 220px;
             --sidebar-right-width: 220px;
-            --content-max-width: 850px;
+            --content-max-width: 800px;
         }
         body {  background: #fff !important; }
         
@@ -26,7 +26,7 @@
 
         /* 3. 左側邊欄：現在它會黏著內文的左邊 */
         .sidebar-left {
-            flex: 1;
+            flex: 0 0 var(--sidebar-left-width);
             position: sticky; /* 改用 sticky，它會隨容器滾動但卡在頂部 */
             top: var(--nav-height);
             height: calc(100vh - var(--nav-height));
@@ -38,7 +38,6 @@
         /* 4. 中間內文：控制整體的寬度主軸 */
         .main-content {
             flex: 0 0 var(--content-max-width);
-            width: var(--content-max-width);
             padding: 2rem 3rem;
             min-height: 100vh;
 
@@ -46,7 +45,7 @@
 
         /* 5. 右側邊欄：現在它會黏著內文的右邊 */
         .sidebar-right {
-            flex: 1;
+            flex: 0 0 var(--sidebar-right-width);
             position: sticky;
             top: var(--nav-height);
             height: calc(100vh - var(--nav-height));
