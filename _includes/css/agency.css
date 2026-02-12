@@ -778,7 +778,7 @@ body {
     
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
+@media (max-width: 900px) and (min-width: 768px) {
     .sidebar-right {
         display: none; /* 隱藏右側側邊欄 */
     }
@@ -792,7 +792,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .sidebar-left {
         position: fixed;
         width: 80%; /* 手機版側邊欄佔螢幕寬度的比例 */
