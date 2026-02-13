@@ -836,6 +836,11 @@ body {
         margin-top: 50px;
         text-align: center;
     }
+    .navbar-header-main {
+        position: relative;
+        height: 60px; /* 這裡設定你想要的導覽列高度 */
+        width: 100%;
+    }
     .navbar-brand-d {
         position: absolute;
         left: 50%;
