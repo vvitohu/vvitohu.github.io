@@ -846,12 +846,12 @@ body {
     .navbar-right-d {
         position: absolute;
         right: 10%;
-        top: 15px;
+        top: 20px;
     }
     .navbar-left-d {
         position: absolute;
         left: 10%;
-        top: 20px;
+        top: 15px;
     }
 }
 
