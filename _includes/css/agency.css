@@ -816,25 +816,25 @@ body {
     .navbar {
         max-height: none !important; /* 允許導覽列隨內容伸長 */
     }
-    .navbar-collapse {
+    .navbar-collapse-d {
         background: #222; /* 確保下拉選單區域也有背景色 */
         padding: 1rem;    /* 給選單一點留白比較好看 */
         margin-top: 50px;
         text-align: center;
     }
-    .navbar-top {
+    .navbar-brand-d {
         position: absolute;
         left: 50%;
         top: 2px;
         transform: translateX(-50%);
         
     }
-    .navbar-right {
+    .navbar-right-d {
         position: absolute;
         right: 10%;
         top: 15px;
     }
-    .navbar-left {
+    .navbar-left-d {
         position: absolute;
         left: 10%;
         top: 15px;
