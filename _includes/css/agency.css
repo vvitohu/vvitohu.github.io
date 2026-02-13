@@ -813,7 +813,7 @@ body {
         transform: translateX(0);
     }
 
-    .navbar {
+    .navbar-d {
         max-height: none !important; /* 允許導覽列隨內容伸長 */
     }
     .navbar-collapse-d {
