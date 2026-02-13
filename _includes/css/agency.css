@@ -822,7 +822,7 @@ body {
         margin-top: 50px;
         text-align: center;
     }
-    .navbar-brand {
+    .navbar-top {
         position: absolute;
         left: 50%;
         top: 2px;
