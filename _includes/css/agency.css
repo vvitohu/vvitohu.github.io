@@ -813,6 +813,14 @@ body {
         transform: translateX(0);
     }
 
+    .text-menu{
+        color: #e4e2e3;
+    }
+
+    .text-menu-tit{
+        color: #dedede;
+    }
+
     .navbar {
         max-height: none !important; /* 允許導覽列隨內容伸長 */
     }
@@ -839,6 +847,14 @@ body {
         left: 10%;
         top: 15px;
     }
+}
+
+.text-menu{
+    color: #{{ site.data.template.color.muted }};
+}
+
+.text-menu-tit{
+    color: #222;
 }
 
 html {

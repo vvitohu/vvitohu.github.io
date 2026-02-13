@@ -1,18 +1,18 @@
 <aside class="sidebar-left shadow-sm" id="bs-navbar-collapse-3">
-        <h6 class="text-uppercase text-muted fw-bold">課程章節</h6>
+        <h5 class="text-uppercase text-menu fw-bold">課程章節</h5>
         <ul class="nav flex-column">
             {% assign menu = site.data[page.type] %}
             
             {% for item in menu %}
             <li class="nav-item">
-                <div class="nav-link fw-bold text-dark mt-2">{{ item.title }}</div>
+                <div class="nav-link fw-bold text-menu-tit mt-2">{{ item.title }}</div>
                 
                 {% if item.subitems %}
                 <ul class="nav flex-column ms-3">
                     {% for sub in item.subitems %}
                     <li class="nav-item">
                         {% if sub.url %}
-                        <a class="nav-link py-1 {% if sub.url == page.url %}fw-bold text-primary{% else %}text-muted{% endif %}" 
+                        <a class="nav-link py-1 {% if sub.url == page.url %}fw-bold text-primary{% else %}text-menu{% endif %}" 
                             href="{{ sub.url | relative_url }}">
                             {{ sub.name }}
                         </a>
@@ -24,7 +24,7 @@
                         <ul class="nav flex-column ms-3 border-start">
                             {% for child in sub.children %}
                             <li class="nav-item">
-                                <a class="nav-link py-0 my-1 smaller {% if child.url == page.url %}fw-bold text-primary{% else %}text-muted{% endif %}" 
+                                <a class="nav-link py-0 my-1 smaller {% if child.url == page.url %}fw-bold text-primary{% else %}text-menu{% endif %}" 
                                     href="{{ child.url | relative_url }}">
                                     {{ child.name }}
                                 </a>
