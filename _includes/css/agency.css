@@ -838,7 +838,7 @@ body {
     }
     .navbar-header-main {
         position: relative;
-        height: 60px; /* 這裡設定你想要的導覽列高度 */
+        height: 40px; /* 這裡設定你想要的導覽列高度 */
         width: 100%;
     }
     .navbar-brand-d {
@@ -846,7 +846,7 @@ body {
         left: 50%;
         top: 50%;
         transform: translateX(-50%);
-        transform: translateY(-50%);
+        
     }
     .navbar-right-d {
         position: absolute;
