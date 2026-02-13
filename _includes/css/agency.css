@@ -827,9 +827,14 @@ body {
         transform: translateX(-50%);
         
     }
-    .navbar-toggler {
+    .navbar-right {
         position: absolute;
         right: 10%;
+        top: 15px;
+    }
+    .navbar-left {
+        position: absolute;
+        left: 10%;
         top: 15px;
     }
 }
