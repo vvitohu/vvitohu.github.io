@@ -846,13 +846,13 @@ body {
     .navbar-right-d {
         position: absolute;
         right: 10%;
-        top: 20px;
+        top: 30px;
         transform: translateY(-50%);
     }
     .navbar-left-d {
         position: absolute;
         left: 10%;
-        top: 20px;
+        top: 30px;
         transform: translateY(-50%);
     }
 }
