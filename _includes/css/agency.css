@@ -867,6 +867,11 @@ h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 90px; 
 }
 
+/* 1. 移除預設的黑影漸層背景 */
+.carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+    width: 10%; /* 縮窄感應區 */
+}
 
 /* 2. 自定義細長箭頭 */
 .chevron-left::before, .chevron-right::before {
