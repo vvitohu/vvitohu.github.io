@@ -835,25 +835,24 @@ body {
         padding: 1rem;    /* 給選單一點留白比較好看 */
         margin-top: 50px;
         text-align: center;
+        width: 100%;
+    }
+    .navbar-right-d .navbar-left-d{
+        position: absolute;
+        top: 30px;
+        transform: translateY(-50%);
     }
     .navbar-brand-d {
         position: absolute;
         left: 50%;
         top: 2px;
         transform: translateX(-50%);
-        
     }
     .navbar-right-d {
-        position: absolute;
         right: 10%;
-        top: 30px;
-        transform: translateY(-50%);
     }
     .navbar-left-d {
-        position: absolute;
         left: 10%;
-        top: 30px;
-        transform: translateY(-50%);
     }
 }
 
