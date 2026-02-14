@@ -839,9 +839,9 @@ body {
     .navbar-brand-d {
         position: absolute;
         left: 50%;
-        top: 30px;
+        top: 2px;
         transform: translateX(-50%);
-        transform: translateY(-50%);
+        
     }
     .navbar-right-d {
         position: absolute;
