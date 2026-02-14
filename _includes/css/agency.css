@@ -837,11 +837,6 @@ body {
         text-align: center;
         width: 100%;
     }
-    .navbar-right-d .navbar-left-d{
-        position: absolute;
-        top: 30px;
-        transform: translateY(-50%);
-    }
     .navbar-brand-d {
         position: absolute;
         left: 50%;
@@ -849,9 +844,15 @@ body {
         transform: translateX(-50%);
     }
     .navbar-right-d {
+        position: absolute;
+        top: 30px;
+        transform: translateY(-50%);
         right: 10%;
     }
     .navbar-left-d {
+        position: absolute;
+        top: 30px;
+        transform: translateY(-50%);
         left: 10%;
     }
 }
