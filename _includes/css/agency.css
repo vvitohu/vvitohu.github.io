@@ -834,8 +834,7 @@ body {
         background: #222; /* 確保下拉選單區域也有背景色 */
         padding: 1rem;    /* 給選單一點留白比較好看 */
         margin-top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center;
     }
     .navbar-brand-d {
         position: absolute;
