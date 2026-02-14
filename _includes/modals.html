@@ -17,22 +17,24 @@
                             <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
                                     <div class="item active">
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="...">
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive center-block" alt="...">
                                     </div>
                                     <div class="item">
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="...">
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive center-block" alt="...">
                                     </div>
                                     <div class="item">
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="...">
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive center-block" alt="...">
                                     </div>
                                 </div>
 
-                                <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev" style="background-image: none; color: #000;">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next" style="background-image: none; color: #000;">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         
                             <p>{{ post.description }}</p>
