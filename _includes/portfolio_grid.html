@@ -8,8 +8,8 @@
                 </div>
             </div>
             <div class="row">
-            {% assign pinning_posts = site.posts | sort: "order" %}
-            {% assign normal_posts = site.posts | where_exp: "item", "item.order != true" | sort: "date" | reverse %}
+            {% assign pinning_posts = site.posts | where_exp: "item", "item.order != 0" | sort: "order" %}
+            {% assign normal_posts = site.posts | where_exp: "item", "item.order == 0" | sort: "date" | reverse %}
             {% assign final_posts = pinning_posts | concat: normal_posts %}
             {% for post in final_posts %}
                 <div class="col-md-4 col-sm-6 portfolio-item">
