@@ -16,9 +16,9 @@
                             <hr class="star-primary">
                             <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="1"></li>
-                                    <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="2"></li>
+                                    {% for image in post.img %}
+                                        <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                                    {% endfor %}
                                 </ol>
 
                                 <div class="carousel-inner">
