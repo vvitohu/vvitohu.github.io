@@ -910,7 +910,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1px; /* 修正 Bootstrap 預設位移 */
 }
 /* 2. 使用偽元素畫出「填色方框」 */
-.carousel-left::before {
+.carousel-control::before {
     /* 這裡設定你想要的方框大小 */
     width: 40px;
     height: 50px;
@@ -926,15 +926,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     right: 50%;
     transform: translate(35%, -50%);
-    
-    /* 這裡設定你想要的方框大小 */
-    width: 40px;
-    height: 50px;
-    
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑底 */
-    border-radius: 8px;
-    transition: all 0.3s;
-    z-index: -1; /* 確保在箭頭下方 */
 }
 .carousel-right::before {
     content: '';
@@ -942,15 +933,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     left: 50%;
     transform: translate(-35%, -50%);
-    
-    /* 這裡設定你想要的方框大小 */
-    width: 40px;
-    height: 50px;
-    
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑底 */
-    border-radius: 8px;
-    transition: all 0.3s;
-    z-index: -1; /* 確保在箭頭下方 */
 }
 /* 3. 滑鼠移入感應區時，方框變色 */
 .carousel-control:hover::before {
