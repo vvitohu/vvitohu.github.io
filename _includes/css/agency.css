@@ -926,10 +926,16 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1; /* 確保在箭頭下方 */
 }
 .carousel-control.left .chevron-left {
-    transform: translate(35%, -50%); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%); 
 }
 .carousel-control.right .chevron-right {
-    transform: translate(-35%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%);
 }
 /* 3. 滑鼠移入感應區時，方框變色 */
 .carousel-control:hover::before {
