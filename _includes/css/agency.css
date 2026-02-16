@@ -911,29 +911,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#background-carousel {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* 確保它在所有內容下方 */
-    left: 0;
-    top: 0;
+header {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* 讓 Header 佔滿螢幕高度 */
+    background: none !important; /* 取代原本模板的靜態背景圖 */
 }
 
-.carousel-inner, .item, .fill {
-    height: 100%;
+/* 設定輪播容器填滿整個 Header */
+#header-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 1; /* 放在底層 */
+}
+
+#header-carousel .carousel-inner, 
+#header-carousel .item {
+    height: 100%;
+}
+
+#header-carousel .item {
+    background-size: cover;
     background-position: center;
-    background-size: cover; /* 確保圖片填滿螢幕 */
     background-repeat: no-repeat;
 }
 
-/* 確保內容區塊背景透明，否則會遮住輪播圖 */
-.bg-light-gray {
-    background-color: transparent !important;
+/* 確保文字內容在輪播圖之上 */
+header .container {
+    position: relative;
+    z-index: 2; /* 數字比輪播圖大，文字就會浮上來 */
 }
 
-.content-section {
-    padding: 100px 0;
-    color: white; /* 如果背景變深，建議文字改為白色 */
+/* (選填) 增加淡入淡出效果，比左右滑動更高級 */
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
 }
