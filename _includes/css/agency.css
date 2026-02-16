@@ -279,7 +279,6 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    /*background-image: url('{{ site.baseurl }}/img/header-bg.jpg');背景圖*/
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -946,7 +945,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
     position: relative;
     overflow: hidden;
-    background: none !important; /* 取代原本模板的靜態背景圖 */
+    background: #333; /* 取代原本模板的靜態背景圖 */
 }
 
 /* 設定輪播容器填滿整個 Header */
