@@ -8,7 +8,6 @@
             </div>
             <div class="row">
                 {% for member in site.people %}
-                <div class="col-lg-10 col-lg-offset-1"> 
                     <div class="col-sm-5">
                         <div class="team-member">
                             <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
@@ -24,15 +23,13 @@
                                 {% endfor %}
                             </ul>
                         </div>
-                    </div>
-                    
-                </div>
+                    </div>      
                 {% endfor %}
                 <div class="col-sm-8" style="padding-top: 20px;">
-                        <p style="font-size: 16px; line-height: 1.6;">
-                            {{ member.name }} 
-                        </p>
-                    </div>
+                    <p style="font-size: 16px; line-height: 1.6;">
+                        {{ member.name }} 
+                    </p>
+                </div>
             </div>
         </div>
     </section>
