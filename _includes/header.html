@@ -36,12 +36,23 @@
 
     <!-- Header -->
     <header>
-        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
             <div class="carousel-inner">
                 <div class="item active" style="background-image:url('img/header-bg.jpg');"></div>
                 <div class="item" style="background-image:url('img/header-bg.jpg');"></div>
                 <div class="item" style="background-image:url('img/header-bg.jpg');"></div>
             </div>
+            <a class="left carousel-control" href="#header-carousel" data-slide="prev">
+                <span class="chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#header-carousel" data-slide="next">
+                <span class="chevron-right"></span>
+            </a>
         </div>
 
         <div class="container">
