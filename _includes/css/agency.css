@@ -953,3 +953,39 @@ header .container {
 .carousel-fade .carousel-inner .active {
     opacity: 1;
 }
+
+/* 2. 自定義細長箭頭 */
+.chevron-left-h::before, .chevron-right-h::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 1px solid #333; /* 箭頭線條粗細與顏色 */
+    border-bottom: 1px solid #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.chevron-left-h::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.chevron-right-h::before {
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* 3. 修改底部指示器 (從圓點變成細橫線) */
+.carousel-indicators-h li {
+    width: 30px;
+    height: 3px;
+    background-color: rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 0;
+}
+.carousel-indicators-h .active {
+    width: 40px;
+    height: 3px;
+    background-color: #333; /* 啟動時的顏色 */
+    margin: 1px; /* 修正 Bootstrap 預設位移 */
+}
