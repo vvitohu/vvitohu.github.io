@@ -938,7 +938,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* 3. 滑鼠移入感應區時，方框變色 */
 .carousel-control:hover::before {
-    background-color: #fed136; /* 變回主題黃色 */
+    background-color: #DEDEDE; /* 變回主題黃色 */
 }
 
 
