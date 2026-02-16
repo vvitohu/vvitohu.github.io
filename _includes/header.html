@@ -38,14 +38,17 @@
     <header>
         <div id="header-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
             <ol class="carousel-indicators">
-                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#header-carousel" data-slide-to="1"></li>
-                <li data-target="#header-carousel" data-slide-to="2"></li>
+                {% for item in site.header_img %}
+                    <li data-target="#header-carousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                {% endfor %}
             </ol>
             <div class="carousel-inner">
-                <div class="item active" style="background-image:url('img/header-bg.jpg');"></div>
-                <div class="item" style="background-image:url('img/header-bg.jpg');"></div>
-                <div class="item" style="background-image:url('img/header-bg.jpg');"></div>
+                {% for image in site.header_img %}
+                <div class="item {% if forloop.first %}active{% endif %}">
+                    <img src="img/header/{{ image }}" class="img-responsive center-block">
+                </div>
+                {% endfor %}
+                
             </div>
             <a class="left carousel-control carousel-left" href="#header-carousel" data-slide="prev">
                 <span class="chevron-left"></span>
