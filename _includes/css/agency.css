@@ -894,6 +894,17 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(-50%, -50%) rotate(-135deg);
 }
 
+.carousel-control {
+    z-index: 20 !important; /* 確保高於文字層與圖片層 */
+    background-image: none !important; /* 移除 Bootstrap 預設的黑影漸層 */
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.carousel-control:hover {
+    opacity: 1; /* 滑鼠移上去時更亮 */
+}
+
 /* 3. 修改底部指示器 (從圓點變成細橫線) */
 .carousel-indicators li {
     width: 30px;
@@ -945,11 +956,3 @@ header .container {
     z-index: 2; /* 數字比輪播圖大，文字就會浮上來 */
 }
 
-/* (選填) 增加淡入淡出效果，比左右滑動更高級 */
-.carousel-fade .carousel-inner .item {
-    opacity: 0;
-    transition-property: opacity;
-}
-.carousel-fade .carousel-inner .active {
-    opacity: 1;
-}
