@@ -913,8 +913,8 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-control {
     top: 50%;          /* 垂直置中 */
     transform: translateY(-50%);
-    width: 60px;       /* 方框寬度 */
-    height: 60px;      /* 方框高度 */
+    width: 40px;       /* 方框寬度 */
+    height: 40px;      /* 方框高度 */
     background-color: rgba(0, 0, 0, 0.5) !important; /* 半透明黑色背景 */
     border-radius: 8px; /* 方框圓角 */
     opacity: 0.7;
