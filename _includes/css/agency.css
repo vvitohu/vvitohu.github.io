@@ -290,6 +290,7 @@ header {
 header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
+    pointer-events: auto; 
 }
 
 header .intro-text .intro-lead-in {
@@ -975,4 +976,3 @@ header .container {
     z-index: 2; /* 數字比輪播圖大，文字就會浮上來 */
     pointer-events: none;
 }
-
