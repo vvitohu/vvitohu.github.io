@@ -44,10 +44,9 @@
             </ol>
             <div class="carousel-inner">
                 {% for image in site.header_img %}
-                <div class="item {% if forloop.first %}active{% endif %}">
-                    <img src="img/header/{{ image }}" class="img-responsive center-block">
-                </div>
+                <div class="item {% if forloop.first %}active{% endif %}" style="background-image:url('img/header/{{ image }}');"></div>
                 {% endfor %}
+                
             </div>
             <a class="left carousel-control carousel-left" href="#header-carousel" data-slide="prev">
                 <span class="chevron-left"></span>
