@@ -932,15 +932,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fed136; /* 變回主題黃色 */
 }
 
-/* 4. 修正箭頭樣式與置中 */
-.chevron-left, .chevron-right {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-}
+
 
 header {
     position: relative;
