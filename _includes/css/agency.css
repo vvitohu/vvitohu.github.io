@@ -915,7 +915,6 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-35%, -50%);
     
     /* 這裡設定你想要的方框大小 */
     width: 40px;
@@ -926,7 +925,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s;
     z-index: -1; /* 確保在箭頭下方 */
 }
-
+.carousel-control.left .chevron-left {
+    transform: translate(35%, -50%); 
+}
+.carousel-control.right .chevron-right {
+    transform: translate(-35%, -50%);
+}
 /* 3. 滑鼠移入感應區時，方框變色 */
 .carousel-control:hover::before {
     background-color: #fed136; /* 變回主題黃色 */
