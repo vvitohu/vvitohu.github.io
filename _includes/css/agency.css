@@ -538,6 +538,12 @@ section h3.section-subheading {
     background-color: #{{ site.data.template.color.background }};
 }
 
+.about-contents{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
