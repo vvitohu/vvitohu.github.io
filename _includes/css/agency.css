@@ -551,6 +551,29 @@ section h3.section-subheading {
     }
 }
 
+/* 標題設計 */
+.section-heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* 第一行大字案 */
+.intro-text {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 後續描述段落 */
+.description {
+    font-size: 18px;
+    line-height: 1.8; /* 增加行高是關鍵 */
+    color: #555;
+    margin-bottom: 15px;
+}
+
 .team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
