@@ -538,8 +538,17 @@ section h3.section-subheading {
     background-color: #{{ site.data.template.color.background }};
 }
 
-.about-contents{
-    top: 10px;
+/* 針對手機版的優化 */
+@media (max-width: 767px) {
+    .about-text-mobile {
+        text-align: center;   /* 手機上文字置中較美觀 */
+        padding: 0 20px;     /* 避免文字貼齊螢幕邊緣 */
+    }
+
+    .about-text-mobile p {
+        font-size: 16px;      /* 調整字體大小，避免太擁擠 */
+        line-height: 1.6;     /* 增加行高提升閱讀性 */
+    }
 }
 
 .team-member img {
