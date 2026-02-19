@@ -551,6 +551,25 @@ section h3.section-subheading {
     }
 }
 
+/* 預設：在手機上顯示，但在電腦版隱藏 */
+.about-mobile {
+    display: block;
+}
+.about-desktop {
+    display: none;
+}
+
+/* 當螢幕寬度大於 768px (電腦版) 時切換狀態 */
+@media (min-width: 768px) {
+    .about-mobile {
+        display: none;
+    }
+    .about-desktop {
+        display: block;
+    }
+}
+
+
 /* 標題設計 */
 .section-heading {
     font-size: 40px;
