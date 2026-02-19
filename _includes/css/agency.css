@@ -538,19 +538,6 @@ section h3.section-subheading {
     background-color: #{{ site.data.template.color.background }};
 }
 
-/* 針對手機版的優化 */
-@media (max-width: 767px) {
-    .about-text-mobile {
-        text-align: center;   /* 手機上文字置中較美觀 */
-        padding: 0 20px;     /* 避免文字貼齊螢幕邊緣 */
-    }
-
-    .about-text-mobile p {
-        font-size: 16px;      /* 調整字體大小，避免太擁擠 */
-        line-height: 1.6;     /* 增加行高提升閱讀性 */
-    }
-}
-
 /* 預設：在手機上顯示，但在電腦版隱藏 */
 .about-mobile {
     display: block;
@@ -569,7 +556,6 @@ section h3.section-subheading {
     }
 }
 
-
 /* 標題設計 */
 .section-heading {
     font-size: 40px;
@@ -579,7 +565,7 @@ section h3.section-subheading {
 }
 
 /* 第一行大字案 */
-.intro-text {
+.about-intro-text {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
