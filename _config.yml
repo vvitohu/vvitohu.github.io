@@ -20,7 +20,7 @@ people:
     - title: instagram
       url: https://www.instagram.com/otis.vito/
     - title: facebook
-      url: #
+      url: https://mobile.facebook.com/otis.vito/
     - title: github
       url: https://github.com/vvitohu
 
@@ -29,7 +29,7 @@ social:
   - title: instagram
     url: https://www.instagram.com/otis.vito/
   - title: facebook
-    url:
+    url: https://mobile.facebook.com/otis.vito/
   - title: stack-overflow
     url: http://stackoverflow.com/questions/tagged/jekyll
   - title: github
