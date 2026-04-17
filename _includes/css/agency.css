@@ -852,7 +852,7 @@ body {
         z-index: 1050; /* 確保它在最上層 */
         transform: translateX(-120%); /* 預設推到螢幕左側外面 */
         transition: transform 0.3s ease; /* 讓滑入動畫變順滑 */
-        background: #222;
+        background: #898A8d;
         color: #ffffff;
     }
 
