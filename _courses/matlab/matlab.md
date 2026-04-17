@@ -78,8 +78,8 @@ ___
 | [`zeros`](https://www.mathworks.com/help/matlab/ref/zeros.html)`(2,3)` | 建⽴⼀個 `3` ⾏ `2` 列的零矩陣。 |
 | [`ones`](https://www.mathworks.com/help/matlab/ref/ones.html)`(2,3)` | 建⽴⼀個 `3` ⾏ `2` 列的全⼀矩陣。 |
 | [`eye`](https://www.mathworks.com/help/matlab/ref/eye.html)`(3)` | 建⽴⼀個 `3` ⾏ `3` 列的單位矩陣。 |
-| [`diag`](https://www.mathworks.com/help/matlab/ref/eye.html)`(v)` | 以向量`v`為對角元素，建立一個矩陣。 |
-| [`magic`](https://www.mathworks.com/help/matlab/ref/eye.html)`(n)` | 建立一個`𝑛`×`𝑛`的魔術方陣。 |
+| [`diag`](https://www.mathworks.com/help/matlab/ref/diag.html)`(v)` | 以向量`v`為對角元素，建立一個矩陣。 |
+| [`magic`](https://www.mathworks.com/help/matlab/ref/magic.html)`(n)` | 建立一個`𝑛`×`𝑛`的魔術方陣。 |
 
 ### 查詢陣列函數
 
