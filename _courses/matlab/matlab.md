@@ -21,12 +21,24 @@ ___
 | --- | --- | --- |
 | [`save`](https://www.mathworks.com/help/matlab/ref/save.html) | `save data.mat` | 將⽬前⼯作區保存到MAT⽂件中。 |
 | [`load`](https://www.mathworks.com/help/matlab/ref/load.html) | `load data.mat` | 將MAT⽂件中的變數載⼊到⼯作區。 |
+| [`who`](https://www.mathworks.com/help/matlab/ref/who.html) | `who` | 查詢於目前的工作區內，正在使用的變數。 |
+| [`whos`](https://www.mathworks.com/help/matlab/ref/whos.html) | `whos var` | 查詢特定或所有變數的詳細資訊。 |
 | [`clear`](https://www.mathworks.com/help/matlab/ref/clear.html) | `clear` | 清除⼯作區的所有變數。 |
 | [`clc`](https://www.mathworks.com/help/matlab/ref/clc.html) | `clc` | 清除命令⾏窗⼝中的所有⽂本。 |
 | [`format`](https://www.mathworks.com/help/matlab/ref/format.html) | `format long` | 更改命令⾏窗⼝中數值輸出的顯⽰⽅式。 |
 
-### 數組類別
+### 永久常數
 
+| **永久常數** | **說明** |
+| --- | --- |
+| `pi`   | 圓周率，𝜋 = 3.14159265358970  |
+| `inf`或`Inf` | 無限大(∞) |
+| `i` , `j` | 虛數 (imaginary number) |
+| `NaN`或`nan` | 不存在的數 |
+| `realmax` | 系統所能表示之最大數值  |
+| `realmin` | 系統所能表示之最小數值  |
+
+### 數組類別
 
 | **範例** | **說明** |
 | --- | --- |
@@ -35,13 +47,15 @@ ___
 | `[1;3]` | ⾏向量 |
 | `[3 4 5; 6 7 8]` | 矩陣  |
 
-### 等間距向量
+### 向量建立
 
 | **範例** | **說明** |
 | --- | --- |
-| `1:4` | 使⽤冒號運算⼦ (`:`)，建⽴⼀個從`1`到`4`，間距為`1`的向量。 |
-| `1:0.5:4` | 建⽴⼀個從`1`到`4`，間距為`0.5`的向量。 |
-| [`linspace`](https://www.mathworks.com/help/matlab/ref/double.linspace.html)`(1,10,5)` | 建⽴⼀個包含`5`個元素的向量。這些值從`1`到`10`等間距間隔。 |
+| `a:b` | 使⽤冒號運算⼦ (`:`)，建⽴⼀個從`a`到`b`，間距為`1`的向量。 |
+| `a:step:b` | 建⽴⼀個從`a`到`b`，間距為`step`的向量。 |
+| [`linspace`](https://www.mathworks.com/help/matlab/ref/double.linspace.html)`(a,b,n)` | 建⽴⼀個包含`n`個元素的向量。這些值從`a`到`b`等間距間隔。 |
+| [`length`](https://www.mathworks.com/help/matlab/ref/double.length.html)`(v)` | 查詢向量`ν`的元素個數。 |
+| `v'` | 將向量`ν`轉置，也就是列向量變行向量，行向量變列向量。 |
 
 ### 矩陣建⽴
 
