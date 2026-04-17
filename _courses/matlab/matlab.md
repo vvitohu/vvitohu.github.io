@@ -57,6 +57,19 @@ ___
 | [`length`](https://www.mathworks.com/help/matlab/ref/double.length.html)`(v)` | 查詢向量`ν`的元素個數。 |
 | `v'` | 將向量`ν`轉置，也就是列向量變行向量，行向量變列向量。 |
 
+### 向量處理函數
+
+| **範例** | **說明** |
+| --- | --- |
+| [`sum`](https://www.mathworks.com/help/matlab/ref/double.sum.html)`(v)` | 計算向量`ν`的總和。 |
+| [`prod`](https://www.mathworks.com/help/matlab/ref/double.prod.html)`(v)` | 計算向量`ν`的乘積。 |
+| [`max`](https://www.mathworks.com/help/matlab/ref/double.max.html)`(v)` | 取出向量`ν`的最大值。 |
+| [`min`](https://www.mathworks.com/help/matlab/ref/double.min.html)`(v)` | 取出向量`ν`的最小值。 |
+| [`sort`](https://www.mathworks.com/help/matlab/ref/double.sort.html)`(v)` | 將向量`ν`裡的元素由小到大排序。 |
+| [`sort`](https://www.mathworks.com/help/matlab/ref/double.sort.html)`(v, 'descend')` | 將向量`ν`裡的元素由大到小排序。 |
+| [`cumsum`](https://www.mathworks.com/help/matlab/ref/double.cumsum.html)`(v)` | 計算向量`ν`的累加。 |
+| [`cumprod`](https://www.mathworks.com/help/matlab/ref/double.cumprod.html)`(v)` | 計算向量`ν`的累乘。 |
+
 ### 矩陣建⽴
 
 | **範例** | **說明** |
@@ -64,7 +77,18 @@ ___
 | [`rand`](https://www.mathworks.com/help/matlab/ref/double.rand.html)`(2)` | 建⽴⼀個 `2` ⾏ `2` 列 數值介於 `0-1` 的隨機⽅陣。 |
 | [`zeros`](https://www.mathworks.com/help/matlab/ref/zeros.html)`(2,3)` | 建⽴⼀個 `3` ⾏ `2` 列的零矩陣。 |
 | [`ones`](https://www.mathworks.com/help/matlab/ref/ones.html)`(2,3)` | 建⽴⼀個 `3` ⾏ `2` 列的全⼀矩陣。 |
-| `eye``(3)` | 建⽴⼀個 `3` ⾏ `3` 列的單位矩陣 |
+| [`eye`](https://www.mathworks.com/help/matlab/ref/eye.html)`(3)` | 建⽴⼀個 `3` ⾏ `3` 列的單位矩陣。 |
+| [`diag`](https://www.mathworks.com/help/matlab/ref/eye.html)`(v)` | 以向量`v`為對角元素，建立一個矩陣。 |
+| [`magic`](https://www.mathworks.com/help/matlab/ref/eye.html)`(n)` | 建立一個`𝑛`×`𝑛`的魔術方陣。 |
+
+### 查詢陣列函數
+
+| **範例** | **說明** |
+| --- | --- |
+| [`size`](https://www.mathworks.com/help/matlab/ref/double.size.html)`(m)` | 查詢陣列`m`的大小。 |
+| [`length`]()`(m)` | 傳回行數與列數中，較大的數。 |
+| [`numel`]()`(m)` | 查詢陣列`m`元素的總數。 |
+| [`ndims`]()`(m)` | 查詢陣列m的維度。 |
 
 ### 數組索引
 
@@ -89,6 +113,8 @@ ___
 | --- | --- |
 | `[xrow,xcol] = `[`size`](https://www.mathworks.com/help/matlab/ref/double.size.html)`(x)` | 將 `x` 中的⾏數和列數儲存為兩個不同變數。 |
 | `[xMax,idx] = `[`max`](https://www.mathworks.com/help/matlab/ref/double.max.html)`(x)` | 計算 `x` 的最⼤值(`xMax`)及其對應的索引值(`idx`)。 |
+| `[xMin,idx] = `[`min`](https://www.mathworks.com/help/matlab/ref/double.min.html)`(x)` | 計算 `x` 的最小值(`xMin`)及其對應的索引值(`idx`)。 |
+| `[val, ind] = `[`sort`](https://www.mathworks.com/help/matlab/ref/double.min.html)`(x)` | 排序向量`x`，同時傳回元素相對應的原始位置。 |
 
 ### ⽂檔
 
