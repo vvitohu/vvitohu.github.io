@@ -854,6 +854,9 @@ body {
         transition: transform 0.3s ease; /* 讓滑入動畫變順滑 */
         background: #F9F7F2;
         color: #174047;
+        height: fit-content;      /* 讓高度隨內容自動縮放 */
+        max-height: calc(100vh - var(--nav-height) - 40px); /* 內容太多時仍可滾動，不超出螢幕 */
+        overflow-y: auto;
     }
 
     /* 當我們透過 JS 加入 .show 這個類別時，側邊欄會滑進來 */
@@ -862,11 +865,11 @@ body {
     }
 
     .text-menu{
-        color: #e4e2e3;
+        color: #174047;
     }
 
     .text-menu-tit{
-        color: #fff;
+        color: #174047;
     }
 
     .navbar {
