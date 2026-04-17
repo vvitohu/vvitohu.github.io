@@ -852,7 +852,7 @@ body {
         z-index: 1050; /* 確保它在最上層 */
         transform: translateX(-120%); /* 預設推到螢幕左側外面 */
         transition: transform 0.3s ease; /* 讓滑入動畫變順滑 */
-        background: #FEF8E8;
+        background: #E4E2E3;
         color: #174047;
         height: fit-content;      /* 讓高度隨內容自動縮放 */
         max-height: calc(100vh - var(--nav-height) - 40px); /* 內容太多時仍可滾動，不超出螢幕 */
