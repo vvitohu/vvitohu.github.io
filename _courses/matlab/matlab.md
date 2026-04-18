@@ -12,7 +12,7 @@ ___
 
 | **範例** | **說明** |
 | --- | --- |
-| [`x = pi`](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html) | 使⽤等號 ( `= `) 建⽴變數並給其值。左側 ( `x` ) 是變數名稱，右側 ( `pi` ) 是其值。 |
+| [`x = pi`](https://www.mathworks.com/help/matlab/matlab_env/create-and-edit-variables.html) | 使⽤等號 ( `=`) 建⽴變數並給其值。左側 ( `x` ) 是變數名稱，右側 ( `pi` ) 是其值。 |
 | [`y = sin(-5)`](https://www.mathworks.com/help/matlab/learn_matlab/calling-functions.html) | 使⽤括號 `( )` 提供函數輸⼊。 |
 
 ### 桌⾯管理
@@ -30,6 +30,26 @@ ___
 ### 永久常數
 
 | **永久常數** | **說明** |
+| --- | --- |
+| `pi`   | 圓周率，𝜋 = 3.14159265358970  |
+| `inf`或`Inf` | 無限大(∞) |
+| `i` , `j` | 虛數 (imaginary number) |
+| `NaN`或`nan` | 不存在的數 |
+| `realmax` | 系統所能表示之最大數值  |
+| `realmin` | 系統所能表示之最小數值  |
+
+### 數學函數
+
+| **數學函數** | **說明** |
+| --- | --- |
+| `pi`   | 圓周率，𝜋 = 3.14159265358970  |
+| `inf`或`Inf` | 無限大(∞) |
+| `i` , `j` | 虛數 (imaginary number) |
+| `NaN`或`nan` | 不存在的數 |
+| `realmax` | 系統所能表示之最大數值  |
+| `realmin` | 系統所能表示之最小數值  |
+
+| **數學函數** | **說明** |
 | --- | --- |
 | `pi`   | 圓周率，𝜋 = 3.14159265358970  |
 | `inf`或`Inf` | 無限大(∞) |
