@@ -6,13 +6,13 @@ order: 1
 modal-id: 2
 date: 2026-05-10
 img: 
-- /visual clock/inform.jpeg
-- /visual clock/angle.jpeg
-- /visual clock/back.jpeg
-- /visual clock/front.jpeg
-- /visual clock/Drawing 1.png
-- /visual clock/Drawing 2.png
-thumbnail: /visual clock/clock-thumbnail.jpeg
+- /clock/inform.jpeg
+- /clock/angle.jpeg
+- /clock/back.jpeg
+- /clock/front.jpeg
+- /clock/Drawing 1.png
+- /clock/Drawing 2.png
+thumbnail: /clock/clock-thumbnail.jpeg
 alt: image-alt
 project-date: May 2026
 type: Competition
