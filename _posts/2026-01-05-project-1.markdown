@@ -7,8 +7,8 @@ modal-id: 1
 date: 2026-01-05
 folder: drone
 img: 
-- final.jpg
-- V3.0 3D prototype.png
+- /drone/final.jpg
+- /drone/V3.0 3D prototype.png
 - V1.0 side.jpeg
 - V1.0.jpeg
 - V2.0 side.jpeg
@@ -17,7 +17,7 @@ img:
 - V3.0.jpeg
 - structure.jpg
 - circuit.jpg
-thumbnail: drone-thumbnail.jpg
+thumbnail: /drone/drone-thumbnail.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
