@@ -2,15 +2,22 @@
 layout: default
 title: 自製無人機
 subtitle: Website Design
-order: 1
-modal-id: 6
-date: 2014-07-18
+order: 0
+modal-id: 1
+date: 2026-01-05
+folder: drone
 img: 
-- dreams.png
-- dreams.png
-- dreams.png
-- dreams.png
-thumbnail: dreams-thumbnail.png
+- final.jpg
+- V3.0 3D prototype.png
+- V1.0 side.jpeg
+- V1.0.jpeg
+- V2.0 side.jpeg
+- V2.0.jpeg
+- V3.0 side.jpg
+- V3.0.jpeg
+- structure.jpg
+- circuit.jpg
+thumbnail: drone-thumbnail.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
