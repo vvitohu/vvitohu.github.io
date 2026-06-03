@@ -1,0 +1,33 @@
+---
+layout: default
+title: Visual Recognition Alarm Clock
+subtitle: 3D Design
+order: 1
+modal-id: 2
+date: 2026-05-10
+img: 
+- /visual clock/inform.jpeg
+- /visual clock/angle.jpeg
+- /visual clock/back.jpeg
+- /visual clock/front.jpeg
+- /visual clock/Drawing 1.png
+- /visual clock/Drawing 2.png
+thumbnail: /visual clock/clock-thumbnail.jpeg
+alt: image-alt
+project-date: May 2026
+type: Competition
+category: 3D Design
+description: 
+ 這個是在 MakeNTU 競賽中製作的專案——「起床重睡起床輔助器」。該專案旨在解決現代人設定鬧鐘後仍因「低認知負擔、依賴肌肉記憶」而輕易按掉鬧鐘並睡過頭的痛點。而我們在此競賽中榮獲了企業獎第一名的殊榮！
+
+ 採用 NXP i.MX 93 開發板作為核心硬體，開發出一款具備高效率機器學習與節能邊緣運算能力的獨立硬體鬧鐘。其核心運作與創新優勢如下：
+
+- 主動驗證與終結貪睡：當鬧鐘響起時，系統會透過鏡頭與輕量化的 MoveNet 辨識模型進行邊緣端 AI 推論，使用者必須「呈現坐姿並揮手」提高關閉阻力，才能解除當下鬧鐘。
+- 持續追蹤防賴床：關閉鬧鐘後，系統會進入狀態機的冷卻期（Cooldown），間隔一段時間後主動再次辨識環境。若偵測到使用者仍在床上，鬧鐘將會再度響起，確保使用者確實下床。
+ - 系統高整合性：
+    - 機構與硬體：設計專屬的外殼，並透過 Delegate 機制將 AI 負載從 CPU 轉移至專用 NPU，實現低延遲推論。
+    - 韌體與演算法：利用 EMA（指數移動平均）與關鍵點權重優化演算法以穩定感知、過濾無意圖動作；並讓 M33 小核心負責顯示與簡易 HID，大核心負責模型運算。
+    - 網頁與資安：提供專屬網頁控制介面（可設定排程與鏡頭串流），並導入驗證層、會話安全層與資源保護層等多層次防禦設計。
+
+ 相較於傳統鬧鐘、手機防賴床 APP 或依賴雲端 API 的樹莓派專案，本作品是一款**完全獨立運作、具備環境感知能力且結合狀態機持續監測**的邊緣運算智慧硬體，能有效終結貪睡循環。
+---
