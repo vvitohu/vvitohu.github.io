@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Visual Recognition Alarm Clock
+title: 視覺辨識鬧鐘
 subtitle: 3D Design
 order: 1
 modal-id: 2
