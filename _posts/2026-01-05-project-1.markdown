@@ -9,14 +9,14 @@ folder: drone
 img: 
 - /drone/final.jpg
 - /drone/V3.0 3D prototype.png
-- V1.0 side.jpeg
-- V1.0.jpeg
-- V2.0 side.jpeg
-- V2.0.jpeg
-- V3.0 side.jpg
-- V3.0.jpeg
-- structure.jpg
-- circuit.jpg
+- /drone/V1.0 side.jpeg
+- /drone/V1.0.jpeg
+- /drone/V2.0 side.jpeg
+- /drone/V2.0.jpeg
+- /drone/V3.0 side.jpg
+- /drone/V3.0.jpeg
+- /drone/structure.jpg
+- /drone/circuit.jpg
 thumbnail: /drone/drone-thumbnail.jpg
 alt: image-alt
 project-date: April 2014
