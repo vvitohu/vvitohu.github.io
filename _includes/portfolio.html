@@ -14,7 +14,7 @@
                 {% assign final_posts = pinning_posts | concat: normal_posts %}
                 {% for post in final_posts %}
                     <div class="col-8 col-md-4 col-sm-6 mb-5 mx-auto">
-                        <div class="card-link" class="card-link" data-toggle="modal"  data-target="#modal-{{ post.slug }}"style="text-decoration: none; color: inherit;">
+                        <div class="card-link" class="card-link" data-toggle="modal"  data-target="#modal-{{ post.modal-id }}"style="text-decoration: none; color: inherit;">
 
                             <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden; margin-bottom: 20px !important;">
                                 
@@ -32,11 +32,9 @@
                 
                 {% endfor %}
 
-                {% assign pinning_posts = site.posts | where_exp: "item", "item.order != 0" | sort: "order" %}
-                {% assign normal_posts = site.posts | where_exp: "item", "item.order == 0" | sort: "date" | reverse %}
-                {% assign final_posts = pinning_posts | concat: normal_posts %}
-                {% for post in final_posts %}
-                    <div class="portfolio-modal modal fade" id="modal-{{ post.slug }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                
+                {% for post in site.posts %}
+                    <div class="portfolio-modal modal fade" id="modal-{{ post.modal-id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                         <div class="modal-header">
