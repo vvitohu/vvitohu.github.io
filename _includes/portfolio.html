@@ -57,11 +57,13 @@
                                         {% endfor %}
                                     </div>
 
-                                    <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev">
-                                        <span class="chevron-left"></span>
+                                    <a class="left carousel-control-prev carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only visually-hidden">Previous</span>
                                     </a>
-                                    <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next">
-                                        <span class="chevron-right"></span>
+                                    <a class="right carousel-control-next carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only visually-hidden">Next</span>
                                     </a>
                                 </div>
                                 
