@@ -30,7 +30,12 @@
                     </div>
 
                 
+                {% endfor %}
 
+                {% assign pinning_posts = site.posts | where_exp: "item", "item.order != 0" | sort: "order" %}
+                {% assign normal_posts = site.posts | where_exp: "item", "item.order == 0" | sort: "date" | reverse %}
+                {% assign final_posts = pinning_posts | concat: normal_posts %}
+                {% for post in final_posts %}
                     <div class="modal fade" id="modal-{{ post.slug }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
