@@ -9,8 +9,8 @@ img: golden.png
 thumbnail: golden-thumbnail.png
 alt: image-alt
 project-date: June 2025
-client: Start Bootstrap
-category: Web Development
+type: Course Project
+category: 3D Design, Program Design
 ---
 ### 🚀 Corne Keyboard — 客製化分體鍵盤
 
