@@ -28,17 +28,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="modal-{{ post.slug }}" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                        <div class="modal-content" style="border-radius: 12px; overflow: hidden;">
-                            <div class="modal-header" style="border-bottom: none; padding: 20px 25px 10px 25px;">
-                                <h4 class="modal-title" style="font-weight: bold;">{{ post.title }}</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 30px;">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            
-                            <div class="modal-body" style="padding: 10px 25px 25px 25px;">
+
+                
+
+                    <div class="modal fade" id="modal-{{ post.slug }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ post.title }}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 10px 25px 25px 25px;">
                                 <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
                                         {% for image in post.img %}
@@ -66,11 +66,10 @@
                                     {{ post.description }}
                                 </div>
                             </div>
-                            
-                            <div class="modal-footer" style="border-top: none;">
-                                <a href="{{ post.url | relative_url }}" class="btn btn-primary" style="border-radius: 20px; padding: 8px 20px;">閱讀完整文章</a>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 20px; padding: 8px 20px;">關閉</button>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                         </div>
                     </div>
                     </div>
