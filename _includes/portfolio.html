@@ -43,11 +43,7 @@
 
                         <div class="modal-body" style="padding: 10px 25px 25px 25px;">
                                 <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        {% for image in post.img %}
-                                            <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
-                                        {% endfor %}
-                                    </ol>
+                                    
 
                                     <div class="carousel-inner">
                                         {% for image in post.img %}
@@ -56,6 +52,11 @@
                                         </div>
                                         {% endfor %}
                                     </div>
+                                    <ol class="carousel-indicators">
+                                        {% for image in post.img %}
+                                            <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                                        {% endfor %}
+                                    </ol>
 
                                     <a class="left carousel-control-prev carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon chevron-left" aria-hidden="true"></span>
