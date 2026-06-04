@@ -28,6 +28,52 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="modal-{{ post.title }}" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content" style="border-radius: 12px; overflow: hidden;">
+                            <div class="modal-header" style="border-bottom: none; padding: 20px 25px 10px 25px;">
+                                <h4 class="modal-title" style="font-weight: bold;">{{ post.title }}</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 30px;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            
+                            <div class="modal-body" style="padding: 10px 25px 25px 25px;">
+                                <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        {% for image in post.img %}
+                                            <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                                        {% endfor %}
+                                    </ol>
+
+                                    <div class="carousel-inner">
+                                        {% for image in post.img %}
+                                        <div class="item {% if forloop.first %}active{% endif %}">
+                                            <img src="img/portfolio/{{ image }}" class="img-responsive center-block">
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+
+                                    <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev">
+                                        <span class="chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next">
+                                        <span class="chevron-right"></span>
+                                    </a>
+                                </div>
+                                
+                                <div class="post-content-full" style="color: #444; line-height: 1.8;">
+                                    {{ post.description }}
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer" style="border-top: none;">
+                                <a href="{{ post.url | relative_url }}" class="btn btn-primary" style="border-radius: 20px; padding: 8px 20px;">閱讀完整文章</a>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border-radius: 20px; padding: 8px 20px;">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>
