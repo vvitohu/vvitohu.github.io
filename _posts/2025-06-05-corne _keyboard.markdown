@@ -6,11 +6,11 @@ order: 0
 modal-id: 3
 date: 2025-06-05
 img: 
-- keyboard.jpg
-- keyboard-side1.jpg
-- - Corne keyboard.png
-- keyboard-side2.jpg
-thumbnail: keyboard-thumbnail.jpg
+- /keyboard/keyboard.jpg
+- /keyboard/keyboard-side1.jpg
+- /keyboard/Corne keyboard.png
+- /keyboard/keyboard-side2.jpg
+thumbnail: /keyboard/keyboard-thumbnail.jpg
 alt: image-alt
 project-date: June 2025
 type: Course Project
