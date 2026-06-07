@@ -5,8 +5,12 @@ subtitle: 3D Design, Program Design
 order: 0
 modal-id: 3
 date: 2025-06-05
-img: golden.png
-thumbnail: golden-thumbnail.png
+img: 
+- keyboard.jpg
+- keyboard-side1.jpg
+- - Corne keyboard.png
+- keyboard-side2.jpg
+thumbnail: keyboard-thumbnail.jpg
 alt: image-alt
 project-date: June 2025
 type: Course Project
