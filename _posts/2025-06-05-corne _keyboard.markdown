@@ -9,7 +9,6 @@ img:
 - /keyboard/keyboard.jpg
 - /keyboard/keyboard-side1.jpg
 - /keyboard/Corne keyboard.png
-- /keyboard/keyboard-side2.jpg
 thumbnail: /keyboard/keyboard-thumbnail.jpg
 alt: image-alt
 project-date: June 2025
