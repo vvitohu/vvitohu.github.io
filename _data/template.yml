@@ -6,6 +6,7 @@ color:
   muted: 777
   background: dedede
   background1: a3a3a3
+  card: efece5
 
 # Font Families
 font:
