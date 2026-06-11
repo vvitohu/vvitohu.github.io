@@ -1,8 +1,8 @@
 ---
 layout: database_courses
-title: "MATLAB"
+title: "MATLAB Basic"
 type: matlab_menu
-permalink: /database_courses/matlab
+permalink: /database_courses/matlab/basic
 ---
 # MATLAB
 
