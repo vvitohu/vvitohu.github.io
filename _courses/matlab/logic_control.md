@@ -1,0 +1,32 @@
+---
+layout: database_courses
+title: "邏輯控制"
+type: matlab_menu
+permalink: /database_courses/matlab/logic_control
+---
+# MATLAB
+
+___
+
+
+### 表格
+
+| **範例** | **說明** |
+| --- | --- |
+| [`data.HeightYards`](https://www.mathworks.com/help/matlab/matlab_prog/access-data-in-a-table.html) | 從表格 `data` 中提取變數 `HeightYards` 。 |
+| `data.HeightMeters = data.HeightYards * 0.9144` | 從表格(`data`)中的數據(`HeightYards`)去定義另⼀個數據(`HeightMeters`)。 |
+
+### 邏輯索引
+
+| **範例** | **說明** |
+| --- | --- |
+| [`[5 10 15] > 12`](https://www.mathworks.com/help/matlab/matlab_prog/array-comparison-with-relational-operators.html) | 將向量元素去和 `12` 進⾏⽐較。 |
+| [`v1(v1 > 6)`](https://www.mathworks.com/help/matlab/matlab_prog/find-array-elements-that-meet-a-condition.html) | 提取 `v1` 中⼤於 `6` 的所有元素。 |
+| `x(x==999) = 1` | 將 `x` 中所有等於 `999` 的值，替換為值 `1` 。 |
+
+### 編程
+
+| **範例** | **說明** |
+| --- | --- |
+| [`if`](https://www.mathworks.com/help/matlab/ref/if.html)` x > 0.5` <br>`y = 3`<br>`else` <br>`y = 4` <br>`end` | 如果 `x` ⼤於 `0.5` ，則將 `y` 設為 `3` 。<br>否則，將 `y` 設定為 `4` 。 |
+| [`for`](https://www.mathworks.com/help/matlab/ref/for.html)` c = 1:3` <br>`disp(c)`<br>`end` | 迴圈計數器的值 (`c`)依序為 `1:3`  ( `1`到`3` 間隔`1`)。<br>迴圈顯⽰ `c` 的每個值。 |

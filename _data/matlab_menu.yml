@@ -4,4 +4,6 @@
       url: "/database_courses/matlab/basic"
     - name: "繪圖函數"
       url: "/database_courses/matlab/plot_function"
+    - name: "邏輯控制"
+      url: "/database_courses/matlab/logic_control"
 
