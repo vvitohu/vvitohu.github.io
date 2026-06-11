@@ -12,11 +12,13 @@ ___
 
 | **範例** | **說明** |
 | --- | --- |
-| [`plot`](https://www.mathworks.com/help/matlab/ref/plot.html)`(x,y,"ro-- ",LineWidth=5)`| 绘制⼀条红⾊ (`r`) 虚线 (`--`)并使⽤圆形 (`o`) 标记，线宽很⼤。 |
+| [`plot`](https://www.mathworks.com/help/matlab/ref/plot.html)`(x,y,'ro-- ',LineWidth=5)`| 绘制⼀条红⾊ (`r`) 虚线 (`--`)并使⽤圆形 (`o`) 标记，线宽很⼤。 |
 | [`hold`](https://www.mathworks.com/help/matlab/ref/hold.html)` on`<br>`…`<br>`hold off` | 在此區間內的所有動作都會再同⼀張圖上進⾏。 |
-| [`title`](https://www.mathworks.com/help/matlab/ref/title.html) ("My Title") | 在圖上添加標題。 |
-| [`xlabel`](https://www.mathworks.com/help/matlab/ref/xlabel.html)`("x")`<br>[`ylabel`](https://www.mathworks.com/help/matlab/ref/ylabel.html)`("y")` | 在坐標軸上添加標籤。 |
-| [`legend`](https://www.mathworks.com/help/matlab/ref/legend.html)`("a","b","c")` | 在圖上添加圖例。 |
+| [`title`](https://www.mathworks.com/help/matlab/ref/title.html) `("My Title")` | 在圖上添加標題。 |
+| [`xlabel`](https://www.mathworks.com/help/matlab/ref/xlabel.html)`('x')`<br>[`ylabel`](https://www.mathworks.com/help/matlab/ref/ylabel.html)`('y')`<br>[`zlabel`](https://www.mathworks.com/help/matlab/ref/zlabel.html)`('z')`(用於三維繪圖) | 在坐標軸上添加標籤。 |
+| [`legend`](https://www.mathworks.com/help/matlab/ref/legend.html)`('a','b','c')` | 在圖上添加圖例。 |
+| `legend off` | 清除圖例 |
+| `text(x,y,'text')` | 在圖形中位置為(x,y)之處加入註解文字 |
 
 ### 線條樣式與顏色
 
@@ -53,15 +55,24 @@ ___
 
 ### 更改繪圖的範圍與顯示方式
 
-| **線條樣式** | **說明** |
+| **範例** | **說明** |
 | --- | --- |
-| `axis([xmin, xmax, ymin, ymax])` | 更改圖形範圍 |
+| `axis([xmin, xmax, ymin, ymax])` | 更改圖形顯示範圍 |
 | `grid on/off` | 設定顯示格線 |
 | `box on/off` | 設定顯示圖形外框 |
 | `axis normal` | 預設的寬高比,可調整比例  |
 | `axis square` | 寬高比1:1 |
 | `axis equal` | 坐標軸比例1:1 |
 | `axis tight` | 圖形緊貼繪圖區域外框 |
+
+### 建立新的繪圖視窗
+
+| **範例** | **說明** |
+| --- | --- |
+| `figure` | 建立新的繪圖視窗 |
+| `figure(n)` | 建立新的繪圖視窗，<br>視窗標題為Figure n |
+| `subplot(m,n,p)` | 繪圖視窗分成𝑚 × 𝑛個區域，並在第p個位置建立一個繪圖區。(位置p的計算方式是由左到右，由上而下來排列) |
+| `subplot(m,n,p,'replace')` | 於第p個位置建立子繪圖區，若此已有圖形存在則取代掉原有的圖。 |
 
 
 ### 表格
