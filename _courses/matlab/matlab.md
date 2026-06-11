@@ -142,4 +142,9 @@ ___
 | --- | --- |
 | [`doc`](https://www.mathworks.com/help/matlab/ref/doc.html)`randi` | 開啟 `randi` 函數的說明⽂檔⾴。 |
 
+### 表格
 
+| **範例** | **說明** |
+| --- | --- |
+| [`data.HeightYards`](https://www.mathworks.com/help/matlab/matlab_prog/access-data-in-a-table.html) | 從表格 `data` 中提取變數 `HeightYards` 。 |
+| `data.HeightMeters = data.HeightYards * 0.9144` | 從表格(`data`)中的數據(`HeightYards`)去定義另⼀個數據(`HeightMeters`)。 |
