@@ -280,7 +280,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-position: center center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -430,6 +430,10 @@ section h3.section-subheading {
 
 
 /* 左側選單 Hover 效果 */
+.card-link {
+    cursor: pointer;
+}
+
 .nav-link:hover {
     background-color: rgba(0, 123, 255, 0.1);
     border-radius: 5px;
@@ -437,6 +441,7 @@ section h3.section-subheading {
 }
 
 /* 右側 TOC 滾動監控 */
+#toc a:hover,
 #TableOfContents a:hover {
     color: #fed136 !important; /* 使用你原本主題的黃色 */
 }
@@ -675,7 +680,6 @@ footer {
 }
 
 footer span.copyright {
-    text-transform: uppercase;
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
     line-height: 40px;
@@ -683,7 +687,6 @@ footer span.copyright {
 
 footer ul.quicklinks {
     margin-bottom: 0;
-    text-transform: uppercase;
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
     line-height: 40px;
@@ -812,7 +815,7 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+    -webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
 
 .text-menu{
@@ -1022,4 +1025,18 @@ header .container {
     position: relative;
     z-index: 2; /* 數字比輪播圖大，文字就會浮上來 */
     pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
