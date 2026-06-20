@@ -1,16 +1,17 @@
 ---
 layout: default
-title: Treehouse
-subtitle: Website Design
+title: 電子紙科普影片
+subtitle: 
 order: 0
 modal-id: 4
-date: 2014-07-15
-img: treehouse.png
-thumbnail: treehouse-thumbnail.png
+date: 2026-06-20
+img: 
+- "youtube:KhucfI94Xm4"
+thumbnail: /keyboard/keyboard-thumbnail.jpg
 alt: image-alt
-project-date: April 2014
+project-date: June 2025
 type: Course Project
-category: Web Development
+category: 3D Design, Program Design
 ---
 graph TD
     %% 全域與初始化
