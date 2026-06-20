@@ -44,12 +44,9 @@
                         <div class="modal-body" style="padding: 10px 25px 25px 25px;">
                                 <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
                                     
-
-                                    
                                     <div class="carousel-inner">
                                         {% for file in post.img %}
                                         <div class="item {% if forloop.first %}active{% endif %}">
-                                            
                                             {% if file contains 'youtube:' %}
                                                 {% comment %} 把 'youtube:' 字串去掉，只留下影片 ID {% endcomment %}
                                                 {% assign video_id = file | remove: 'youtube:' %}

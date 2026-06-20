@@ -1,0 +1,15 @@
+---
+layout: default
+title: 電子紙科普影片
+subtitle: Video Production
+order: 0
+modal-id: 4
+date: 2026-06-20
+img: 
+- "youtube:KhucfI94Xm4"
+thumbnail: /keyboard/keyboard-thumbnail.jpg
+alt: image-alt
+project-date: June 2026
+type: Course Project
+category: Video Production
+---
