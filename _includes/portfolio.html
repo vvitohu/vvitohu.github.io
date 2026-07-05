@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="modal-body" style="padding: 10px 25px 25px 25px;">
-                                <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+                            <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
                                     
                                     <div class="carousel-inner">
                                         {% for file in post.img %}
@@ -65,6 +65,7 @@
                                         </div>
                                         {% endfor %}
                                     </div>
+                                {% if post.img.size > 1 %}
                                     <ol class="carousel-indicators">
                                         {% for image in post.img %}
                                             <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
@@ -79,7 +80,8 @@
                                         <span class="carousel-control-next-icon chevron-right" aria-hidden="true"></span>
                                         <span class="sr-only visually-hidden">Next</span>
                                     </a>
-                                </div>
+                                {% endif %}
+                            
                                 
                                 <div class="post-content-full" style="color: #444; line-height: 1.8;">
                                     <hr>
@@ -101,10 +103,10 @@
                                 </div>
                             </div>
                             
-                        <div class="modal-footer">
-                            
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
+                            <div class="modal-footer">
+                                
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                     </div>
