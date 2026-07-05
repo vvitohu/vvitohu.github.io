@@ -37,70 +37,70 @@
                     <div class="modal fade" id="modal-{{ post.modal-id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9000;">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">{{ post.title }}</h1>
-                        </div>
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">{{ post.title }}</h1>
+                            </div>
 
-                        <div class="modal-body" style="padding: 10px 25px 25px 25px;">
-                            <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
-                                    
-                                    <div class="carousel-inner">
-                                        {% for file in post.img %}
-                                        <div class="item {% if forloop.first %}active{% endif %}">
-                                            {% if file contains 'youtube:' %}
-                                                {% comment %} 把 'youtube:' 字串去掉，只留下影片 ID {% endcomment %}
-                                                {% assign video_id = file | remove: 'youtube:' %}
+                            <div class="modal-body" style="padding: 10px 25px 25px 25px;">
+                                <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+                                        
+                                        <div class="carousel-inner">
+                                            {% for file in post.img %}
+                                            <div class="item {% if forloop.first %}active{% endif %}">
+                                                {% if file contains 'youtube:' %}
+                                                    {% comment %} 把 'youtube:' 字串去掉，只留下影片 ID {% endcomment %}
+                                                    {% assign video_id = file | remove: 'youtube:' %}
+                                                    
+                                                    <div class="embed-responsive embed-responsive-16by9">
+                                                        <iframe class="embed-responsive-item" 
+                                                                src="https://www.youtube.com/embed/{{ video_id }}?rel=0" 
+                                                                allowfullscreen>
+                                                        </iframe>
+                                                    </div>
+                                                    
+                                                {% else %}
+                                                    <img src="img/portfolio/{{ file }}" class="img-responsive center-block">
+                                                {% endif %}
                                                 
-                                                <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" 
-                                                            src="https://www.youtube.com/embed/{{ video_id }}?rel=0" 
-                                                            allowfullscreen>
-                                                    </iframe>
-                                                </div>
-                                                
-                                            {% else %}
-                                                <img src="img/portfolio/{{ file }}" class="img-responsive center-block">
-                                            {% endif %}
-                                            
+                                            </div>
+                                            {% endfor %}
                                         </div>
-                                        {% endfor %}
-                                    </div>
-                                {% if post.img.size > 1 %}
-                                    <ol class="carousel-indicators">
-                                        {% for image in post.img %}
-                                            <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
-                                        {% endfor %}
-                                    </ol>
+                                    {% if post.img.size > 1 %}
+                                        <ol class="carousel-indicators">
+                                            {% for image in post.img %}
+                                                <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                                            {% endfor %}
+                                        </ol>
 
-                                    <a class="left carousel-control-prev carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon chevron-left" aria-hidden="true"></span>
-                                        <span class="sr-only visually-hidden">Previous</span>
-                                    </a>
-                                    <a class="right carousel-control-next carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon chevron-right" aria-hidden="true"></span>
-                                        <span class="sr-only visually-hidden">Next</span>
-                                    </a>
-                                {% endif %}
-                            
-                                
-                                <div class="post-content-full" style="color: #444; line-height: 1.8;">
-                                    <hr>
-                                    {{ post.content }}
-                                    <ul class="list-inline item-details">
-                                        <li>Category:
-                                            <strong><a href="">{{ post.category }}</a>
-                                            </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong><a href="">{{ post.project-date }}</a>
-                                            </strong>
-                                        </li>
-                                        <li>Type:
-                                            <strong><a href="">{{ post.type }}</a>
-                                            </strong>
-                                        </li>
-                                    </ul>
+                                        <a class="left carousel-control-prev carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only visually-hidden">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control-next carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only visually-hidden">Next</span>
+                                        </a>
+                                    {% endif %}
                                 </div>
+                                    
+                                    <div class="post-content-full" style="color: #444; line-height: 1.8;">
+                                        <hr>
+                                        {{ post.content }}
+                                        <ul class="list-inline item-details">
+                                            <li>Category:
+                                                <strong><a href="">{{ post.category }}</a>
+                                                </strong>
+                                            </li>
+                                            <li>Date:
+                                                <strong><a href="">{{ post.project-date }}</a>
+                                                </strong>
+                                            </li>
+                                            <li>Type:
+                                                <strong><a href="">{{ post.type }}</a>
+                                                </strong>
+                                            </li>
+                                        </ul>
+                                    </div>
                             </div>
                             
                             <div class="modal-footer">
