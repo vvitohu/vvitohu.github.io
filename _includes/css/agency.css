@@ -53,9 +53,10 @@ h3,
 h4,
 h5,
 h6 {
+    font-weight: 700;
+    scroll-margin-top: 90px; 
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-weight: 700;
 }
 
 .img-centered {
@@ -443,7 +444,7 @@ section h3.section-subheading {
 /* 右側 TOC 滾動監控 */
 #toc a:hover,
 #TableOfContents a:hover {
-    color: #fed136 !important; /* 使用你原本主題的黃色 */
+    color: #222 !important; /* 使用你原本主題的黃色 */
 }
 
 /* 內容區圖片放大動畫 */
@@ -842,9 +843,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    scroll-margin-top: 90px; 
-}
+
 
 /* 1. 移除預設的黑影漸層背景 */
 .carousel-control.left, .carousel-control.right {
