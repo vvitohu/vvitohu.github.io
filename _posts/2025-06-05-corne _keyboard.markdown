@@ -12,7 +12,7 @@ img:
 thumbnail: /keyboard/keyboard-thumbnail.jpg
 alt: image-alt
 project-date: June 2025
-type: Course Project
+type: Personal Project
 category: 3D Design, Program Design
 ---
 ### 🚀 Corne Keyboard — 客製化分體鍵盤
