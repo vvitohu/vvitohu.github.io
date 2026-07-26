@@ -1236,10 +1236,15 @@ a:focus-visible {
 @media (orientation: portrait) and (min-width: 601px) and (max-width: 1180px) {
   .hero {
     justify-content: center;
+    background-position: center calc(var(--header-height) + 91px);
+  }
+
+  .tool-marquee {
+    line-height: 23px;
   }
 
   .hero-content {
-    margin-top: clamp(68px, 8vh, 96px);
+    margin-top: clamp(48px, 6vh, 72px);
   }
 }
 
