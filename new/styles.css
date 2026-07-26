@@ -25,6 +25,29 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+  scrollbar-color: #31445e var(--bg);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 48px;
+  border: 2px solid var(--bg);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #3a4e68, #223044);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 body {
@@ -1241,7 +1264,9 @@ a:focus-visible {
 
 @media (orientation: portrait) and (min-width: 601px) and (max-width: 1180px) {
   .hero {
+    min-height: auto;
     justify-content: flex-start;
+    padding-bottom: 32px;
     background-position: center calc(var(--header-height) + 91px);
   }
 
@@ -1256,14 +1281,18 @@ a:focus-visible {
   }
 
   .hero-metrics {
-    margin-top: -64px;
+    margin-top: -76px;
   }
 
   .scroll-cue {
     position: static;
     display: block;
     align-self: flex-end;
-    margin-top: 24px;
+    margin-top: 14px;
+  }
+
+  .projects-section {
+    padding-top: clamp(44px, 5vw, 56px);
   }
 }
 
