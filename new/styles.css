@@ -1254,8 +1254,8 @@ a:focus-visible {
   }
 
   .hero-content {
-    /* 25vw tracks the midpoint of the 2:1 image; the fixed offset provides optical centering. */
-    margin-top: calc(72px + 25vw);
+    /* Center the three-line name optically within the 2:1 image. */
+    margin-top: calc(25vw - 16px);
   }
 }
 
