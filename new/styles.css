@@ -1254,6 +1254,17 @@ a:focus-visible {
     margin-top: calc(57px + 25vw);
     transform: translateY(-50%);
   }
+
+  .hero-metrics {
+    margin-top: -64px;
+  }
+
+  .scroll-cue {
+    position: static;
+    display: block;
+    align-self: flex-end;
+    margin-top: 24px;
+  }
 }
 
 @media (orientation: portrait) and (max-width: 600px) {
