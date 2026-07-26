@@ -1254,8 +1254,8 @@ a:focus-visible {
   }
 
   .hero-content {
-    /* The 2:1 hero image renders at 50vw high; 25vw places content at its midpoint. */
-    margin-top: calc(57px + 25vw);
+    /* 25vw tracks the midpoint of the 2:1 image; the fixed offset provides optical centering. */
+    margin-top: calc(72px + 25vw);
   }
 }
 
