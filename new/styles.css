@@ -249,7 +249,8 @@ a:focus-visible {
 
 .hero-content {
   width: min(820px, 76vw);
-  margin-top: clamp(82px, 11vh, 142px);
+  margin-top: clamp(122px, 16vh, 198px);
+  margin-left: clamp(18px, 3.2vw, 54px);
 }
 
 .hero h1 {
@@ -336,7 +337,7 @@ a:focus-visible {
   display: grid;
   width: min(760px, 78vw);
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: clamp(42px, 8vh, 92px) 0 0;
+  margin: clamp(42px, 8vh, 92px) 0 0 clamp(18px, 3.2vw, 54px);
   border: 1px solid var(--line);
   background: rgba(9, 13, 19, 0.38);
   backdrop-filter: blur(10px);
@@ -1074,7 +1075,8 @@ a:focus-visible {
 
   .hero-content {
     width: 100%;
-    margin-top: 154px;
+    margin-top: 176px;
+    margin-left: 0;
   }
 
   .hero h1 {
@@ -1085,6 +1087,7 @@ a:focus-visible {
     width: 100%;
     grid-template-columns: 1fr;
     margin-top: 34px;
+    margin-left: 0;
   }
 
   .hero-metrics div + div {
