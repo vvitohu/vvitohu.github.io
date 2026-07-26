@@ -138,7 +138,6 @@ a:focus-visible {
 .scroll-cue,
 .section-index,
 .project-meta,
-.project-link,
 .dialog-close {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
@@ -193,7 +192,11 @@ a:focus-visible {
   justify-content: center;
   padding: calc(var(--header-height) + 34px) var(--page-padding) 32px;
   overflow: hidden;
-  background: var(--bg) url("/img/header/me.jpg") 66% center / cover no-repeat;
+  background-color: var(--bg);
+  background-image: url("/img/header/me.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .hero-shade {
@@ -207,7 +210,7 @@ a:focus-visible {
 
 .hero-kicker {
   position: absolute;
-  top: calc(var(--header-height) + 18px);
+  top: calc(var(--header-height) + 12px);
   right: var(--page-padding);
   left: var(--page-padding);
   margin: 0;
@@ -219,10 +222,10 @@ a:focus-visible {
 
 .tool-marquee {
   position: absolute;
-  top: calc(var(--header-height) + 72px);
+  top: calc(var(--header-height) + 46px);
   right: 0;
   left: 0;
-  padding: 13px 0;
+  padding: 10px 0;
   overflow: hidden;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -246,14 +249,14 @@ a:focus-visible {
 
 .hero-content {
   width: min(820px, 76vw);
-  margin-top: clamp(100px, 13vh, 170px);
+  margin-top: clamp(82px, 11vh, 142px);
 }
 
 .hero h1 {
   display: flex;
   flex-direction: column;
   margin: 0 0 26px;
-  font-size: clamp(62px, 10.8vw, 176px);
+  font-size: clamp(54px, 8.2vw, 132px);
   font-weight: 700;
   letter-spacing: -0.075em;
   line-height: 0.76;
@@ -491,8 +494,7 @@ a:focus-visible {
 }
 
 .project-title,
-.project-summary,
-.project-link {
+.project-summary {
   display: block;
 }
 
@@ -508,11 +510,6 @@ a:focus-visible {
   max-width: 600px;
   margin-top: 12px;
   color: var(--muted);
-}
-
-.project-link {
-  margin-top: 18px;
-  color: var(--text);
 }
 
 .skill-section {
@@ -705,14 +702,16 @@ a:focus-visible {
 }
 
 .project-dialog {
-  width: min(1180px, calc(100vw - 32px));
+  width: min(1440px, calc(100vw - 24px));
+  height: min(900px, calc(100dvh - 24px));
   max-width: none;
-  max-height: calc(100svh - 32px);
+  max-height: none;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
   border: 1px solid var(--line-strong);
   color: var(--text);
   background: var(--bg-soft);
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.52);
 }
 
 .project-dialog::backdrop {
@@ -721,56 +720,123 @@ a:focus-visible {
 }
 
 .dialog-shell {
-  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+}
+
+.dialog-topbar {
+  z-index: 2;
+  display: flex;
+  min-height: 62px;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(18px, 2.4vw, 34px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(9, 13, 19, 0.96);
+}
+
+.dialog-topbar > span {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
 }
 
 .dialog-close {
-  position: sticky;
-  z-index: 20;
-  top: 16px;
-  float: right;
-  margin: 16px 16px -58px 0;
-  padding: 10px 14px;
+  padding: 9px 0;
   border: 1px solid var(--line-strong);
+  border-width: 0 0 1px;
   color: var(--text);
-  background: rgba(9, 13, 19, 0.88);
-  backdrop-filter: blur(10px);
+  background: transparent;
   cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.dialog-close:hover,
+.dialog-close:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dialog-layout {
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.92fr);
+  overflow: hidden;
+}
+
+.dialog-visual {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  border-right: 1px solid var(--line);
+  background: #06090e;
 }
 
 .dialog-hero {
-  height: min(58svh, 620px);
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  margin: 0;
+  padding: clamp(18px, 3vw, 48px);
+  place-items: center;
   overflow: hidden;
-  background: var(--surface);
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px),
+    #06090e;
+  background-size: 48px 48px;
 }
 
 .dialog-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 22px 65px rgba(0, 0, 0, 0.38);
 }
 
 .dialog-content {
-  padding: clamp(34px, 6vw, 86px);
+  min-width: 0;
+  padding: clamp(34px, 4vw, 68px);
+  overflow-y: auto;
+  scrollbar-color: var(--line-strong) transparent;
 }
 
 .dialog-content h2 {
-  margin-top: 15px;
-  font-size: clamp(45px, 7vw, 90px);
+  margin-top: 14px;
+  font-size: clamp(42px, 5.2vw, 78px);
+  line-height: 0.94;
+}
+
+.dialog-heading {
+  padding-bottom: clamp(34px, 4vw, 58px);
+  border-bottom: 1px solid var(--line);
 }
 
 .dialog-lead {
-  max-width: 840px;
-  margin: 28px 0 0;
+  max-width: 680px;
+  margin: 24px 0 0;
   color: var(--muted);
-  font-size: clamp(17px, 1.7vw, 22px);
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.7;
 }
 
 .dialog-gallery {
   display: grid;
-  grid-template-columns: repeat(6, minmax(80px, 1fr));
-  gap: 8px;
-  margin-top: 42px;
+  flex: none;
+  grid-template-columns: repeat(6, minmax(64px, 1fr));
+  gap: 7px;
+  padding: 12px;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
 }
 
 .gallery-button {
@@ -783,6 +849,7 @@ a:focus-visible {
 
 .gallery-button.is-active {
   border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 .gallery-button img {
@@ -794,11 +861,9 @@ a:focus-visible {
 
 .dialog-columns {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: clamp(30px, 6vw, 90px);
-  margin-top: 58px;
-  padding: 46px 0;
-  border-top: 1px solid var(--line);
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(24px, 3vw, 46px);
+  padding: clamp(34px, 4vw, 52px) 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -813,7 +878,26 @@ a:focus-visible {
 
 .dialog-columns ul {
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: project-result;
+}
+
+.dialog-columns li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  counter-increment: project-result;
+}
+
+.dialog-columns li::before {
+  color: var(--accent);
+  content: "0" counter(project-result);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
 }
 
 .dialog-columns p,
@@ -824,14 +908,15 @@ a:focus-visible {
 
 .dialog-details {
   display: grid;
-  gap: 42px;
-  padding-top: 54px;
+  gap: 0;
 }
 
 .dialog-details section {
   display: grid;
-  grid-template-columns: minmax(170px, 0.3fr) minmax(0, 0.7fr);
-  gap: 32px;
+  grid-template-columns: minmax(145px, 0.32fr) minmax(0, 0.68fr);
+  gap: 28px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .reveal {
@@ -886,6 +971,30 @@ a:focus-visible {
   .course-grid {
     grid-template-columns: 1fr;
   }
+
+  .project-dialog {
+    width: calc(100vw - 20px);
+    height: calc(100dvh - 20px);
+  }
+
+  .dialog-layout {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .dialog-visual {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .dialog-hero {
+    height: min(56svh, 620px);
+    min-height: 390px;
+  }
+
+  .dialog-content {
+    overflow: visible;
+  }
 }
 
 @media (max-width: 720px) {
@@ -905,7 +1014,7 @@ a:focus-visible {
   .hero {
     justify-content: flex-end;
     padding-bottom: 78px;
-    background-position: 61% center;
+    background-position: center 28%;
   }
 
   .hero-shade {
@@ -916,11 +1025,11 @@ a:focus-visible {
 
   .hero-content {
     width: 100%;
-    margin-top: 180px;
+    margin-top: 154px;
   }
 
   .hero h1 {
-    font-size: clamp(58px, 21vw, 96px);
+    font-size: clamp(48px, 16vw, 76px);
   }
 
   .hero-metrics {
@@ -969,17 +1078,37 @@ a:focus-visible {
     flex-direction: column;
   }
 
+  .project-dialog {
+    width: 100vw;
+    height: 100dvh;
+    border: 0;
+  }
+
+  .dialog-topbar {
+    min-height: 56px;
+  }
+
   .dialog-hero {
-    height: 40svh;
+    height: 42svh;
+    min-height: 280px;
+    padding: 16px;
   }
 
   .dialog-gallery {
     grid-template-columns: repeat(3, minmax(70px, 1fr));
   }
 
+  .dialog-content {
+    padding: 30px 22px 48px;
+  }
+
   .dialog-columns,
   .dialog-details section {
     grid-template-columns: 1fr;
+  }
+
+  .dialog-details section {
+    gap: 12px;
   }
 }
 

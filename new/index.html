@@ -102,7 +102,6 @@
             <span class="project-meta">01 / PRODUCT · EDGE AI</span>
             <span class="project-title">視覺辨識鬧鐘</span>
             <span class="project-summary">以邊緣 AI 確認使用者真正離床，榮獲 MakeNTU 企業獎第一名。</span>
-            <span class="project-link">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -114,7 +113,6 @@
             <span class="project-meta">02 / MECHANICAL · EMBEDDED</span>
             <span class="project-title">自製無人機</span>
             <span class="project-summary">ESP32-S3 飛控與一體式列印機身，將整體重量控制在 250g 以下。</span>
-            <span class="project-link">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -126,7 +124,6 @@
             <span class="project-meta">03 / PRODUCT · ZMK</span>
             <span class="project-title">Corne Keyboard</span>
             <span class="project-summary">結合 ZMK 韌體與客製化列印外殼的 54 鍵無線人體工學分體鍵盤。</span>
-            <span class="project-link">VIEW CASE STUDY ↗</span>
           </button>
         </article>
 
@@ -138,7 +135,6 @@
             <span class="project-meta">04 / MEDIA</span>
             <span class="project-title">4 分鐘電子紙科普</span>
             <span class="project-summary">將顯示技術整理成容易理解的影像內容，呈現研究與技術溝通能力。</span>
-            <span class="project-link">VIEW CASE STUDY ↗</span>
           </button>
         </article>
       </div>
@@ -227,32 +223,42 @@
 
   <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
     <div class="dialog-shell">
-      <button class="dialog-close" type="button" data-dialog-close aria-label="關閉專案內容">CLOSE ×</button>
-      <div class="dialog-hero">
-        <img data-dialog-image src="" alt="">
-      </div>
-      <div class="dialog-content">
-        <p class="project-meta" data-dialog-meta></p>
-        <h2 id="dialog-title" data-dialog-title></h2>
-        <p class="dialog-lead" data-dialog-summary></p>
+      <header class="dialog-topbar">
+        <span>PROJECT ARCHIVE</span>
+        <button class="dialog-close" type="button" data-dialog-close aria-label="關閉專案內容">CLOSE ×</button>
+      </header>
 
-        <div class="dialog-gallery" data-dialog-gallery aria-label="專案圖片"></div>
-
-        <div class="dialog-columns">
-          <section>
-            <h3>Key results</h3>
-            <ul data-dialog-results></ul>
-          </section>
-          <section>
-            <h3>Tools & methods</h3>
-            <p data-dialog-tools></p>
-          </section>
+      <div class="dialog-layout">
+        <div class="dialog-visual">
+          <figure class="dialog-hero">
+            <img data-dialog-image src="" alt="">
+          </figure>
+          <div class="dialog-gallery" data-dialog-gallery aria-label="專案圖片"></div>
         </div>
 
-        <div class="dialog-details">
-          <section><h3>Project & objective</h3><p data-dialog-objective></p></section>
-          <section><h3>Design decisions</h3><p data-dialog-decisions></p></section>
-          <section><h3>Status & validation</h3><p data-dialog-validation></p></section>
+        <div class="dialog-content">
+          <div class="dialog-heading">
+            <p class="project-meta" data-dialog-meta></p>
+            <h2 id="dialog-title" data-dialog-title></h2>
+            <p class="dialog-lead" data-dialog-summary></p>
+          </div>
+
+          <div class="dialog-columns">
+            <section>
+              <h3>Key results</h3>
+              <ul data-dialog-results></ul>
+            </section>
+            <section>
+              <h3>Tools & methods</h3>
+              <p data-dialog-tools></p>
+            </section>
+          </div>
+
+          <div class="dialog-details">
+            <section><h3>Project & objective</h3><p data-dialog-objective></p></section>
+            <section><h3>Design decisions</h3><p data-dialog-decisions></p></section>
+            <section><h3>Status & validation</h3><p data-dialog-validation></p></section>
+          </div>
         </div>
       </div>
     </div>

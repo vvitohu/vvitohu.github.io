@@ -259,6 +259,8 @@
     if (!renderProject(projectKey)) return;
 
     lastProjectTrigger = trigger;
+    dialog.querySelector(".dialog-content").scrollTop = 0;
+    dialog.querySelector(".dialog-layout").scrollTop = 0;
     if (!dialog.open) dialog.showModal();
     document.body.classList.add("dialog-open");
 
@@ -277,6 +279,13 @@
         y: { from: 18 },
         duration: 540,
         delay: animeApi.stagger(60),
+        ease: "outExpo"
+      });
+      animeApi.animate(dialog.querySelector(".dialog-visual"), {
+        opacity: { from: 0 },
+        x: { from: -22 },
+        duration: 720,
+        delay: 80,
         ease: "outExpo"
       });
     }
