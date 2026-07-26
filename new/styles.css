@@ -193,7 +193,7 @@ a:focus-visible {
   justify-content: center;
   padding: calc(var(--header-height) + 34px) var(--page-padding) 32px;
   overflow: hidden;
-  background: var(--bg) url("/img/portfolio/drone/final.jpg") 66% center / cover no-repeat;
+  background: var(--bg) url("/img/header/me.jpg") 66% center / cover no-repeat;
 }
 
 .hero-shade {
