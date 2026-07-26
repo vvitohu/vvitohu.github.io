@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="胡勝紘的機械設計、嵌入式系統與產品原型作品集。">
+  <meta name="theme-color" content="#090d13">
+  <link rel="canonical" href="https://vvitohu.github.io/new/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/new/styles.css">
+  <title>胡勝紘｜Mechanical Design × Embedded Systems</title>
+</head>
+<body>
+  <a class="skip-link" href="#projects">跳至專案</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="回到新版作品集頂端">
+      <span class="brand-mark">HS</span>
+      <span class="brand-name">胡勝紘</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span>MENU</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="主要導覽">
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#courses">COURSES</a>
+      <a href="#contact">CONTACT</a>
+      <a href="/" class="nav-muted">CURRENT SITE ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <p class="hero-kicker anime-hero-item">MECHANICAL ENGINEERING STUDENT / PRODUCT DEVELOPMENT / EMBEDDED SYSTEMS</p>
+
+      <div class="tool-marquee anime-hero-item" aria-label="使用工具與技能">
+        <div class="tool-track" data-tool-track>
+          <div class="tool-group">
+            <span>ONSHAPE</span><span>3D PRINTING</span><span>ESP32</span><span>ARDUINO</span>
+            <span>C++</span><span>EDGE AI</span><span>ZMK</span><span>MATLAB</span>
+          </div>
+          <div class="tool-group" aria-hidden="true">
+            <span>ONSHAPE</span><span>3D PRINTING</span><span>ESP32</span><span>ARDUINO</span>
+            <span>C++</span><span>EDGE AI</span><span>ZMK</span><span>MATLAB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 id="hero-title">
+          <span class="anime-hero-item">SHENG-HUNG</span>
+          <span class="anime-hero-item">HU</span>
+        </h1>
+        <p class="hero-statement anime-hero-item">I design, build, and program physical products — from CAD models to working prototypes.</p>
+        <p class="hero-statement hero-statement-zh anime-hero-item">從機構設計、快速原型到嵌入式控制，將構想製作成真正能運作的產品。</p>
+        <div class="hero-actions anime-hero-item">
+          <a class="button button-primary" href="#projects">VIEW PROJECTS</a>
+          <a class="button button-secondary" href="mailto:otis.vito@gmail.com">CONTACT ME</a>
+        </div>
+      </div>
+
+      <dl class="hero-metrics anime-hero-item">
+        <div><dt>4</dt><dd>FEATURED PROJECTS</dd></div>
+        <div><dt>1st</dt><dd>MAKENTU CORPORATE AWARD</dd></div>
+        <div><dt>3</dt><dd>CORE DISCIPLINES</dd></div>
+      </dl>
+
+      <a class="scroll-cue anime-hero-item" href="#projects">SCROLL TO PROJECTS ↓</a>
+    </section>
+
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-intro reveal">
+        <p class="section-index">01 / SELECTED WORK</p>
+        <div>
+          <h2 id="projects-title">Projects</h2>
+          <p class="section-copy">從產品構想到機構、電子與程式整合，呈現實際製作與迭代的成果。</p>
+        </div>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="專案分類">
+        <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">ALL</button>
+        <button type="button" class="filter-button" data-filter="product" aria-pressed="false">PRODUCT</button>
+        <button type="button" class="filter-button" data-filter="mechanical" aria-pressed="false">MECHANICAL</button>
+        <button type="button" class="filter-button" data-filter="embedded" aria-pressed="false">EMBEDDED</button>
+        <button type="button" class="filter-button" data-filter="media" aria-pressed="false">MEDIA</button>
+      </div>
+
+      <div class="project-grid" data-project-grid>
+        <article class="project-card reveal" data-categories="product embedded">
+          <button class="project-open" type="button" data-project="clock" aria-label="查看視覺辨識鬧鐘專案">
+            <span class="project-image-wrap">
+              <img src="/img/portfolio/clock/clock-thumbnail.jpeg" alt="視覺辨識鬧鐘完成品" loading="lazy">
+            </span>
+            <span class="project-meta">01 / PRODUCT · EDGE AI</span>
+            <span class="project-title">視覺辨識鬧鐘</span>
+            <span class="project-summary">以邊緣 AI 確認使用者真正離床，榮獲 MakeNTU 企業獎第一名。</span>
+            <span class="project-link">VIEW CASE STUDY ↗</span>
+          </button>
+        </article>
+
+        <article class="project-card reveal" data-categories="mechanical embedded">
+          <button class="project-open" type="button" data-project="drone" aria-label="查看自製無人機專案">
+            <span class="project-image-wrap">
+              <img src="/img/portfolio/drone/drone-thumbnail.jpg" alt="自製無人機完成品" loading="lazy">
+            </span>
+            <span class="project-meta">02 / MECHANICAL · EMBEDDED</span>
+            <span class="project-title">自製無人機</span>
+            <span class="project-summary">ESP32-S3 飛控與一體式列印機身，將整體重量控制在 250g 以下。</span>
+            <span class="project-link">VIEW CASE STUDY ↗</span>
+          </button>
+        </article>
+
+        <article class="project-card reveal" data-categories="product mechanical embedded">
+          <button class="project-open" type="button" data-project="keyboard" aria-label="查看 Corne Keyboard 專案">
+            <span class="project-image-wrap">
+              <img src="/img/portfolio/keyboard/keyboard-thumbnail.jpg" alt="Corne Keyboard 分體鍵盤" loading="lazy">
+            </span>
+            <span class="project-meta">03 / PRODUCT · ZMK</span>
+            <span class="project-title">Corne Keyboard</span>
+            <span class="project-summary">結合 ZMK 韌體與客製化列印外殼的 54 鍵無線人體工學分體鍵盤。</span>
+            <span class="project-link">VIEW CASE STUDY ↗</span>
+          </button>
+        </article>
+
+        <article class="project-card reveal" data-categories="media">
+          <button class="project-open" type="button" data-project="eink" aria-label="查看四分鐘電子紙科普專案">
+            <span class="project-image-wrap">
+              <img src="/img/portfolio/eink/eink-thumbnail.png" alt="四分鐘電子紙科普影片縮圖" loading="lazy">
+            </span>
+            <span class="project-meta">04 / MEDIA</span>
+            <span class="project-title">4 分鐘電子紙科普</span>
+            <span class="project-summary">將顯示技術整理成容易理解的影像內容，呈現研究與技術溝通能力。</span>
+            <span class="project-link">VIEW CASE STUDY ↗</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skill-section" id="skills" aria-labelledby="skills-title">
+      <div class="section-intro reveal">
+        <p class="section-index">02 / TOOLCHAIN</p>
+        <div>
+          <h2 id="skills-title">Skill matrix</h2>
+          <p class="section-copy">依照實際專案使用情境分類，讓技能可以回到作品中被驗證。</p>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-item reveal"><span>CAD</span><h3>CAD & mechanical design</h3><p>Onshape · Assembly design · Engineering drawing · Mechanism design</p></article>
+        <article class="skill-item reveal"><span>MAKE</span><h3>Fabrication & prototyping</h3><p>FDM 3D printing · Laser cutting · Soldering · Prototype assembly</p></article>
+        <article class="skill-item reveal"><span>CTRL</span><h3>Embedded & controls</h3><p>C / C++ · Arduino · ESP32 · ZMK firmware</p></article>
+        <article class="skill-item reveal"><span>VISION</span><h3>AI & computer vision</h3><p>MoveNet · Edge AI · NPU inference · Pose recognition</p></article>
+        <article class="skill-item reveal"><span>HW</span><h3>Electronics & integration</h3><p>Sensor integration · Hardware wiring · System debugging · Power management</p></article>
+        <article class="skill-item reveal"><span>DOC</span><h3>Software & communication</h3><p>MATLAB · Git / GitHub · Technical documentation · Video production</p></article>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="about-photo reveal">
+        <img src="/img/team/1.jpg" alt="胡勝紘個人照片" loading="lazy">
+      </div>
+      <div class="about-copy reveal">
+        <p class="section-index">03 / ABOUT</p>
+        <h2 id="about-title">Build it. Test it. Improve it.</h2>
+        <p>我是胡勝紘，一名熱衷實作的機械系學生。我喜歡在機構、電子與程式之間工作，從 CAD 建模、快速原型製作到嵌入式控制，將想法逐步發展成能夠測試與使用的實體產品。</p>
+        <p>目前專注於 Onshape、3D 列印、Arduino、ESP32 與 C++，也持續探索邊緣 AI 和產品整合。</p>
+        <div class="about-links">
+          <a href="https://github.com/vvitohu" target="_blank" rel="noreferrer">GITHUB ↗</a>
+          <a href="mailto:otis.vito@gmail.com">EMAIL ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section course-section" id="courses" aria-labelledby="courses-title">
+      <div class="section-intro reveal">
+        <p class="section-index">04 / KNOWLEDGE SHARING</p>
+        <div>
+          <h2 id="courses-title">Courses & notes</h2>
+          <p class="section-copy">課程內容沿用既有頁面與導覽，只在新版首頁提供入口。</p>
+        </div>
+      </div>
+
+      <div class="course-grid">
+        <a class="course-card reveal" href="/database_courses/onshape-basic">
+          <img src="/img/courses/onshape/onshape.jpg" alt="Onshape 基礎建模" loading="lazy">
+          <span><strong>Onshape 基礎建模</strong><small>從基礎介面開始，學習 3D 建模的核心邏輯</small></span>
+        </a>
+        <a class="course-card reveal" href="/database_courses/zmk">
+          <img src="/img/courses/zmk/zmk.png" alt="ZMK 設定教學" loading="lazy">
+          <span><strong>ZMK 設定教學</strong><small>從零掌握韌體編寫，打造專屬無線鍵盤</small></span>
+        </a>
+        <a class="course-card reveal" href="/database_courses/matlab/basic">
+          <img src="/img/courses/matlab/MATLAB.png" alt="MATLAB 課程" loading="lazy">
+          <span><strong>MATLAB</strong><small>工程與科學運算程式語法筆記</small></span>
+        </a>
+        <a class="course-card reveal" href="/database_courses/ergogen">
+          <img src="/img/courses/ergogen/ergogen.png" alt="Ergogen 鍵盤設計" loading="lazy">
+          <span><strong>Ergogen 鍵盤設計</strong><small>開源鍵盤參數化繪圖工具</small></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="section-index reveal">05 / CONTACT</p>
+      <h2 id="contact-title" class="reveal">Let’s build something real.</h2>
+      <p class="reveal">如果你對我的作品、實習機會或合作有興趣，歡迎直接與我聯絡。</p>
+      <div class="contact-actions reveal">
+        <a class="button button-primary" href="mailto:otis.vito@gmail.com">OTIS.VITO@GMAIL.COM</a>
+        <a class="button button-secondary" href="https://github.com/vvitohu" target="_blank" rel="noreferrer">GITHUB ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year></span> 胡勝紘</span>
+    <span>MECHANICAL DESIGN × EMBEDDED SYSTEMS</span>
+    <a href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+  <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" data-dialog-close aria-label="關閉專案內容">CLOSE ×</button>
+      <div class="dialog-hero">
+        <img data-dialog-image src="" alt="">
+      </div>
+      <div class="dialog-content">
+        <p class="project-meta" data-dialog-meta></p>
+        <h2 id="dialog-title" data-dialog-title></h2>
+        <p class="dialog-lead" data-dialog-summary></p>
+
+        <div class="dialog-gallery" data-dialog-gallery aria-label="專案圖片"></div>
+
+        <div class="dialog-columns">
+          <section>
+            <h3>Key results</h3>
+            <ul data-dialog-results></ul>
+          </section>
+          <section>
+            <h3>Tools & methods</h3>
+            <p data-dialog-tools></p>
+          </section>
+        </div>
+
+        <div class="dialog-details">
+          <section><h3>Project & objective</h3><p data-dialog-objective></p></section>
+          <section><h3>Design decisions</h3><p data-dialog-decisions></p></section>
+          <section><h3>Status & validation</h3><p data-dialog-validation></p></section>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@4.5.0/dist/bundles/anime.umd.min.js" defer></script>
+  <script src="/new/app.js" defer></script>
+</body>
+</html>
