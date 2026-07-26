@@ -1245,7 +1245,7 @@ a:focus-visible {
 
 @media (orientation: portrait) and (max-width: 600px) {
   .hero {
-    justify-content: center;
+    justify-content: flex-start;
     background-position: center calc(var(--header-height) + 91px);
   }
 
@@ -1254,7 +1254,8 @@ a:focus-visible {
   }
 
   .hero-content {
-    margin-top: clamp(38px, 6vh, 58px);
+    /* The 2:1 hero image renders at 50vw high; 25vw places content at its midpoint. */
+    margin-top: calc(57px + 25vw);
   }
 }
 
