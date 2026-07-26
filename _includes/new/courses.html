@@ -1,0 +1,18 @@
+    <section class="section course-section" id="courses" aria-labelledby="courses-title">
+      <div class="section-intro reveal">
+        <p class="section-index">04 / KNOWLEDGE SHARING</p>
+        <div>
+          <h2 id="courses-title">Courses & notes</h2>
+          <p class="section-copy">課程內容沿用既有 collection 與導覽，只在新版首頁提供入口。</p>
+        </div>
+      </div>
+
+      <div class="course-grid">
+        {% for course in site.data.courses %}
+          <a class="course-card reveal" href="{{ course.permalink | relative_url }}">
+            <img src="{{ course.img | relative_url }}" alt="{{ course.title }}" loading="lazy">
+            <span><strong>{{ course.title }}</strong><small>{{ course.content }}</small></span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>

@@ -1,0 +1,40 @@
+    {% assign featured_projects = site.posts | where: "featured", true %}
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <p class="hero-kicker anime-hero-item">MECHANICAL ENGINEERING STUDENT / PRODUCT DEVELOPMENT / EMBEDDED SYSTEMS</p>
+
+      <div class="tool-marquee anime-hero-item" aria-label="使用工具與技能">
+        <div class="tool-track" data-tool-track>
+          <div class="tool-group">
+            <span>ONSHAPE</span><span>3D PRINTING</span><span>ESP32</span><span>ARDUINO</span>
+            <span>C++</span><span>EDGE AI</span><span>ZMK</span><span>MATLAB</span>
+          </div>
+          <div class="tool-group" aria-hidden="true">
+            <span>ONSHAPE</span><span>3D PRINTING</span><span>ESP32</span><span>ARDUINO</span>
+            <span>C++</span><span>EDGE AI</span><span>ZMK</span><span>MATLAB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 id="hero-title">
+          <span class="anime-hero-item">SHENG-HUNG</span>
+          <span class="anime-hero-item">HU</span>
+        </h1>
+        <p class="hero-statement anime-hero-item">I design, build, and program physical products — from CAD models to working prototypes.</p>
+        <p class="hero-statement hero-statement-zh anime-hero-item">從機構設計、快速原型到嵌入式控制，將構想製作成真正能運作的產品。</p>
+        <div class="hero-actions anime-hero-item">
+          <a class="button button-primary" href="#projects">VIEW PROJECTS</a>
+          <a class="button button-secondary" href="mailto:{{ site.email }}">CONTACT ME</a>
+        </div>
+      </div>
+
+      <dl class="hero-metrics anime-hero-item">
+        <div><dt>{{ featured_projects.size }}</dt><dd>FEATURED PROJECTS</dd></div>
+        <div><dt>1st</dt><dd>MAKENTU CORPORATE AWARD</dd></div>
+        <div><dt>3</dt><dd>CORE DISCIPLINES</dd></div>
+      </dl>
+
+      <a class="scroll-cue anime-hero-item" href="#projects">SCROLL TO PROJECTS ↓</a>
+    </section>

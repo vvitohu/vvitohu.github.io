@@ -1,0 +1,34 @@
+    {% assign featured_projects = site.posts | where: "featured", true | sort: "home_order" %}
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-intro reveal">
+        <p class="section-index">01 / SELECTED WORK</p>
+        <div>
+          <h2 id="projects-title">Projects</h2>
+          <p class="section-copy">從產品構想到機構、電子與程式整合，呈現實際製作與迭代的成果。</p>
+        </div>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="專案分類">
+        <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">ALL</button>
+        <button type="button" class="filter-button" data-filter="product" aria-pressed="false">PRODUCT</button>
+        <button type="button" class="filter-button" data-filter="mechanical" aria-pressed="false">MECHANICAL</button>
+        <button type="button" class="filter-button" data-filter="embedded" aria-pressed="false">EMBEDDED</button>
+        <button type="button" class="filter-button" data-filter="media" aria-pressed="false">MEDIA</button>
+      </div>
+
+      <div class="project-grid" data-project-grid>
+        {% for project in featured_projects %}
+          {% capture project_thumbnail %}/img/portfolio{{ project.thumbnail }}{% endcapture %}
+          <article class="project-card reveal" data-categories="{{ project.project_categories | join: ' ' }}">
+            <button class="project-open" type="button" data-project="{{ project.project_key }}" aria-label="查看{{ project.title }}專案">
+              <span class="project-image-wrap">
+                <img src="{{ project_thumbnail | relative_url }}" alt="{{ project.thumbnail_alt | default: project.title }}" loading="lazy">
+              </span>
+              <span class="project-meta">0{{ forloop.index }} / {{ project.card_meta }}</span>
+              <span class="project-title">{{ project.title }}</span>
+              <span class="project-summary">{{ project.project_summary }}</span>
+            </button>
+          </article>
+        {% endfor %}
+      </div>
+    </section>

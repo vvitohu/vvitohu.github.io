@@ -17,6 +17,25 @@ alt: image-alt
 project-date: May 2026
 type: Competition
 category: 3D Design
+featured: true
+home_order: 1
+project_key: clock
+project_categories:
+- product
+- embedded
+card_meta: PRODUCT · EDGE AI
+thumbnail_alt: 視覺辨識鬧鐘完成品
+project_meta: PRODUCT / EDGE AI / 2026
+project_summary: 以姿態辨識提高關閉鬧鐘的認知成本，並透過狀態機持續確認使用者是否真正離床。
+project_results:
+- 榮獲 MakeNTU 企業獎第一名
+- 以 MoveNet 進行邊緣端姿態辨識
+- 結合冷卻期狀態機，持續確認使用者是否離床
+- 整合獨立硬體、顯示與網頁控制介面
+project_tools: NXP i.MX 93 · MoveNet · NPU · Onshape · 3D Printing · Web Control
+project_objective: MakeNTU 團隊競賽專案。目標是改善使用者憑肌肉記憶關閉鬧鐘後繼續入睡的問題，讓關閉行為需要完成可被系統驗證的動作。
+project_decisions: 採用坐姿與揮手作為關閉條件，並將模型推論交由 NPU 執行；關閉後不立即結束，而是加入冷卻期與再次辨識機制。外殼則整合鏡頭、顯示與主板安裝需求。
+project_validation: 完成可獨立運作的硬體原型、姿態判斷流程與網頁控制功能，並在 MakeNTU 獲得企業獎第一名。
 ---
 
  這個是在 MakeNTU 競賽中製作的專案——「起床重睡起床輔助器」。該專案旨在解決現代人設定鬧鐘後仍因「低認知負擔、依賴肌肉記憶」而輕易按掉鬧鐘並睡過頭的痛點。而我們在此競賽中**榮獲了企業獎第一名的殊榮！**

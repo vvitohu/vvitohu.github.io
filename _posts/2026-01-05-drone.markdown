@@ -20,6 +20,25 @@ alt: image-alt
 project-date: January 2026
 type: Course Project
 category: 3D Design, Program Design
+featured: true
+home_order: 2
+project_key: drone
+project_categories:
+- mechanical
+- embedded
+card_meta: MECHANICAL · EMBEDDED
+thumbnail_alt: 自製無人機完成品
+project_meta: MECHANICAL / EMBEDDED / 2026
+project_summary: 建立低成本、可反覆測試的自穩飛行平台，整合機身結構、動力配置與 ESP32-S3 飛控。
+project_results:
+- 全機重量控制在 250 公克以下
+- 完成三個主要機身版本迭代
+- 整合 ESP-FC 飛控與陀螺儀濾波調整
+- 改善電壓、馬達方向、重量與飛行穩定問題
+project_tools: ESP32-S3 · ESP-FC · Onshape · 3D Printing · Flight Testing · PID Tuning
+project_objective: 課程專案以降低失控墜落造成的零件損壞為長期目標，先建立一套可調整、可維修且成本較低的自穩飛行實驗平台。
+project_decisions: 使用 ESP32-S3 SuperMini 與開源 ESP-FC，機身採用一體式列印與三角形高剛性結構；透過多版外型逐步降低重量並改善零件配置與應力集中。
+project_validation: 平台已完成基本飛行與姿態調整，飛行表現可支援後續失控保護研究，並保持在 250 公克以下。
 ---
 
  本專案名為「無人機零墜毀計畫」，旨在解決無人機在飛行過程中因失去訊號或控制而墜落、導致機身零件損壞與高昂維修成本的痛點 。為了降低使用成本，我們以開發出一套在控制器斷線時能做出相應安全措施的失控保護系統 ，並以「設計無人機自穩實驗平台」、「優化動力輸出與姿態補償的響應效率」及「尋找完美飛控參數」為階段性目標 。

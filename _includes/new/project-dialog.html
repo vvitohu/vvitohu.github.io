@@ -1,0 +1,77 @@
+  {% assign featured_projects = site.posts | where: "featured", true | sort: "home_order" %}
+  <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <header class="dialog-topbar">
+        <span>PROJECT ARCHIVE</span>
+        <button class="dialog-close" type="button" data-dialog-close aria-label="關閉專案內容">CLOSE ×</button>
+      </header>
+
+      <div class="dialog-layout">
+        <div class="dialog-visual">
+          <figure class="dialog-hero">
+            <img data-dialog-image src="" alt="">
+          </figure>
+          <div class="dialog-gallery" data-dialog-gallery aria-label="專案圖片"></div>
+        </div>
+
+        <div class="dialog-content">
+          <div class="dialog-heading">
+            <p class="project-meta" data-dialog-meta></p>
+            <h2 id="dialog-title" data-dialog-title></h2>
+            <p class="dialog-lead" data-dialog-summary></p>
+          </div>
+
+          <div class="dialog-columns">
+            <section>
+              <h3>Key results</h3>
+              <ul data-dialog-results></ul>
+            </section>
+            <section>
+              <h3>Tools & methods</h3>
+              <p data-dialog-tools></p>
+            </section>
+          </div>
+
+          <div class="dialog-details">
+            <section><h3>Project & objective</h3><p data-dialog-objective></p></section>
+            <section><h3>Design decisions</h3><p data-dialog-decisions></p></section>
+            <section><h3>Status & validation</h3><p data-dialog-validation></p></section>
+          </div>
+
+          <section class="dialog-notes" data-dialog-notes-section>
+            <h3>Project notes</h3>
+            <div class="dialog-notes-body" data-dialog-notes></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="application/json" data-project-data>
+    {
+      {% for project in featured_projects %}
+        "{{ project.project_key }}": {
+          "meta": {{ project.project_meta | jsonify }},
+          "title": {{ project.title | jsonify }},
+          "summary": {{ project.project_summary | jsonify }},
+          "images": [
+            {% for file in project.img %}
+              {% if file contains 'youtube:' %}
+                {% capture image_path %}/img/portfolio{{ project.thumbnail }}{% endcapture %}
+              {% else %}
+                {% capture image_path %}/img/portfolio{{ file }}{% endcapture %}
+              {% endif %}
+              {% capture image_alt %}{{ project.title }} — 圖片 {{ forloop.index }}{% endcapture %}
+              [{{ image_path | relative_url | jsonify }}, {{ image_alt | jsonify }}]{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ],
+          "results": {{ project.project_results | jsonify }},
+          "tools": {{ project.project_tools | jsonify }},
+          "objective": {{ project.project_objective | jsonify }},
+          "decisions": {{ project.project_decisions | jsonify }},
+          "validation": {{ project.project_validation | jsonify }},
+          "notes": {{ project.content | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+  </script>

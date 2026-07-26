@@ -15,6 +15,26 @@ alt: image-alt
 project-date: June 2025
 type: Personal Project
 category: 3D Design, Program Design
+featured: true
+home_order: 3
+project_key: keyboard
+project_categories:
+- product
+- mechanical
+- embedded
+card_meta: PRODUCT · ZMK
+thumbnail_alt: Corne Keyboard 分體鍵盤
+project_meta: PRODUCT / EMBEDDED / 2025
+project_summary: 針對人體工學與桌面使用情境，打造可高度客製化的無線分體鍵盤。
+project_results:
+- 左右各 27 鍵，共 54 鍵分體配置
+- 支援藍牙無線與 USB-C 有線連線
+- 使用 ZMK Firmware 進行多層鍵位與裝置管理
+- 完成客製化 3D 列印外殼
+project_tools: ZMK · Onshape · 3D Printing · Soldering · Bluetooth · Ergonomic Layout
+project_objective: 個人專案聚焦在減少手指跨行移動、改善手腕姿勢，並保留韌體、鍵位與外殼的高度客製能力。
+project_decisions: 採用 4×6 加三顆拇指鍵的分體配置，整合旋鈕、熱插拔與無線連線，外殼則以 3D 列印因應傾角和配置的快速修改。
+project_validation: 完成可使用的左右分體鍵盤，支援 ZMK 的鍵位分層及多裝置藍牙功能，並持續作為日常輸入設備使用與調整。
 ---
 ### 🚀 Corne Keyboard — 客製化分體鍵盤
 

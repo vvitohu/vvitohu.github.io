@@ -919,6 +919,55 @@ a:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+.dialog-notes {
+  padding-top: clamp(38px, 4vw, 56px);
+}
+
+.dialog-notes-body {
+  color: var(--muted);
+}
+
+.dialog-notes-body h2,
+.dialog-notes-body h3,
+.dialog-notes-body h4 {
+  margin: 34px 0 12px;
+  color: var(--text);
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+  font-size: clamp(20px, 1.8vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-transform: none;
+}
+
+.dialog-notes-body p,
+.dialog-notes-body li {
+  line-height: 1.8;
+}
+
+.dialog-notes-body img {
+  height: auto;
+  margin: 18px 0;
+}
+
+.dialog-notes-body table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dialog-notes-body th,
+.dialog-notes-body td {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.dialog-notes-body a {
+  color: var(--text);
+}
+
 .reveal {
   will-change: transform, opacity;
 }

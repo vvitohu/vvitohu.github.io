@@ -12,4 +12,21 @@ alt: image-alt
 project-date: June 2026
 type: Course Project
 category: Video Production
+featured: true
+home_order: 4
+project_key: eink
+project_categories:
+- media
+card_meta: MEDIA
+thumbnail_alt: 四分鐘電子紙科普影片縮圖
+project_meta: MEDIA / COMMUNICATION / 2026
+project_summary: 將電子紙的顯示原理與應用濃縮成短篇影像內容，兼顧技術準確度與理解門檻。
+project_results:
+- 以四分鐘篇幅說明電子紙的核心概念
+- 完成資料研究、腳本整理與影像製作
+- 以視覺化方式降低技術內容的理解門檻
+project_tools: Research · Scriptwriting · Visual Communication · Video Editing
+project_objective: 課程影片專案，目標是將電子紙的技術原理轉化為一般觀眾能在短時間內理解的內容。
+project_decisions: 先聚焦最關鍵的顯示機制與應用差異，再以圖像、旁白與節奏控制資訊密度，避免短片被過多技術名詞淹沒。
+project_validation: 完成四分鐘科普影片並發布於 YouTube，補充作品集中對研究整理與技術溝通能力的呈現。
 ---
