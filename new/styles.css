@@ -1233,9 +1233,15 @@ a:focus-visible {
   }
 }
 
+@media (orientation: landscape) and (min-width: 601px) and (max-width: 1366px) and (hover: none) {
+  .hero {
+    background-position: center calc(var(--header-height) + 46px);
+  }
+}
+
 @media (orientation: portrait) and (min-width: 601px) and (max-width: 1180px) {
   .hero {
-    justify-content: center;
+    justify-content: flex-start;
     background-position: center calc(var(--header-height) + 91px);
   }
 
@@ -1244,7 +1250,9 @@ a:focus-visible {
   }
 
   .hero-content {
-    margin-top: clamp(48px, 6vh, 72px);
+    /* Place the content center on the midpoint of the 2:1 background image. */
+    margin-top: calc(57px + 25vw);
+    transform: translateY(-50%);
   }
 }
 
