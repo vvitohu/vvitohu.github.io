@@ -1233,6 +1233,16 @@ a:focus-visible {
   }
 }
 
+@media (orientation: portrait) and (min-width: 601px) and (max-width: 1180px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-content {
+    margin-top: clamp(68px, 8vh, 96px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
