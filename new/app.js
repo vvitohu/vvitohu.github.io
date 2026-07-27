@@ -10,6 +10,7 @@
   const dialog = document.querySelector("[data-project-dialog]");
   const dialogImage = dialog.querySelector("[data-dialog-image]");
   const dialogGallery = dialog.querySelector("[data-dialog-gallery]");
+  const dialogIndicators = dialog.querySelector("[data-dialog-indicators]");
   const projectCards = [...document.querySelectorAll(".project-card")];
   const filterButtons = [...document.querySelectorAll(".filter-button")];
   const projectDataElement = document.querySelector("[data-project-data]");
@@ -117,11 +118,17 @@
     });
   });
 
-  const setDialogImage = (src, alt, selectedButton) => {
+  const setDialogImage = (src, alt, selectedIndex) => {
     dialogGallery.querySelectorAll(".gallery-button").forEach((button) => {
-      const isActive = button === selectedButton;
+      const isActive = Number(button.dataset.galleryIndex) === selectedIndex;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    dialogIndicators.querySelectorAll(".indicator-button").forEach((button) => {
+      const isActive = Number(button.dataset.galleryIndex) === selectedIndex;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-current", isActive ? "true" : "false");
     });
 
     dialogImage.src = src;
@@ -168,18 +175,31 @@
       const image = document.createElement("img");
       button.type = "button";
       button.className = `gallery-button${index === 0 ? " is-active" : ""}`;
+      button.dataset.galleryIndex = String(index);
       button.setAttribute("aria-label", `顯示圖片：${alt}`);
       button.setAttribute("aria-pressed", String(index === 0));
       image.src = src;
       image.alt = "";
       image.loading = "lazy";
       button.append(image);
-      button.addEventListener("click", () => setDialogImage(src, alt, button));
+      button.addEventListener("click", () => setDialogImage(src, alt, index));
+      return button;
+    }));
+
+    dialogIndicators.hidden = project.images.length < 2;
+    dialogIndicators.replaceChildren(...project.images.map(([src, alt], index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `indicator-button${index === 0 ? " is-active" : ""}`;
+      button.dataset.galleryIndex = String(index);
+      button.setAttribute("aria-label", `Show image ${index + 1} of ${project.images.length}`);
+      button.setAttribute("aria-current", index === 0 ? "true" : "false");
+      button.addEventListener("click", () => setDialogImage(src, alt, index));
       return button;
     }));
 
     if (project.images.length) {
-      setDialogImage(project.images[0][0], project.images[0][1], dialogGallery.firstElementChild);
+      setDialogImage(project.images[0][0], project.images[0][1], 0);
     }
     return true;
   };

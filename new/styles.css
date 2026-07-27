@@ -861,6 +861,7 @@ a:focus-visible {
 }
 
 .dialog-hero {
+  position: relative;
   display: grid;
   min-height: 0;
   flex: 1;
@@ -883,6 +884,50 @@ a:focus-visible {
   max-height: 100%;
   object-fit: contain;
   box-shadow: 0 22px 65px rgba(0, 0, 0, 0.38);
+}
+
+.dialog-indicators {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(6, 9, 14, 0.76);
+  backdrop-filter: blur(8px);
+  transform: translateX(-50%);
+}
+
+.dialog-indicators[hidden] {
+  display: none;
+}
+
+.indicator-button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--muted);
+  cursor: pointer;
+  opacity: 0.52;
+  transition: width 0.2s ease, border-radius 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.indicator-button:hover,
+.indicator-button:focus-visible {
+  background: var(--text);
+  opacity: 1;
+}
+
+.indicator-button.is-active {
+  width: 20px;
+  border-radius: 4px;
+  background: var(--accent);
+  opacity: 1;
 }
 
 .dialog-content {
@@ -1239,7 +1284,27 @@ a:focus-visible {
   }
 
   .dialog-gallery {
-    grid-template-columns: repeat(3, minmax(70px, 1fr));
+    display: flex;
+    gap: 6px;
+    padding: 8px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x proximity;
+  }
+
+  .dialog-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-button {
+    flex: 0 0 72px;
+    scroll-snap-align: start;
+  }
+
+  .dialog-indicators {
+    bottom: 10px;
   }
 
   .dialog-content {
