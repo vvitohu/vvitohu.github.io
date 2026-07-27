@@ -952,8 +952,9 @@ a:focus-visible {
 }
 
 .dialog-media-button::before {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
   border-bottom: 1px solid currentColor;
   border-left: 1px solid currentColor;
   content: "";
@@ -1409,8 +1410,8 @@ a:focus-visible {
   }
 
   .dialog-media-button::before {
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
   }
 
   .dialog-indicators {
