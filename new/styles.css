@@ -877,10 +877,13 @@ a:focus-visible {
 }
 
 .dialog-media-stage {
-  position: relative;
+  display: grid;
   width: 100%;
   min-height: 0;
   flex: 1;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 5px;
 }
 
 .dialog-media {
@@ -932,52 +935,43 @@ a:focus-visible {
 }
 
 .dialog-media-button {
-  position: absolute;
-  top: 50%;
-  z-index: 2;
   display: grid;
   width: 40px;
   height: 50px;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.78);
-  border-radius: 7px;
-  color: #111820;
-  background: rgba(242, 244, 246, 0.9);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(9, 13, 19, 0.72);
   cursor: pointer;
   font-size: 0;
   line-height: 1;
   place-items: center;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
-  transform: translateY(-50%);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(8px);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .dialog-media-button::before {
   width: 14px;
   height: 14px;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
   content: "";
-  transform: rotate(45deg);
 }
 
 .dialog-media-button[data-dialog-previous]::before {
+  transform: rotate(45deg);
+}
+
+.dialog-media-button[data-dialog-next]::before {
   transform: rotate(-135deg);
-}
-
-.dialog-media-button[data-dialog-previous] {
-  left: 6px;
-}
-
-.dialog-media-button[data-dialog-next] {
-  right: 6px;
 }
 
 .dialog-media-button:hover,
 .dialog-media-button:focus-visible {
-  color: #07101a;
-  background: #fff;
-  transform: translateY(-50%) scale(1.03);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .indicator-button {
@@ -1043,6 +1037,10 @@ a:focus-visible {
   scrollbar-width: thin;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x proximity;
+}
+
+.dialog-gallery[hidden] {
+  display: none;
 }
 
 .gallery-button {
@@ -1406,14 +1404,6 @@ a:focus-visible {
   .dialog-media-button {
     width: 34px;
     height: 44px;
-  }
-
-  .dialog-media-button[data-dialog-previous] {
-    left: 4px;
-  }
-
-  .dialog-media-button[data-dialog-next] {
-    right: 4px;
   }
 
   .dialog-media-button::before {

@@ -233,6 +233,7 @@
     previousMediaButton.hidden = !hasMultipleMedia;
     nextMediaButton.hidden = !hasMultipleMedia;
     dialogIndicators.hidden = !hasMultipleMedia;
+    dialogGallery.hidden = !hasMultipleMedia;
     dialogIndicators.replaceChildren(...project.media.map((media, index) => {
       const button = document.createElement("button");
       button.type = "button";
