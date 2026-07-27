@@ -907,7 +907,6 @@ a:focus-visible {
   height: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: 12px;
   box-shadow: 0 22px 65px rgba(0, 0, 0, 0.38);
 }
 
@@ -917,23 +916,34 @@ a:focus-visible {
   height: 100%;
   max-height: 100%;
   border: 0;
-  border-radius: 12px;
   box-shadow: 0 22px 65px rgba(0, 0, 0, 0.38);
 }
 
 .dialog-indicators {
   display: flex;
+  width: max-content;
+  max-width: min(100%, 360px);
   min-height: 34px;
   flex: none;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 7px;
   margin-top: 6px;
   padding: 5px 7px;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(6, 9, 14, 0.76);
   backdrop-filter: blur(8px);
   align-self: center;
+  justify-self: center;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+.dialog-indicators::-webkit-scrollbar {
+  display: none;
 }
 
 .dialog-indicators[hidden],

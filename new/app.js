@@ -160,11 +160,27 @@
       button.setAttribute("aria-pressed", String(isActive));
     });
 
+    let activeIndicator = null;
     dialogIndicators.querySelectorAll(".indicator-button").forEach((button) => {
       const isActive = Number(button.dataset.galleryIndex) === selectedIndex;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-current", isActive ? "true" : "false");
+      if (isActive) activeIndicator = button;
     });
+
+    if (activeIndicator && dialogIndicators.scrollWidth > dialogIndicators.clientWidth) {
+      requestAnimationFrame(() => {
+        const containerRect = dialogIndicators.getBoundingClientRect();
+        const indicatorRect = activeIndicator.getBoundingClientRect();
+        const centeredLeft = dialogIndicators.scrollLeft
+          + indicatorRect.left - containerRect.left
+          - (containerRect.width - indicatorRect.width) / 2;
+        dialogIndicators.scrollTo({
+          left: centeredLeft,
+          behavior: reduceMotion ? "auto" : "smooth"
+        });
+      });
+    }
 
     const mediaElement = createMediaElement(media);
     dialogMedia.replaceChildren(mediaElement);
