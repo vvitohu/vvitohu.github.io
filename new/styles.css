@@ -877,13 +877,10 @@ a:focus-visible {
 }
 
 .dialog-media-stage {
-  display: grid;
+  position: relative;
   width: 100%;
   min-height: 0;
   flex: 1;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(8px, 1.4vw, 18px);
 }
 
 .dialog-media {
@@ -920,7 +917,7 @@ a:focus-visible {
   flex: none;
   align-items: center;
   gap: 7px;
-  margin-top: 14px;
+  margin-top: 6px;
   padding: 5px 7px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -935,25 +932,52 @@ a:focus-visible {
 }
 
 .dialog-media-button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
   display: grid;
-  width: 36px;
-  height: 44px;
+  width: 40px;
+  height: 50px;
   padding: 0;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  color: var(--text);
-  background: rgba(6, 9, 14, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 7px;
+  color: #111820;
+  background: rgba(242, 244, 246, 0.9);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0;
   line-height: 1;
   place-items: center;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dialog-media-button::before {
+  width: 14px;
+  height: 14px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.dialog-media-button[data-dialog-previous]::before {
+  transform: rotate(-135deg);
+}
+
+.dialog-media-button[data-dialog-previous] {
+  left: 6px;
+}
+
+.dialog-media-button[data-dialog-next] {
+  right: 6px;
 }
 
 .dialog-media-button:hover,
 .dialog-media-button:focus-visible {
-  color: var(--bg);
-  background: var(--accent);
+  color: #07101a;
+  background: #fff;
+  transform: translateY(-50%) scale(1.03);
 }
 
 .indicator-button {
@@ -1379,17 +1403,26 @@ a:focus-visible {
     scroll-snap-align: start;
   }
 
-  .dialog-media-stage {
-    gap: 6px;
+  .dialog-media-button {
+    width: 34px;
+    height: 44px;
   }
 
-  .dialog-media-button {
-    width: 30px;
-    height: 38px;
+  .dialog-media-button[data-dialog-previous] {
+    left: 4px;
+  }
+
+  .dialog-media-button[data-dialog-next] {
+    right: 4px;
+  }
+
+  .dialog-media-button::before {
+    width: 12px;
+    height: 12px;
   }
 
   .dialog-indicators {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .dialog-content {
