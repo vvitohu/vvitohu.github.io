@@ -9,8 +9,12 @@
       <div class="dialog-layout">
         <div class="dialog-visual">
           <figure class="dialog-hero">
-            <img data-dialog-image src="" alt="">
-            <div class="dialog-indicators" data-dialog-indicators aria-label="Project image indicators"></div>
+            <div class="dialog-media" data-dialog-media></div>
+            <div class="dialog-navigation" data-dialog-navigation aria-label="Project media navigation">
+              <button class="dialog-media-button" type="button" data-dialog-previous aria-label="Previous image or video">&#8592;</button>
+              <div class="dialog-indicators" data-dialog-indicators aria-label="Project media indicators"></div>
+              <button class="dialog-media-button" type="button" data-dialog-next aria-label="Next image or video">&#8594;</button>
+            </div>
           </figure>
           <div class="dialog-gallery" data-dialog-gallery aria-label="專案圖片"></div>
         </div>
@@ -55,15 +59,29 @@
           "meta": {{ project.project_meta | jsonify }},
           "title": {{ project.title | jsonify }},
           "summary": {{ project.project_summary | jsonify }},
-          "images": [
+          "media": [
             {% for file in project.img %}
               {% if file contains 'youtube:' %}
-                {% capture image_path %}/img/portfolio{{ project.thumbnail }}{% endcapture %}
+                {% assign media_source = file | remove: 'youtube:' %}
+                {% capture media_thumbnail %}/img/portfolio{{ project.thumbnail }}{% endcapture %}
+                {% assign media_type = 'youtube' %}
+              {% elsif file contains 'video:' %}
+                {% assign video_file = file | remove: 'video:' %}
+                {% capture media_source %}/img/portfolio{{ video_file }}{% endcapture %}
+                {% capture media_thumbnail %}/img/portfolio{{ project.thumbnail }}{% endcapture %}
+                {% assign media_type = 'video' %}
               {% else %}
-                {% capture image_path %}/img/portfolio{{ file }}{% endcapture %}
+                {% capture media_source %}/img/portfolio{{ file }}{% endcapture %}
+                {% capture media_thumbnail %}/img/portfolio{{ file }}{% endcapture %}
+                {% assign media_type = 'image' %}
               {% endif %}
-              {% capture image_alt %}{{ project.title }} — 圖片 {{ forloop.index }}{% endcapture %}
-              [{{ image_path | relative_url | jsonify }}, {{ image_alt | jsonify }}]{% unless forloop.last %},{% endunless %}
+              {% capture image_alt %}{{ project.title }} — 媒體 {{ forloop.index }}{% endcapture %}
+              {
+                "type": {{ media_type | jsonify }},
+                "src": {% if media_type == 'youtube' %}{{ media_source | jsonify }}{% else %}{{ media_source | relative_url | jsonify }}{% endif %},
+                "thumbnail": {{ media_thumbnail | relative_url | jsonify }},
+                "alt": {{ image_alt | jsonify }}
+              }{% unless forloop.last %},{% endunless %}
             {% endfor %}
           ],
           "results": {{ project.project_results | jsonify }},

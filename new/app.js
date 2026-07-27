@@ -8,14 +8,18 @@
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("#primary-nav");
   const dialog = document.querySelector("[data-project-dialog]");
-  const dialogImage = dialog.querySelector("[data-dialog-image]");
+  const dialogMedia = dialog.querySelector("[data-dialog-media]");
   const dialogGallery = dialog.querySelector("[data-dialog-gallery]");
   const dialogIndicators = dialog.querySelector("[data-dialog-indicators]");
+  const dialogNavigation = dialog.querySelector("[data-dialog-navigation]");
+  const previousMediaButton = dialog.querySelector("[data-dialog-previous]");
+  const nextMediaButton = dialog.querySelector("[data-dialog-next]");
   const projectCards = [...document.querySelectorAll(".project-card")];
   const filterButtons = [...document.querySelectorAll(".filter-button")];
   const projectDataElement = document.querySelector("[data-project-data]");
   let lastProjectTrigger = null;
   let activeProject = null;
+  let activeMediaIndex = 0;
   let projects = {};
 
   try {
@@ -118,7 +122,39 @@
     });
   });
 
-  const setDialogImage = (src, alt, selectedIndex) => {
+  const createMediaElement = (media) => {
+    if (media.type === "youtube") {
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(media.src)}?rel=0`;
+      iframe.title = media.alt;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      return iframe;
+    }
+
+    if (media.type === "video") {
+      const video = document.createElement("video");
+      video.src = media.src;
+      video.poster = media.thumbnail;
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      video.setAttribute("aria-label", media.alt);
+      return video;
+    }
+
+    const image = document.createElement("img");
+    image.src = media.src;
+    image.alt = media.alt;
+    return image;
+  };
+
+  const setDialogMedia = (selectedIndex) => {
+    const mediaItems = projects[activeProject]?.media || [];
+    const media = mediaItems[selectedIndex];
+    if (!media) return;
+
+    activeMediaIndex = selectedIndex;
     dialogGallery.querySelectorAll(".gallery-button").forEach((button) => {
       const isActive = Number(button.dataset.galleryIndex) === selectedIndex;
       button.classList.toggle("is-active", isActive);
@@ -131,17 +167,24 @@
       button.setAttribute("aria-current", isActive ? "true" : "false");
     });
 
-    dialogImage.src = src;
-    dialogImage.alt = alt;
+    const mediaElement = createMediaElement(media);
+    dialogMedia.replaceChildren(mediaElement);
 
     if (canAnimate) {
-      animeApi.animate(dialogImage, {
+      animeApi.animate(mediaElement, {
         opacity: { from: 0.2 },
         scale: { from: 1.025 },
         duration: 620,
         ease: "outExpo"
       });
     }
+  };
+
+  const changeDialogMedia = (direction) => {
+    const mediaItems = projects[activeProject]?.media || [];
+    if (mediaItems.length < 2) return;
+    const nextIndex = (activeMediaIndex + direction + mediaItems.length) % mediaItems.length;
+    setDialogMedia(nextIndex);
   };
 
   const renderProject = (projectKey) => {
@@ -170,36 +213,39 @@
       return item;
     }));
 
-    dialogGallery.replaceChildren(...project.images.map(([src, alt], index) => {
+    dialogGallery.replaceChildren(...project.media.map((media, index) => {
       const button = document.createElement("button");
       const image = document.createElement("img");
       button.type = "button";
       button.className = `gallery-button${index === 0 ? " is-active" : ""}`;
+      if (media.type !== "image") button.classList.add("is-video");
       button.dataset.galleryIndex = String(index);
-      button.setAttribute("aria-label", `顯示圖片：${alt}`);
+      button.setAttribute("aria-label", `顯示媒體：${media.alt}`);
       button.setAttribute("aria-pressed", String(index === 0));
-      image.src = src;
+      image.src = media.thumbnail;
       image.alt = "";
       image.loading = "lazy";
       button.append(image);
-      button.addEventListener("click", () => setDialogImage(src, alt, index));
+      button.addEventListener("click", () => setDialogMedia(index));
       return button;
     }));
 
-    dialogIndicators.hidden = project.images.length < 2;
-    dialogIndicators.replaceChildren(...project.images.map(([src, alt], index) => {
+    dialogNavigation.hidden = project.media.length < 2;
+    dialogIndicators.replaceChildren(...project.media.map((media, index) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = `indicator-button${index === 0 ? " is-active" : ""}`;
       button.dataset.galleryIndex = String(index);
-      button.setAttribute("aria-label", `Show image ${index + 1} of ${project.images.length}`);
+      button.setAttribute("aria-label", `顯示第 ${index + 1} 個媒體，共 ${project.media.length} 個`);
       button.setAttribute("aria-current", index === 0 ? "true" : "false");
-      button.addEventListener("click", () => setDialogImage(src, alt, index));
+      button.addEventListener("click", () => setDialogMedia(index));
       return button;
     }));
 
-    if (project.images.length) {
-      setDialogImage(project.images[0][0], project.images[0][1], 0);
+    if (project.media.length) {
+      setDialogMedia(0);
+    } else {
+      dialogMedia.replaceChildren();
     }
     return true;
   };
@@ -249,6 +295,7 @@
 
   const finishDialogClose = () => {
     document.body.classList.remove("dialog-open");
+    dialogMedia.replaceChildren();
     clearProjectHash();
     if (lastProjectTrigger) lastProjectTrigger.focus();
   };
@@ -258,6 +305,12 @@
   });
 
   dialog.querySelector("[data-dialog-close]").addEventListener("click", () => dialog.close());
+  previousMediaButton.addEventListener("click", () => changeDialogMedia(-1));
+  nextMediaButton.addEventListener("click", () => changeDialogMedia(1));
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") changeDialogMedia(-1);
+    if (event.key === "ArrowRight") changeDialogMedia(1);
+  });
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
