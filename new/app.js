@@ -11,7 +11,6 @@
   const dialogMedia = dialog.querySelector("[data-dialog-media]");
   const dialogGallery = dialog.querySelector("[data-dialog-gallery]");
   const dialogIndicators = dialog.querySelector("[data-dialog-indicators]");
-  const dialogNavigation = dialog.querySelector("[data-dialog-navigation]");
   const previousMediaButton = dialog.querySelector("[data-dialog-previous]");
   const nextMediaButton = dialog.querySelector("[data-dialog-next]");
   const projectCards = [...document.querySelectorAll(".project-card")];
@@ -230,7 +229,10 @@
       return button;
     }));
 
-    dialogNavigation.hidden = project.media.length < 2;
+    const hasMultipleMedia = project.media.length > 1;
+    previousMediaButton.hidden = !hasMultipleMedia;
+    nextMediaButton.hidden = !hasMultipleMedia;
+    dialogIndicators.hidden = !hasMultipleMedia;
     dialogIndicators.replaceChildren(...project.media.map((media, index) => {
       const button = document.createElement("button");
       button.type = "button";
