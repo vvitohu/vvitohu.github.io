@@ -15,6 +15,7 @@
   const nextMediaButton = dialog.querySelector("[data-dialog-next]");
   const projectCards = [...document.querySelectorAll(".project-card")];
   const filterButtons = [...document.querySelectorAll(".filter-button")];
+  const metricCards = [...document.querySelectorAll(".hero-metrics > div")];
   const projectDataElement = document.querySelector("[data-project-data]");
   let lastProjectTrigger = null;
   let activeProject = null;
@@ -28,6 +29,33 @@
   }
 
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+  if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    metricCards.forEach((card) => {
+      let pointerFrame = null;
+      let pointerX = 0;
+      let pointerY = 0;
+
+      const updateMetricGlow = () => {
+        const bounds = card.getBoundingClientRect();
+        card.style.setProperty("--metric-glow-x", `${pointerX - bounds.left}px`);
+        card.style.setProperty("--metric-glow-y", `${pointerY - bounds.top}px`);
+        pointerFrame = null;
+      };
+
+      card.addEventListener("pointerenter", () => card.classList.add("is-metric-glowing"));
+      card.addEventListener("pointermove", (event) => {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        if (pointerFrame === null) pointerFrame = requestAnimationFrame(updateMetricGlow);
+      });
+      card.addEventListener("pointerleave", () => {
+        card.classList.remove("is-metric-glowing");
+        if (pointerFrame !== null) cancelAnimationFrame(pointerFrame);
+        pointerFrame = null;
+      });
+    });
+  }
 
   const setHeaderState = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 24);
