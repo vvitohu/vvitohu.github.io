@@ -2,8 +2,6 @@
 layout: default
 title: 視覺辨識鬧鐘
 subtitle: 3D Design
-order: 1
-modal-id: 2
 date: 2026-05-10
 img: 
 - /clock/inform.jpeg

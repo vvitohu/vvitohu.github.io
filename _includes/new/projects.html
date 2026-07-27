@@ -1,4 +1,7 @@
-    {% assign featured_projects = site.posts | where: "featured", true | sort: "home_order" %}
+
+    {% assign pinning_posts = site.posts | where_exp: "item", "item.home_order != 0" | sort: "home_order" %}
+    {% assign normal_posts = site.posts | where_exp: "item", "item.home_order == 0" | sort: "date" | reverse %}
+    {% assign featured_projects = pinning_posts | concat: normal_posts %}
     <section class="section projects-section" id="projects" aria-labelledby="projects-title">
       <div class="section-intro reveal">
         <p class="section-index">01 / SELECTED WORK</p>

@@ -2,8 +2,6 @@
 layout: default
 title: 自製無人機
 subtitle: 3D Design, Program Design
-order: 0
-modal-id: 1
 date: 2026-01-05
 img: 
 - /drone/final.jpg

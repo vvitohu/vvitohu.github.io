@@ -2,8 +2,6 @@
 layout: default
 title: Corne Keyboard
 subtitle: 3D Design, Program Design
-order: 0
-modal-id: 3
 date: 2025-06-05
 img: 
 - /keyboard/Corne Keyboard渲染.png
@@ -16,7 +14,7 @@ project-date: June 2025
 type: Personal Project
 category: 3D Design, Program Design
 featured: true
-home_order: 3
+home_order: 0
 project_key: keyboard
 project_categories:
 - product

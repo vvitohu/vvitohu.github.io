@@ -2,8 +2,6 @@
 layout: default
 title: 4分鐘電子紙科普
 subtitle: Video Production
-order: 0
-modal-id: 4
 date: 2026-06-20
 img: 
 - "youtube:KhucfI94Xm4"
@@ -13,7 +11,7 @@ project-date: June 2026
 type: Course Project
 category: Video Production
 featured: true
-home_order: 4
+home_order: 0
 project_key: eink
 project_categories:
 - media
