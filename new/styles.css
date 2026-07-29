@@ -408,7 +408,7 @@ a:focus-visible {
 .hero-metrics {
   isolation: isolate;
   display: grid;
-  width: min(1240px, 92vw);
+  width: min(1120px, 90vw);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: clamp(42px, 8vh, 92px) 0 0 clamp(18px, 3.2vw, 54px);
   overflow: hidden;
@@ -425,7 +425,7 @@ a:focus-visible {
   display: grid;
   grid-template-rows: clamp(29px, 3.24vw, 44px) auto;
   align-content: start;
-  padding: 14px;
+  padding: 14px 20px;
   overflow: hidden;
 }
 
@@ -456,7 +456,7 @@ a:focus-visible {
 .hero-metrics dt {
   position: relative;
   z-index: 1;
-  align-self: end;
+  align-self: center;
   color: var(--accent);
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(24px, 2.7vw, 36px);
@@ -1543,9 +1543,9 @@ a:focus-visible {
   }
 }
 
-@media (min-width: 721px) and (max-width: 900px) {
+@media (min-width: 721px) and (max-width: 960px) {
   .hero-metrics {
-    width: min(760px, 92vw);
+    width: min(720px, 90vw);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
