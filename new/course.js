@@ -7,6 +7,7 @@
   const sidebar = document.querySelector("[data-course-sidebar]");
   const sidebarOpen = document.querySelector("[data-course-sidebar-open]");
   const sidebarClose = document.querySelector("[data-course-sidebar-close]");
+  const sidebarBackdrop = document.querySelector("[data-course-sidebar-backdrop]");
   const toc = document.querySelector("[data-course-toc]");
 
   document.querySelectorAll("[data-year]").forEach((node) => {
@@ -37,14 +38,26 @@
 
   const setSidebarOpen = (isOpen) => {
     sidebar?.classList.toggle("is-open", isOpen);
+    sidebarBackdrop?.classList.toggle("is-visible", isOpen);
+    document.body.classList.toggle("course-sidebar-open", isOpen);
     sidebarOpen?.setAttribute("aria-expanded", String(isOpen));
+
+    if (!isOpen) sidebarOpen?.focus({ preventScroll: true });
   };
 
   sidebarOpen?.addEventListener("click", () => setSidebarOpen(true));
   sidebarClose?.addEventListener("click", () => setSidebarOpen(false));
+  sidebarBackdrop?.addEventListener("click", () => setSidebarOpen(false));
   sidebar?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setSidebarOpen(false));
   });
+
+  const sidebarBreakpoint = window.matchMedia("(max-width: 900px)");
+  const resetSidebarOnDesktop = (event) => {
+    if (!event.matches) setSidebarOpen(false);
+  };
+
+  sidebarBreakpoint.addEventListener?.("change", resetSidebarOnDesktop);
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {

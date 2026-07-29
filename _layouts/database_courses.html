@@ -36,6 +36,29 @@ layout: none
     </nav>
   </header>
 
+  <button
+    type="button"
+    class="course-index-toggle"
+    data-course-sidebar-open
+    aria-controls="course-sidebar"
+    aria-expanded="false"
+    aria-label="開啟課程章節"
+  >
+    <span class="course-index-icon" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+  <button
+    type="button"
+    class="course-sidebar-backdrop"
+    data-course-sidebar-backdrop
+    aria-label="關閉課程章節"
+    tabindex="-1"
+  ></button>
+
   {% assign course_menu = site.data[page.type] %}
   <main class="course-shell">
     <aside class="course-sidebar" id="course-sidebar" data-course-sidebar aria-label="課程章節">
@@ -81,7 +104,6 @@ layout: none
       <header class="course-hero">
         <div class="course-hero-actions">
           <a href="{{ '/#courses' | relative_url }}">← ALL COURSES</a>
-          <button type="button" class="course-index-toggle" data-course-sidebar-open aria-controls="course-sidebar" aria-expanded="false">COURSE INDEX</button>
         </div>
         <p class="course-kicker">COURSE NOTES{% if page.date %} / {{ page.date | date: "%Y.%m.%d" }}{% endif %}</p>
         <h1>{{ page.title }}</h1>
