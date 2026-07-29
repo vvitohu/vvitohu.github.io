@@ -1482,7 +1482,7 @@ a:focus-visible {
   .menu-toggle {
     display: inline-flex;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .primary-nav {
