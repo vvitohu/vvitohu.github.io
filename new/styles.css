@@ -252,9 +252,13 @@ a:focus-visible {
   overflow: hidden;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  color: rgba(245, 247, 250, 0.35);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: clamp(14px, 1.7vw, 23px);
+  color: transparent;
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+  font-size: clamp(19px, 1.8vw, 29px);
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
+  -webkit-text-stroke: 1px rgba(245, 247, 250, 0.23);
   white-space: nowrap;
 }
 
@@ -263,13 +267,17 @@ a:focus-visible {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: clamp(34px, 5vw, 90px);
+  gap: clamp(42px, 5vw, 88px);
 }
 
 .tool-group {
-  padding-right: clamp(34px, 5vw, 90px);
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
+  padding-right: clamp(42px, 5vw, 88px);
+}
+
+.tool-group span {
+  display: inline-block;
+  transform: scaleX(1.08);
+  transform-origin: center;
 }
 
 .hero-content {
@@ -413,9 +421,11 @@ a:focus-visible {
 .hero-metrics dt {
   position: relative;
   z-index: 1;
+  color: var(--accent);
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(20px, 2.4vw, 32px);
   font-weight: 500;
+  text-shadow: 0 0 18px rgba(75, 140, 255, 0.24);
 }
 
 .hero-metrics dd {
