@@ -408,13 +408,13 @@ a:focus-visible {
 .hero-metrics {
   isolation: isolate;
   display: grid;
-  width: min(1040px, 90vw);
+  width: min(1240px, 92vw);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: clamp(42px, 8vh, 92px) 0 0 clamp(18px, 3.2vw, 54px);
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  background: rgba(9, 13, 19, 0.58);
+  background: rgba(19, 27, 37, 0.78);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 14px 34px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(8px);
 }
@@ -427,7 +427,7 @@ a:focus-visible {
 }
 
 .hero-metrics div + div {
-  border-left: 1px solid var(--line);
+  border-left: 1px solid rgba(255, 255, 255, 0.17);
 }
 
 .hero-metrics div::before {
@@ -457,6 +457,8 @@ a:focus-visible {
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(24px, 2.7vw, 36px);
   font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
   text-shadow: 0 0 18px rgba(75, 140, 255, 0.24);
 }
 
@@ -466,9 +468,10 @@ a:focus-visible {
   margin: 2px 0 0;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
+  font-size: clamp(10px, 1vw, 13px);
   line-height: 1.4;
   letter-spacing: 0.07em;
+  white-space: nowrap;
 }
 
 .hero-metric-role dt,
@@ -478,6 +481,7 @@ a:focus-visible {
 
 .hero-metric-role dt {
   color: var(--text);
+  font-size: clamp(18px, 1.8vw, 26px);
   text-shadow: none;
 }
 
@@ -1580,7 +1584,7 @@ a:focus-visible {
   }
 
   .hero-metrics div + div {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
     border-left: 0;
   }
 
