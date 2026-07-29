@@ -764,6 +764,7 @@ a:focus-visible {
   min-height: 174px;
   grid-template-columns: minmax(130px, 0.42fr) minmax(0, 0.58fr);
   overflow: hidden;
+  border-radius: 16px;
   color: var(--course-text);
   background: var(--course-card);
   text-decoration: none;
@@ -1439,10 +1440,20 @@ a:focus-visible {
 
   .course-card {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 0;
   }
 
   .course-card img {
+    display: block;
+    height: auto;
     aspect-ratio: 16 / 8;
+  }
+
+  .course-card > span {
+    position: relative;
+    z-index: 1;
+    background: var(--course-card);
   }
 
   .site-footer {
