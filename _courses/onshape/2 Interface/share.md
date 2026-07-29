@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "協作與分享"
 type: onshape_menu
 permalink: /database_courses/interface/share
@@ -46,4 +46,3 @@ Onshape的好處之一就是可以和其他人分享或即時協作，只需點�
         <img src="{{ site.baseurl }}/img/courses/onshape/share/2.png" style="width: 120%; max-width: 1000px;" class="img-fluid w-50 rounded shadow">
         <p class="text-muted" style="font-size: 1.2rem;"></p>
     </div>
-    

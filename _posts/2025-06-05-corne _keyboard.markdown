@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: none
 title: Corne Keyboard
 subtitle: 3D Design, Program Design
 date: 2025-06-05

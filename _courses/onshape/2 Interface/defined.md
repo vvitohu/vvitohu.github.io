@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "視角與軟體操作"
 type: onshape_menu
 permalink: /database_courses/interface/fully_defined

@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "草圖與基本繪圖工具"
 type: onshape_menu
 permalink: /database_courses/modeling/basic

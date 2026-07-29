@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "繪圖函數"
 type: matlab_menu
 permalink: /database_courses/matlab/plot_function

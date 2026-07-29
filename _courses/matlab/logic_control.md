@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "邏輯控制"
 type: matlab_menu
 permalink: /database_courses/matlab/logic_control

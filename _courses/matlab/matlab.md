@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "MATLAB Basic"
 type: matlab_menu
 permalink: /database_courses/matlab/basic

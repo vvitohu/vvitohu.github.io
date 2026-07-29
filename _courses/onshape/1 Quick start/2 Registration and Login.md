@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "註冊與登入"
 type: onshape_menu
 permalink: /database_courses/Quick_start/Registration_and_Login

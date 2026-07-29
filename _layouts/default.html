@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  {% include main/head.html %}
+</head>
+<body>
+  <a class="skip-link" href="#projects">跳至專案</a>
 
-  {% include old/head.html %}
+  {% include main/header.html %}
 
+  <main>
+    {% include main/hero.html %}
+    {% include main/projects.html %}
+    {% include main/skills.html %}
+    {% include main/about.html %}
+    {% include main/courses.html %}
+    {% include main/contact.html %}
+  </main>
 
-    <body id="page-top" class="index">
-
-    {% include old/header.html %}
-    {% include old/portfolio.html %}
-    {% include old/courses.html %}
-    {% include old/about.html %}
-    {% include old/footer.html %}
-    {% include old/js.html %}
-
-    </body>
+  {% include main/footer.html %}
+  {% include main/project-dialog.html %}
+  {% include main/scripts.html %}
+</body>
 </html>

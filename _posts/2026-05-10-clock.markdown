@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: none
 title: 視覺辨識鬧鐘
 subtitle: 3D Design
 date: 2026-05-10

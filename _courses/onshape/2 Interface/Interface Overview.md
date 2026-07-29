@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "介面總覽"
 type: onshape_menu
 permalink: /database_courses/interface/interface_overview

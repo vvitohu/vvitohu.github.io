@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "Onshape 基礎建模"
 type: onshape_menu
 image: "onshape.jpg"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: none
 title: 4分鐘電子紙科普
 subtitle: Video Production
 date: 2026-06-20

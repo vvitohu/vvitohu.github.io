@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "修飾特徵"
 type: onshape_menu
 permalink: /database_courses/modeling/modification

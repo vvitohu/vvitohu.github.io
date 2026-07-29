@@ -1,5 +1,5 @@
 ---
-layout: database_courses
+layout: course
 title: "ZMK 設定教學"
 type: 'zmk/'
 image: "zmk.png"
