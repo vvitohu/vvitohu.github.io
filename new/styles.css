@@ -425,7 +425,7 @@ a:focus-visible {
   display: grid;
   grid-template-rows: clamp(29px, 3.24vw, 44px) auto;
   align-content: start;
-  padding: 14px 18px;
+  padding: 14px;
   overflow: hidden;
 }
 
@@ -456,6 +456,7 @@ a:focus-visible {
 .hero-metrics dt {
   position: relative;
   z-index: 1;
+  align-self: end;
   color: var(--accent);
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(24px, 2.7vw, 36px);
@@ -477,8 +478,7 @@ a:focus-visible {
   white-space: nowrap;
 }
 
-.hero-metric-role dt,
-.hero-metric-role dd {
+.hero-metric-role dt {
   font-weight: 700;
 }
 
@@ -1540,6 +1540,25 @@ a:focus-visible {
 
   .dialog-content {
     overflow: visible;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 900px) {
+  .hero-metrics {
+    width: min(760px, 92vw);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-metrics div + div {
+    border-left: 0;
+  }
+
+  .hero-metrics div:nth-child(even) {
+    border-left: 1px solid rgba(255, 255, 255, 0.17);
+  }
+
+  .hero-metrics div:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
   }
 }
 
