@@ -50,6 +50,34 @@ html {
   background: var(--accent);
 }
 
+/* iPad/iPhone WebKit can leave the rounded end of a custom scrollbar visible
+   after reaching the bottom of the page. Touch devices do not need the desktop
+   scrollbar treatment, so keep their scrolling overlay-free. */
+@media (hover: none) and (pointer: coarse) {
+  html {
+    scrollbar-color: auto;
+    scrollbar-width: none;
+  }
+
+  html,
+  body {
+    overscroll-behavior-y: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb:hover {
+    border: 0;
+    background: transparent;
+  }
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -172,6 +200,10 @@ a:focus-visible {
   color: var(--text);
   font-size: 13px;
   text-decoration: none;
+}
+
+.section-index {
+  font-size: 14px;
 }
 
 .primary-nav a::after {
@@ -376,8 +408,8 @@ a:focus-visible {
 .hero-metrics {
   isolation: isolate;
   display: grid;
-  width: min(760px, 78vw);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(1040px, 90vw);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: clamp(42px, 8vh, 92px) 0 0 clamp(18px, 3.2vw, 54px);
   overflow: hidden;
   border: 1px solid var(--line);
@@ -423,8 +455,8 @@ a:focus-visible {
   z-index: 1;
   color: var(--accent);
   font-family: "IBM Plex Mono", monospace;
-  font-size: clamp(20px, 2.4vw, 32px);
-  font-weight: 500;
+  font-size: clamp(24px, 2.7vw, 36px);
+  font-weight: 700;
   text-shadow: 0 0 18px rgba(75, 140, 255, 0.24);
 }
 
@@ -434,9 +466,19 @@ a:focus-visible {
   margin: 2px 0 0;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
   letter-spacing: 0.07em;
+}
+
+.hero-metric-role dt,
+.hero-metric-role dd {
+  font-weight: 700;
+}
+
+.hero-metric-role dt {
+  color: var(--text);
+  text-shadow: none;
 }
 
 .section {
@@ -549,7 +591,7 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
-  background: transparent;
+  background: rgba(19, 27, 37, 0.9);
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   letter-spacing: 0.07em;
@@ -562,6 +604,10 @@ a:focus-visible {
   border-color: var(--text);
   color: var(--bg);
   background: var(--text);
+}
+
+.filter-button.is-active {
+  font-weight: 700;
 }
 
 .project-grid {
