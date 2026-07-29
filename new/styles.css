@@ -465,8 +465,40 @@ a:focus-visible {
 }
 
 .projects-section {
+  position: relative;
+  isolation: isolate;
   width: min(100%, 1320px);
   padding-top: clamp(76px, 8vw, 118px);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 85% 58% at 50% 42%, rgba(24, 38, 56, 0.34), transparent 72%),
+    linear-gradient(135deg, rgba(34, 43, 55, 0.28) 0%, rgba(9, 13, 19, 0) 46%);
+}
+
+.projects-section::before,
+.projects-section::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.projects-section::before {
+  opacity: 0.72;
+  background:
+    linear-gradient(112deg, transparent 8%, rgba(75, 140, 255, 0.11) 24%, transparent 38%),
+    linear-gradient(112deg, transparent 49%, rgba(0, 207, 255, 0.07) 64%, transparent 79%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.72) 58%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.72) 58%, transparent 100%);
+}
+
+.projects-section::after {
+  opacity: 0.18;
+  background-image: radial-gradient(circle at 1px 1px, rgba(185, 205, 230, 0.62) 1px, transparent 1.2px);
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(ellipse 78% 68% at 50% 42%, #000 0%, rgba(0, 0, 0, 0.72) 58%, transparent 100%);
+  mask-image: radial-gradient(ellipse 78% 68% at 50% 42%, #000 0%, rgba(0, 0, 0, 0.72) 58%, transparent 100%);
 }
 
 .projects-section .section-intro {
@@ -483,7 +515,7 @@ a:focus-visible {
 }
 
 .projects-section .project-meta {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .projects-section .section-copy {
@@ -506,7 +538,7 @@ a:focus-visible {
   color: var(--muted);
   background: transparent;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.07em;
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -621,7 +653,7 @@ a:focus-visible {
   max-width: 600px;
   margin: 8px 7px 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.55;
 }
 
