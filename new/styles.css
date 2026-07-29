@@ -171,6 +171,7 @@ a:focus-visible {
 .primary-nav a {
   position: relative;
   color: var(--text);
+  font-size: 13px;
   text-decoration: none;
 }
 
@@ -354,6 +355,13 @@ a:focus-visible {
 .button-secondary:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
+}
+
+.hero-actions .button {
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
 }
 
 .hero-metrics {

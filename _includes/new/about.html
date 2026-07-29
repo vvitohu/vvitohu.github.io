@@ -10,12 +10,14 @@
         <div class="about-links">
           {% assign about_profile = site.people | first %}
           {% for network in about_profile.social %}
-            <a class="about-hover-link" href="{{ network.url }}" target="_blank" rel="noreferrer" aria-label="前往 {{ network.title }}">
-              <i class="about-link-icon fa fa-{{ network.title }}" aria-hidden="true"></i>
-              <span class="about-link-label">{{ network.title | upcase }}</span>
-              <span class="about-link-hover" aria-hidden="true">{{ network.title | upcase }} <span>↗</span></span>
-              <span class="about-link-orb" aria-hidden="true"></span>
-            </a>
+            {% unless network.title == 'facebook' %}
+              <a class="about-hover-link" href="{{ network.url }}" target="_blank" rel="noreferrer" aria-label="前往 {{ network.title }}">
+                <i class="about-link-icon fa fa-{{ network.title }}" aria-hidden="true"></i>
+                <span class="about-link-label">{{ network.title | upcase }}</span>
+                <span class="about-link-hover" aria-hidden="true">{{ network.title | upcase }} <span>↗</span></span>
+                <span class="about-link-orb" aria-hidden="true"></span>
+              </a>
+            {% endunless %}
           {% endfor %}
           <a class="about-hover-link" href="mailto:{{ site.email }}" aria-label="寄送 Email">
             <i class="about-link-icon fa fa-envelope" aria-hidden="true"></i>
@@ -23,6 +25,15 @@
             <span class="about-link-hover" aria-hidden="true">EMAIL <span>↗</span></span>
             <span class="about-link-orb" aria-hidden="true"></span>
           </a>
+          {% assign facebook_network = about_profile.social | where: 'title', 'facebook' | first %}
+          {% if facebook_network %}
+            <a class="about-hover-link" href="{{ facebook_network.url }}" target="_blank" rel="noreferrer" aria-label="前往 Facebook">
+              <i class="about-link-icon fa fa-facebook" aria-hidden="true"></i>
+              <span class="about-link-label">FACEBOOK</span>
+              <span class="about-link-hover" aria-hidden="true">FACEBOOK <span>↗</span></span>
+              <span class="about-link-orb" aria-hidden="true"></span>
+            </a>
+          {% endif %}
         </div>
       </div>
     </section>
