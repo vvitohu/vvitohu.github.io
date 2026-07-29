@@ -1,3 +1,23 @@
+/*
+ * CSS 目錄
+ * 01. 全域變數與基礎設定
+ * 02. Header 與主要導覽
+ * 03. Hero、工具跑馬燈與資訊列
+ * 04. 共用區段與元件
+ * 05. Projects
+ * 06. Skills
+ * 07. About
+ * 08. Courses
+ * 09. Contact 與 Footer
+ * 10. 專案 Dialog
+ * 11. 動畫初始狀態
+ * 12. Responsive 與裝置相容處理
+ */
+
+/* ==========================================================================
+   01. 全域變數與基礎設定
+   ========================================================================== */
+
 :root {
   --bg: #090d13;
   --bg-soft: #0f151d;
@@ -50,9 +70,8 @@ html {
   background: var(--accent);
 }
 
-/* iPad/iPhone WebKit can leave the rounded end of a custom scrollbar visible
-   after reaching the bottom of the page. Touch devices do not need the desktop
-   scrollbar treatment, so keep their scrolling overlay-free. */
+/* iOS／iPadOS WebKit 到達頁尾後可能殘留自訂 Scrollbar 圓角；
+   觸控裝置不需要桌面版 Scrollbar，因此停用其覆蓋樣式。 */
 @media (hover: none) and (pointer: coarse) {
   html {
     scrollbar-color: auto;
@@ -132,6 +151,10 @@ a:focus-visible {
 .skip-link:focus {
   transform: translateY(0);
 }
+
+/* ==========================================================================
+   02. Header 與主要導覽
+   ========================================================================== */
 
 .site-header {
   position: fixed;
@@ -238,6 +261,10 @@ a:focus-visible {
   cursor: pointer;
 }
 
+/* ==========================================================================
+   03. Hero、工具跑馬燈與資訊列
+   ========================================================================== */
+
 .hero {
   position: relative;
   isolation: isolate;
@@ -294,6 +321,7 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+/* 兩組相同工具文字由 JavaScript 位移，形成無接縫的循環跑馬燈。 */
 .tool-track,
 .tool-group {
   display: flex;
@@ -433,6 +461,7 @@ a:focus-visible {
   border-left: 1px solid rgba(255, 255, 255, 0.17);
 }
 
+/* JavaScript 會更新游標座標變數，並以 class 控制單一欄位的光暈顯示。 */
 .hero-metrics div::before {
   position: absolute;
   pointer-events: none;
@@ -479,14 +508,15 @@ a:focus-visible {
 }
 
 .hero-metric-role dt {
-  font-weight: 700;
-}
-
-.hero-metric-role dt {
   color: var(--text);
   font-size: clamp(18px, 1.8vw, 26px);
+  font-weight: 700;
   text-shadow: none;
 }
+
+/* ==========================================================================
+   04. 共用區段與元件
+   ========================================================================== */
 
 .section {
   width: min(100%, var(--content-width));
@@ -525,6 +555,10 @@ a:focus-visible {
   font-size: clamp(16px, 1.5vw, 20px);
 }
 
+/* ==========================================================================
+   05. Projects
+   ========================================================================== */
+
 .projects-section {
   position: relative;
   isolation: isolate;
@@ -532,6 +566,7 @@ a:focus-visible {
   padding-top: clamp(76px, 8vw, 118px);
 }
 
+/* 偽元素以 100vw 脫離內容寬度，讓背景延伸到整個瀏覽器視窗。 */
 .projects-section::before,
 .projects-section::after {
   position: absolute;
@@ -545,6 +580,7 @@ a:focus-visible {
   transform: translateX(-50%);
 }
 
+/* 底層負責漸層光影，上層負責低對比點陣紋理。 */
 .projects-section::before {
   background:
     radial-gradient(ellipse 85% 58% at 50% 42%, rgba(24, 38, 56, 0.34), transparent 72%),
@@ -723,6 +759,10 @@ a:focus-visible {
   line-height: 1.55;
 }
 
+/* ==========================================================================
+   06. Skills
+   ========================================================================== */
+
 .skill-section {
   background:
     linear-gradient(var(--line) 1px, transparent 1px),
@@ -769,6 +809,10 @@ a:focus-visible {
   margin: 0;
   color: var(--muted);
 }
+
+/* ==========================================================================
+   07. About
+   ========================================================================== */
 
 .about-section {
   display: grid;
@@ -904,6 +948,10 @@ a:focus-visible {
   transform: scale(1.8);
 }
 
+/* ==========================================================================
+   08. Courses
+   ========================================================================== */
+
 .course-section {
   background: var(--bg-soft);
 }
@@ -973,6 +1021,10 @@ a:focus-visible {
   font-size: 14px;
 }
 
+/* ==========================================================================
+   09. Contact 與 Footer
+   ========================================================================== */
+
 .contact-section {
   padding: clamp(100px, 15vw, 220px) var(--page-padding);
   text-align: center;
@@ -1013,6 +1065,10 @@ a:focus-visible {
   color: var(--text);
   text-decoration: none;
 }
+
+/* ==========================================================================
+   10. 專案 Dialog
+   ========================================================================== */
 
 .project-dialog {
   width: min(1440px, calc(100vw - 24px));
@@ -1130,6 +1186,7 @@ a:focus-visible {
   overflow: hidden;
 }
 
+/* 圖片與影片共用可用高度並保持完整比例；iframe 則填滿媒體容器。 */
 .dialog-media > img,
 .dialog-media > video {
   display: block;
@@ -1150,6 +1207,7 @@ a:focus-visible {
   box-shadow: 0 22px 65px rgba(0, 0, 0, 0.38);
 }
 
+/* Indicators 寬度隨媒體數量成長，超出上限時維持單列橫向捲動。 */
 .dialog-indicators {
   display: flex;
   width: max-content;
@@ -1284,6 +1342,7 @@ a:focus-visible {
   line-height: 1.7;
 }
 
+/* 縮圖列與 Indicators 分離，讓手機版可獨立縮小並橫向瀏覽。 */
 .dialog-gallery {
   display: flex;
   flex: none;
@@ -1453,6 +1512,11 @@ a:focus-visible {
   color: var(--text);
 }
 
+/* ==========================================================================
+   11. 動畫初始狀態
+   ========================================================================== */
+
+/* Anime.js 啟動前先建立 GPU 合成層，避免動畫開始時發生跳動。 */
 .reveal {
   will-change: transform, opacity;
 }
@@ -1466,18 +1530,25 @@ a:focus-visible {
   transform: translateY(28px);
 }
 
+/* ==========================================================================
+   12. Responsive 與裝置相容處理
+   ========================================================================== */
+
+/* 平板直向：Projects 維持兩欄。 */
 @media (orientation: portrait) and (max-width: 1180px) {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* 手機直向：Projects 改為單欄。 */
 @media (orientation: portrait) and (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* 小型桌面與平板：收合 Header 導覽並將 Dialog 改為上下排列。 */
 @media (max-width: 980px) {
   .menu-toggle {
     display: inline-flex;
@@ -1545,6 +1616,7 @@ a:focus-visible {
   }
 }
 
+/* 平板寬度：四格 Hero metrics 改為 2 × 2。 */
 @media (min-width: 721px) and (max-width: 960px) {
   .hero-metrics {
     width: min(720px, 90vw);
@@ -1564,6 +1636,7 @@ a:focus-visible {
   }
 }
 
+/* 手機版共用覆寫。 */
 @media (max-width: 720px) {
   :root {
     --header-height: 72px;
@@ -1746,12 +1819,14 @@ a:focus-visible {
   }
 }
 
+/* 平板橫向：讓 Hero 圖片上緣與工具列位置保持一致。 */
 @media (orientation: landscape) and (min-width: 601px) and (max-width: 1366px) and (hover: none) {
   .hero {
     background-position: center calc(var(--header-height) + 46px);
   }
 }
 
+/* 平板直向：依 2:1 背景圖的中心點校正 Hero 內容位置。 */
 @media (orientation: portrait) and (min-width: 601px) and (max-width: 1180px) {
   .hero {
     min-height: auto;
@@ -1765,7 +1840,7 @@ a:focus-visible {
   }
 
   .hero-content {
-    /* Place the content center on the midpoint of the 2:1 background image. */
+    /* 將內容中心對準 2:1 背景圖的中點。 */
     margin-top: calc(57px + 25vw);
     transform: translateY(-50%);
   }
@@ -1779,6 +1854,7 @@ a:focus-visible {
   }
 }
 
+/* 手機直向：使用較小位移，讓三行姓名在圖片內視覺置中。 */
 @media (orientation: portrait) and (max-width: 600px) {
   .hero {
     justify-content: flex-start;
@@ -1790,11 +1866,12 @@ a:focus-visible {
   }
 
   .hero-content {
-    /* Center the three-line name optically within the 2:1 image. */
+    /* 以視覺中心校正三行姓名，而不是只依元素外框置中。 */
     margin-top: calc(25vw - 16px);
   }
 }
 
+/* 尊重使用者的 Reduced Motion 設定，保留狀態切換但縮短動畫。 */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
