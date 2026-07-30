@@ -1048,6 +1048,10 @@ a:focus-visible {
   justify-content: center;
 }
 
+.contact-actions .button {
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
