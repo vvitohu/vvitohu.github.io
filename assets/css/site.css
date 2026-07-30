@@ -1052,6 +1052,11 @@ a:focus-visible {
   font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
 }
 
+.contact-email {
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -1061,7 +1066,7 @@ a:focus-visible {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.07em;
 }
 
