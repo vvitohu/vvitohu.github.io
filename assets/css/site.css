@@ -1843,6 +1843,13 @@ a:focus-visible {
   .hero {
     background-position: center calc(var(--header-height) + 46px);
   }
+
+  .hero-content,
+  .hero-metrics {
+    width: min(1120px, 90vw);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* 平板直向：依 2:1 背景圖的中心點校正 Hero 內容位置。 */
