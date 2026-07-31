@@ -78,11 +78,7 @@ html {
     scrollbar-width: none;
   }
 
-  html,
-  body {
-    overscroll-behavior-y: none;
-  }
-
+  /* 保留瀏覽器預設的垂直 Overscroll，讓手機仍可下拉重新整理。 */
   ::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -167,7 +163,18 @@ a:focus-visible {
   gap: 28px;
   padding: 14px var(--page-padding);
   border-bottom: 1px solid transparent;
-  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+  transition:
+    min-height 0.3s ease,
+    padding 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.site-header.is-scrolled {
+  min-height: calc(var(--header-height) - 12px);
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .site-header.is-scrolled,
@@ -1853,12 +1860,18 @@ a:focus-visible {
 
   .hero-content {
     /* 將內容中心對準 2:1 背景圖的中點。 */
+    width: min(820px, 90vw);
     margin-top: calc(57px + 25vw);
+    margin-right: auto;
+    margin-left: auto;
     transform: translateY(-50%);
   }
 
   .hero-metrics {
+    width: min(820px, 90vw);
     margin-top: -76px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .projects-section {
