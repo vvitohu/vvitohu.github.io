@@ -16,10 +16,12 @@
   const projectCards = [...document.querySelectorAll(".project-card")];
   const filterButtons = [...document.querySelectorAll(".filter-button")];
   const metricCards = [...document.querySelectorAll(".hero-metrics > div")];
+  const heroScrollIndicator = document.querySelector(".hero-scroll-indicator");
   const projectDataElement = document.querySelector("[data-project-data]");
   let lastProjectTrigger = null;
   let activeProject = null;
   let activeMediaIndex = 0;
+  let hasDismissedHeroScrollIndicator = false;
   let projects = {};
 
   try {
@@ -59,6 +61,11 @@
 
   const setHeaderState = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 24);
+
+    if (!hasDismissedHeroScrollIndicator && window.scrollY > 4) {
+      hasDismissedHeroScrollIndicator = true;
+      heroScrollIndicator?.classList.add("is-dismissed");
+    }
   };
 
   setHeaderState();
