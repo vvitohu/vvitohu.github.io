@@ -31,7 +31,7 @@
   --accent-soft: rgba(75, 140, 255, 0.16);
   --course-card: #efece5;
   --course-text: #1b1d20;
-  --header-height: 84px;
+  --header-height: 76px;
   --page-padding: clamp(20px, 4.5vw, 72px);
   --content-width: 1440px;
 }
@@ -161,7 +161,7 @@ a:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  padding: 14px var(--page-padding);
+  padding: 10px var(--page-padding);
   border-bottom: 1px solid transparent;
   transition:
     min-height 0.3s ease,
@@ -172,9 +172,9 @@ a:focus-visible {
 }
 
 .site-header.is-scrolled {
-  min-height: calc(var(--header-height) - 12px);
-  padding-top: 8px;
-  padding-bottom: 8px;
+  min-height: calc(var(--header-height) - 10px);
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .site-header.is-scrolled,
@@ -353,6 +353,7 @@ a:focus-visible {
   width: min(820px, 76vw);
   margin-top: clamp(122px, 16vh, 198px);
   margin-left: clamp(18px, 3.2vw, 54px);
+  transform: translateY(calc(clamp(42px, 8vh, 92px) - 30px));
 }
 
 .hero h1 {
@@ -1720,7 +1721,7 @@ a:focus-visible {
 /* 手機版共用覆寫。 */
 @media (max-width: 720px) {
   :root {
-    --header-height: 72px;
+    --header-height: 64px;
   }
 
   .brand-mark {
@@ -1752,6 +1753,7 @@ a:focus-visible {
     width: 100%;
     margin-top: 176px;
     margin-left: 0;
+    transform: none;
   }
 
   .hero h1 {

@@ -106,7 +106,7 @@
     });
 
     animeApi.animate(document.querySelector("[data-tool-track]"), {
-      x: "-50%",
+      x: { from: "-50%", to: "0%" },
       duration: 26000,
       loop: true,
       ease: "linear"
