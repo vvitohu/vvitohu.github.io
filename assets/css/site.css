@@ -1960,7 +1960,7 @@ a:focus-visible {
     margin-top: calc(57px + 25vw);
     margin-right: auto;
     margin-left: auto;
-    transform: translateY(-50%);
+    transform: translateY(-106px);
   }
 
   .hero-metrics {

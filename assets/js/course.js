@@ -1,6 +1,9 @@
 (() => {
   "use strict";
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const animeApi = window.anime;
+  const canAnimate = Boolean(animeApi) && !reduceMotion;
   const header = document.querySelector("[data-course-header]");
   const menuToggle = document.querySelector(".menu-toggle");
   const primaryNav = document.querySelector("#primary-nav");
@@ -30,6 +33,16 @@
     const willOpen = !header.classList.contains("is-menu-open");
     header.classList.toggle("is-menu-open", willOpen);
     menuToggle.setAttribute("aria-expanded", String(willOpen));
+
+    if (willOpen && canAnimate) {
+      animeApi.animate(primaryNav.querySelectorAll("a"), {
+        opacity: { from: 0 },
+        x: { from: -14 },
+        duration: 420,
+        delay: animeApi.stagger(55),
+        ease: "outExpo"
+      });
+    }
   });
 
   primaryNav?.querySelectorAll("a").forEach((link) => {
