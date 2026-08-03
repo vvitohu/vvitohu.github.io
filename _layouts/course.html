@@ -64,6 +64,16 @@ layout: none
   ></button>
 
   {% assign course_menu = site.data[page.type] %}
+  {% assign show_course_hero = true %}
+  {% if course_menu %}
+    {% assign first_course_section = course_menu | first %}
+    {% assign first_course_page = first_course_section.subitems | first %}
+    {% assign course_landing_url = first_course_page.url %}
+    {% unless page.url == course_landing_url or page.permalink == course_landing_url %}
+      {% assign show_course_hero = false %}
+    {% endunless %}
+  {% endif %}
+
   <main class="course-shell">
     <aside class="course-sidebar" id="course-sidebar" data-course-sidebar aria-label="課程章節">
       <div class="course-sidebar-heading">
@@ -104,15 +114,17 @@ layout: none
       {% endif %}
     </aside>
 
-    <article class="course-article">
-      <header class="course-hero">
-        <div class="course-hero-actions">
-          <a href="{{ '/#courses' | relative_url }}">← ALL COURSES</a>
-        </div>
-        <p class="course-kicker">COURSE NOTES{% if page.date %} / {{ page.date | date: "%Y.%m.%d" }}{% endif %}</p>
-        <h1>{{ page.title }}</h1>
-        {% if page.desc %}<p class="course-description">{{ page.desc }}</p>{% endif %}
-      </header>
+    <article class="course-article{% unless show_course_hero %} course-article--content-only{% endunless %}">
+      {% if show_course_hero %}
+        <header class="course-hero">
+          <div class="course-hero-actions">
+            <a href="{{ '/#courses' | relative_url }}">← ALL COURSES</a>
+          </div>
+          <p class="course-kicker">COURSE NOTES{% if page.date %} / {{ page.date | date: "%Y.%m.%d" }}{% endif %}</p>
+          <h1>{{ page.title }}</h1>
+          {% if page.desc %}<p class="course-description">{{ page.desc }}</p>{% endif %}
+        </header>
+      {% endif %}
 
       <div class="course-content" id="article-content">
         {{ content }}
