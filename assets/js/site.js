@@ -13,7 +13,9 @@
   const dialogIndicators = dialog.querySelector("[data-dialog-indicators]");
   const previousMediaButton = dialog.querySelector("[data-dialog-previous]");
   const nextMediaButton = dialog.querySelector("[data-dialog-next]");
+  const projectGrid = document.querySelector("[data-project-grid]");
   const projectCards = [...document.querySelectorAll(".project-card")];
+  const projectPlaceholder = document.querySelector("[data-project-placeholder]");
   const filterButtons = [...document.querySelectorAll(".filter-button")];
   const metricCards = [...document.querySelectorAll(".hero-metrics > div")];
   const heroScrollIndicator = document.querySelector(".hero-scroll-indicator");
@@ -31,6 +33,44 @@
   }
 
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+  const syncProjectPlaceholder = () => {
+    if (!projectGrid || !projectPlaceholder) return;
+
+    const columnCount = Number.parseInt(
+      getComputedStyle(projectGrid).getPropertyValue("--project-grid-columns"),
+      10
+    ) || 1;
+    const visibleProjectCount = projectCards.filter((card) => !card.hidden).length;
+    const remainder = visibleProjectCount % columnCount;
+    const missingColumnCount = columnCount > 1 && visibleProjectCount > 0 && remainder > 0
+      ? columnCount - remainder
+      : 0;
+
+    projectPlaceholder.hidden = missingColumnCount === 0;
+    projectPlaceholder.style.setProperty(
+      "--project-placeholder-span",
+      String(Math.max(1, missingColumnCount))
+    );
+  };
+
+  let projectLayoutFrame = null;
+  const scheduleProjectPlaceholderSync = () => {
+    if (projectLayoutFrame !== null) cancelAnimationFrame(projectLayoutFrame);
+    projectLayoutFrame = requestAnimationFrame(() => {
+      syncProjectPlaceholder();
+      projectLayoutFrame = null;
+    });
+  };
+
+  syncProjectPlaceholder();
+
+  if (projectGrid && "ResizeObserver" in window) {
+    const projectGridObserver = new ResizeObserver(scheduleProjectPlaceholderSync);
+    projectGridObserver.observe(projectGrid);
+  } else {
+    window.addEventListener("resize", scheduleProjectPlaceholderSync, { passive: true });
+  }
 
   if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     metricCards.forEach((card) => {
@@ -143,8 +183,13 @@
         card.hidden = filter !== "all" && !card.dataset.categories.split(" ").includes(filter);
       });
 
+      syncProjectPlaceholder();
+
       if (canAnimate) {
-        animeApi.animate(projectCards.filter((card) => !card.hidden), {
+        const visibleProjectItems = projectCards.filter((card) => !card.hidden);
+        if (!projectPlaceholder?.hidden) visibleProjectItems.push(projectPlaceholder);
+
+        animeApi.animate(visibleProjectItems, {
           opacity: { from: 0 },
           y: { from: 22 },
           scale: { from: 0.975 },
