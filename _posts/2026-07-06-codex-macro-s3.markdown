@@ -3,8 +3,9 @@ layout: none
 title: Codex Macro S3 巨集鍵盤
 subtitle: Embedded System, PCB Design, Desktop App
 date: 2026-07-06
-img: []
-thumbnail: ""
+img: 
+- /macropad/Macro Keyboard.jpg
+thumbnail: /macropad/Macro Keyboard-thumbnail.png
 alt: Codex Macro S3 巨集鍵盤
 project-date: July–August 2026
 type: Prototype Project
