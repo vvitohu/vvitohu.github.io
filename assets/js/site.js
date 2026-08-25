@@ -24,6 +24,7 @@
   let activeProject = null;
   let activeMediaIndex = 0;
   let hasDismissedHeroScrollIndicator = false;
+  let toolMarqueeAnimation = null;
   let projects = {};
 
   try {
@@ -145,7 +146,7 @@
       ease: "outExpo"
     });
 
-    animeApi.animate(document.querySelector("[data-tool-track]"), {
+    toolMarqueeAnimation = animeApi.animate(document.querySelector("[data-tool-track]"), {
       x: { from: "-50%", to: "0%" },
       duration: 26000,
       loop: true,
@@ -357,6 +358,7 @@
     dialog.querySelector(".dialog-layout").scrollTop = 0;
     if (!dialog.open) dialog.showModal();
     document.body.classList.add("dialog-open");
+    toolMarqueeAnimation?.pause();
 
     if (updateHash) history.replaceState(null, "", `#${projectKey}`);
 
@@ -394,6 +396,7 @@
 
   const finishDialogClose = () => {
     document.body.classList.remove("dialog-open");
+    toolMarqueeAnimation?.resume();
     dialogMedia.replaceChildren();
     clearProjectHash();
     if (lastProjectTrigger) lastProjectTrigger.focus();
