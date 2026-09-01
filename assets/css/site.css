@@ -1555,6 +1555,23 @@ a:focus-visible {
   content: "";
 }
 
+.teaching-context-body {
+  color: #c2cad5;
+}
+
+.teaching-context-body > :first-child {
+  margin-top: 0;
+}
+
+.teaching-context-body > :last-child {
+  margin-bottom: 0;
+}
+
+.teaching-context-body p,
+.teaching-context-body li {
+  line-height: 1.75;
+}
+
 .teaching-technical-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

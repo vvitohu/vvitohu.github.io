@@ -1,4 +1,4 @@
-  {% assign teaching_cases = site.data.teaching.teaching_cases | where: "published", true %}
+  {% assign teaching_cases = site.teaching | where: "published", true | sort: "teaching_order" %}
   <dialog class="teaching-dialog" data-teaching-dialog role="dialog" aria-modal="true" aria-labelledby="teaching-dialog-title">
     <div class="teaching-dialog-shell">
       <header class="dialog-topbar">
@@ -22,7 +22,7 @@
 
           <section class="teaching-case-section" data-teaching-context-section>
             <h3>Context &amp; Challenge</h3>
-            <ul data-teaching-context></ul>
+            <div class="teaching-context-body" data-teaching-context></div>
           </section>
 
           <section class="teaching-case-section" data-teaching-objectives-section>
@@ -70,8 +70,8 @@
   <script type="application/json" data-teaching-data>
     {
       {% for course in teaching_cases %}
-        "{{ course.id }}": {
-          "id": {{ course.id | jsonify }},
+        "{{ course.teaching_key }}": {
+          "id": {{ course.teaching_key | jsonify }},
           "type": {{ course.type | jsonify }},
           "category": {{ course.category | jsonify }},
           "year": {{ course.year | jsonify }},
@@ -83,7 +83,7 @@
           "format": {{ course.format | jsonify }},
           "audience": {{ course.audience | jsonify }},
           "tools": {{ course.tools | jsonify }},
-          "context": {{ course.context | jsonify }},
+          "contextHtml": {{ course.content | jsonify }},
           "learningObjectives": {{ course.learning_objectives | jsonify }},
           "technicalContent": {{ course.technical_content | jsonify }},
           "selectedContent": [

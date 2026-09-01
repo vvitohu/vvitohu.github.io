@@ -16,13 +16,13 @@
         <div class="teaching-rail reveal" data-teaching-rail aria-label="Teaching Experience 課程卡片">
           <div class="teaching-track" data-teaching-track>
             <ul class="teaching-card-list" data-teaching-list>
-              {% assign published_teaching_cases = site.data.teaching.teaching_cases | where: "published", true %}
+              {% assign published_teaching_cases = site.teaching | where: "published", true | sort: "teaching_order" %}
               {% for course in published_teaching_cases %}
                 <li class="teaching-card-item">
                   <button
                     class="teaching-card"
                     type="button"
-                    data-teaching-case="{{ course.id }}"
+                    data-teaching-case="{{ course.teaching_key }}"
                     aria-label="查看教學案例：{{ course.title }}"
                   >
                     <span class="teaching-card-media">

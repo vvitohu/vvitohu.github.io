@@ -640,7 +640,10 @@
       return item;
     }));
 
-    renderTeachingList("[data-teaching-context-section]", "[data-teaching-context]", course.context);
+    const contextSection = teachingDialog.querySelector("[data-teaching-context-section]");
+    const contextBody = teachingDialog.querySelector("[data-teaching-context]");
+    contextBody.innerHTML = course.contextHtml || "";
+    contextSection.hidden = !contextBody.textContent.trim();
     renderTeachingList("[data-teaching-objectives-section]", "[data-teaching-objectives]", course.learningObjectives);
     renderTeachingList("[data-teaching-outcomes-section]", "[data-teaching-outcomes]", course.outcomes);
     renderTeachingList("[data-teaching-reflection-section]", "[data-teaching-reflection]", course.reflection);

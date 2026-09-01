@@ -48,3 +48,5 @@ collections:
   courses:
     output: true
     permalink: /courses/:path/
+  teaching:
+    output: false
