@@ -75,7 +75,7 @@
                 {% capture media_thumbnail %}/img/portfolio{{ file }}{% endcapture %}
                 {% assign media_type = 'image' %}
               {% endif %}
-              {% capture image_alt %}{{ project.title }} — 媒體 {{ forloop.index }}{% endcapture %}
+              {% capture image_alt %}{{ project.title }} - 媒體 {{ forloop.index }}{% endcapture %}
               {
                 "type": {{ media_type | jsonify }},
                 "src": {% if media_type == 'youtube' %}{{ media_source | jsonify }}{% else %}{{ media_source | relative_url | jsonify }}{% endif %},

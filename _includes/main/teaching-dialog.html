@@ -1,0 +1,103 @@
+  {% assign teaching_cases = site.data.teaching.teaching_cases | where: "published", true %}
+  <dialog class="teaching-dialog" data-teaching-dialog role="dialog" aria-modal="true" aria-labelledby="teaching-dialog-title">
+    <div class="teaching-dialog-shell">
+      <header class="dialog-topbar">
+        <span>TEACHING CASE</span>
+        <button class="dialog-close" type="button" data-teaching-dialog-close aria-label="關閉教學案例">CLOSE ×</button>
+      </header>
+
+      <div class="teaching-dialog-layout">
+        <div class="teaching-dialog-content">
+          <header class="teaching-dialog-heading">
+            <p class="project-meta" data-teaching-dialog-meta></p>
+            <h2 id="teaching-dialog-title" data-teaching-dialog-title></h2>
+            <p class="dialog-lead" data-teaching-dialog-description></p>
+            <dl class="teaching-overview-facts" data-teaching-overview-facts></dl>
+          </header>
+
+          <section class="teaching-case-section" data-teaching-tools-section>
+            <h3>Course Overview</h3>
+            <div class="teaching-tools" data-teaching-tools></div>
+          </section>
+
+          <section class="teaching-case-section" data-teaching-context-section>
+            <h3>Context &amp; Challenge</h3>
+            <ul data-teaching-context></ul>
+          </section>
+
+          <section class="teaching-case-section" data-teaching-objectives-section>
+            <h3>Learning Objectives</h3>
+            <ul data-teaching-objectives></ul>
+          </section>
+
+          <section class="teaching-case-section" data-teaching-technical-section>
+            <h3>Technical Content</h3>
+            <div class="teaching-technical-grid" data-teaching-technical></div>
+          </section>
+
+          <section class="teaching-case-section teaching-selected-content" data-teaching-selected-section>
+            <div class="teaching-selected-heading">
+              <h3>Selected Teaching Content</h3>
+              <p data-teaching-slide-status aria-live="polite"></p>
+            </div>
+            <figure class="teaching-slide-stage">
+              <button class="teaching-slide-control teaching-slide-previous" type="button" data-teaching-slide-previous aria-label="上一張教學內容">←</button>
+              <div class="teaching-slide" data-teaching-slide></div>
+              <button class="teaching-slide-control teaching-slide-next" type="button" data-teaching-slide-next aria-label="下一張教學內容">→</button>
+            </figure>
+            <div class="teaching-slide-thumbnails" data-teaching-thumbnails aria-label="精選教學內容縮圖"></div>
+          </section>
+
+          <section class="teaching-case-section" data-teaching-outcomes-section>
+            <h3>Outcomes</h3>
+            <ul data-teaching-outcomes></ul>
+          </section>
+
+          <section class="teaching-case-section" data-teaching-reflection-section>
+            <h3>Reflection &amp; Improvement</h3>
+            <ul data-teaching-reflection></ul>
+          </section>
+
+          <aside class="teaching-privacy" data-teaching-privacy-section>
+            <h3>Privacy Notice</h3>
+            <p data-teaching-privacy></p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="application/json" data-teaching-data>
+    {
+      {% for course in teaching_cases %}
+        "{{ course.id }}": {
+          "id": {{ course.id | jsonify }},
+          "type": {{ course.type | jsonify }},
+          "category": {{ course.category | jsonify }},
+          "year": {{ course.year | jsonify }},
+          "title": {{ course.title | jsonify }},
+          "description": {{ course.description | jsonify }},
+          "roles": {{ course.roles | jsonify }},
+          "students": {{ course.students | jsonify }},
+          "duration": {{ course.duration | jsonify }},
+          "format": {{ course.format | jsonify }},
+          "audience": {{ course.audience | jsonify }},
+          "tools": {{ course.tools | jsonify }},
+          "context": {{ course.context | jsonify }},
+          "learningObjectives": {{ course.learning_objectives | jsonify }},
+          "technicalContent": {{ course.technical_content | jsonify }},
+          "selectedContent": [
+            {% for item in course.selected_content %}
+              {
+                "src": {{ item.src | relative_url | jsonify }},
+                "alt": {{ item.alt | jsonify }}
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ],
+          "outcomes": {{ course.outcomes | jsonify }},
+          "reflection": {{ course.reflection | jsonify }},
+          "privacyNotice": {{ course.privacy_notice | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+  </script>

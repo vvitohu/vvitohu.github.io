@@ -1134,6 +1134,238 @@ a:focus-visible {
   text-align: center;
 }
 
+.course-subsection-heading {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.course-subsection-heading h3 {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 46px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.course-subsection-heading p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: clamp(15px, 1.2vw, 18px);
+}
+
+.teaching-experience {
+  min-width: 0;
+}
+
+.teaching-rail {
+  position: relative;
+  min-width: 0;
+  padding: 8px 2px 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: var(--line-strong) transparent;
+  scrollbar-width: thin;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x proximity;
+}
+
+.teaching-track,
+.teaching-card-list {
+  display: flex;
+  width: max-content;
+  align-items: stretch;
+}
+
+.teaching-track {
+  gap: 22px;
+}
+
+.teaching-card-list {
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teaching-card-item {
+  width: clamp(340px, 29vw, 392px);
+  flex: none;
+  scroll-snap-align: start;
+}
+
+.teaching-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 564px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(75, 140, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 140, 255, 0.035) 1px, transparent 1px),
+    var(--surface);
+  background-size: 24px 24px;
+  box-shadow: 0 18px 48px rgba(2, 7, 14, 0.2);
+  cursor: pointer;
+  flex-direction: column;
+  text-align: left;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.16s ease-out;
+}
+
+.teaching-card:focus-visible {
+  outline-offset: -3px;
+}
+
+.teaching-card:active {
+  transform: scale(0.985);
+}
+
+.teaching-card-media {
+  display: block;
+  aspect-ratio: 16 / 9;
+  flex: none;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #06090e;
+}
+
+.teaching-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.teaching-card-body {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.teaching-card-meta,
+.teaching-card-role,
+.teaching-card-facts,
+.teaching-card-action {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+}
+
+.teaching-card-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--accent);
+}
+
+.teaching-card-title {
+  margin-top: 20px;
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.teaching-card-description {
+  min-height: 78px;
+  margin-top: 13px;
+  color: #c2cad5;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.teaching-card-role {
+  display: grid;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: #dce3ec;
+  line-height: 1.55;
+}
+
+.teaching-card-role > span:first-child {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.teaching-card-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.teaching-card-action {
+  margin-top: 18px;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .teaching-card:hover,
+  .teaching-card:focus-visible {
+    border-color: var(--accent);
+    box-shadow: 0 20px 52px rgba(2, 7, 14, 0.34), 0 0 28px rgba(75, 140, 255, 0.12);
+  }
+
+  .teaching-card:hover .teaching-card-media img,
+  .teaching-card:focus-visible .teaching-card-media img {
+    transform: scale(1.035);
+  }
+
+  .teaching-card:hover .teaching-card-action,
+  .teaching-card:focus-visible .teaching-card-action {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.teaching-rail.is-marquee {
+  overflow: hidden;
+  scroll-snap-type: none;
+}
+
+.teaching-rail.is-overflowing::before,
+.teaching-rail.is-overflowing::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: clamp(34px, 5vw, 80px);
+  content: "";
+  pointer-events: none;
+}
+
+.teaching-rail.is-overflowing::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-soft), transparent);
+}
+
+.teaching-rail.is-overflowing::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg-soft), transparent);
+}
+
+.technical-notes {
+  margin-top: clamp(72px, 9vw, 126px);
+  padding-top: clamp(50px, 6vw, 78px);
+  border-top: 1px solid var(--line);
+}
+
 .course-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1178,6 +1410,296 @@ a:focus-visible {
   margin-top: 10px;
   color: #62666d;
   font-size: 14px;
+}
+
+/* Teaching Case 使用獨立資料與 Dialog，避免耦合 Projects 的資料與網址狀態。 */
+.teaching-dialog {
+  width: min(1180px, calc(100vw - 24px));
+  height: min(920px, calc(100dvh - 24px));
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  color: var(--text);
+  background: var(--bg-soft);
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.52);
+}
+
+.teaching-dialog::backdrop {
+  background: rgba(1, 3, 6, 0.86);
+}
+
+.teaching-dialog-shell {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.teaching-dialog-layout {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.teaching-dialog-content {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 82px);
+}
+
+.teaching-dialog-heading {
+  padding-bottom: clamp(34px, 5vw, 64px);
+  border-bottom: 1px solid var(--line);
+}
+
+.teaching-dialog-heading h2 {
+  margin: 14px 0 0;
+  font-size: clamp(40px, 6.2vw, 82px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.teaching-overview-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1px;
+  margin: 32px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--line);
+}
+
+.teaching-overview-facts > div {
+  min-width: 0;
+  padding: 16px;
+  background: var(--surface);
+}
+
+.teaching-overview-facts dt,
+.teaching-case-section h3,
+.teaching-privacy h3,
+.teaching-selected-heading p,
+.teaching-tools span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.teaching-overview-facts dt {
+  color: var(--muted);
+}
+
+.teaching-overview-facts dd {
+  margin: 6px 0 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.teaching-case-section {
+  padding: clamp(38px, 5vw, 62px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.teaching-case-section h3,
+.teaching-privacy h3 {
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.teaching-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.teaching-tools span {
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: #d7dee8;
+  background: var(--surface);
+}
+
+.teaching-case-section ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teaching-case-section li {
+  position: relative;
+  padding-left: 22px;
+  color: #c2cad5;
+}
+
+.teaching-case-section li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 9px;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+}
+
+.teaching-technical-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.teaching-technical-item {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.teaching-technical-item strong {
+  display: block;
+  font-size: 17px;
+}
+
+.teaching-technical-item p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.teaching-selected-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.teaching-selected-heading p {
+  margin: 0;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.teaching-slide-stage {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: clamp(12px, 2vw, 22px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px),
+    #06090e;
+  background-size: 40px 40px;
+}
+
+.teaching-slide {
+  display: grid;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  background: #020408;
+}
+
+.teaching-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.teaching-slide-control {
+  display: grid;
+  width: 42px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(9, 13, 19, 0.94);
+  cursor: pointer;
+  place-items: center;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.16s ease-out;
+}
+
+.teaching-slide-control:hover,
+.teaching-slide-control:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.teaching-slide-control:active {
+  transform: scale(0.96);
+}
+
+.teaching-slide-control[hidden] {
+  display: none;
+}
+
+.teaching-slide-thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 4px 2px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x proximity;
+}
+
+.teaching-thumbnail {
+  flex: 0 0 108px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.teaching-thumbnail.is-active {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.teaching-thumbnail img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.teaching-privacy {
+  margin-top: clamp(36px, 5vw, 58px);
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.teaching-privacy p {
+  margin: 0;
+  color: var(--muted);
 }
 
 /* ==========================================================================
@@ -2078,6 +2600,113 @@ a:focus-visible {
   }
 }
 
+/* Teaching Experience：平板與手機只保留手動水平滑動及 Scroll Snap。 */
+@media (max-width: 1099px), (hover: none), (pointer: coarse) {
+  .teaching-rail {
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .teaching-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .teaching-card-action {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .course-section .section-intro {
+    text-align: left;
+  }
+
+  .course-section .section-copy {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .course-subsection-heading {
+    margin-bottom: 22px;
+  }
+
+  .teaching-rail {
+    margin-right: calc(var(--page-padding) * -1);
+    padding-right: var(--page-padding);
+  }
+
+  .teaching-track,
+  .teaching-card-list {
+    gap: 14px;
+  }
+
+  .teaching-card-item {
+    width: min(84vw, 352px);
+  }
+
+  .teaching-card {
+    min-height: 530px;
+  }
+
+  .teaching-card-body {
+    padding: 21px;
+  }
+
+  .teaching-card-description {
+    min-height: 70px;
+  }
+
+  .technical-notes {
+    margin-top: 66px;
+    padding-top: 48px;
+  }
+
+  .teaching-dialog {
+    width: 100vw;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .teaching-dialog-content {
+    padding: 32px 20px 48px;
+  }
+
+  .teaching-dialog-heading h2 {
+    font-size: clamp(38px, 13vw, 58px);
+  }
+
+  .teaching-overview-facts,
+  .teaching-technical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-selected-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .teaching-selected-heading p {
+    margin: -14px 0 18px;
+  }
+
+  .teaching-slide-stage {
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .teaching-slide-control {
+    width: 32px;
+    height: 42px;
+  }
+
+  .teaching-thumbnail {
+    flex-basis: 86px;
+  }
+}
+
 /* 尊重使用者的 Reduced Motion 設定，保留狀態切換但縮短動畫。 */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -2096,5 +2725,10 @@ a:focus-visible {
   .hero-scroll-chevron {
     opacity: 0.72;
     animation: none !important;
+  }
+
+  .teaching-card-media img,
+  .teaching-card-action {
+    transform: none !important;
   }
 }

@@ -20,17 +20,38 @@
   const metricCards = [...document.querySelectorAll(".hero-metrics > div")];
   const heroScrollIndicator = document.querySelector(".hero-scroll-indicator");
   const projectDataElement = document.querySelector("[data-project-data]");
+  const teachingRail = document.querySelector("[data-teaching-rail]");
+  const teachingTrack = document.querySelector("[data-teaching-track]");
+  const teachingList = document.querySelector("[data-teaching-list]");
+  const teachingDialog = document.querySelector("[data-teaching-dialog]");
+  const teachingDataElement = document.querySelector("[data-teaching-data]");
+  const teachingSlide = teachingDialog?.querySelector("[data-teaching-slide]");
+  const teachingThumbnails = teachingDialog?.querySelector("[data-teaching-thumbnails]");
+  const previousTeachingSlideButton = teachingDialog?.querySelector("[data-teaching-slide-previous]");
+  const nextTeachingSlideButton = teachingDialog?.querySelector("[data-teaching-slide-next]");
   let lastProjectTrigger = null;
+  let lastTeachingTrigger = null;
   let activeProject = null;
   let activeMediaIndex = 0;
+  let activeTeachingCase = null;
+  let activeTeachingSlideIndex = 0;
   let hasDismissedHeroScrollIndicator = false;
   let toolMarqueeAnimation = null;
+  let teachingMarqueeAnimation = null;
+  let teachingListClone = null;
   let projects = {};
+  let teachingCases = {};
 
   try {
     projects = JSON.parse(projectDataElement?.textContent || "{}");
   } catch (error) {
     console.error("Project data could not be loaded.", error);
+  }
+
+  try {
+    teachingCases = JSON.parse(teachingDataElement?.textContent || "{}");
+  } catch (error) {
+    console.error("Teaching data could not be loaded.", error);
   }
 
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
@@ -168,6 +189,112 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -7%" });
 
     document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+  }
+
+  const teachingMarqueePauseReasons = new Set();
+
+  const syncTeachingMarqueeState = () => {
+    if (!teachingMarqueeAnimation) return;
+    if (teachingMarqueePauseReasons.size) {
+      teachingMarqueeAnimation.pause();
+    } else {
+      teachingMarqueeAnimation.play();
+    }
+  };
+
+  const pauseTeachingMarquee = (reason) => {
+    teachingMarqueePauseReasons.add(reason);
+    syncTeachingMarqueeState();
+  };
+
+  const resumeTeachingMarquee = (reason) => {
+    teachingMarqueePauseReasons.delete(reason);
+    syncTeachingMarqueeState();
+  };
+
+  const clearTeachingMarquee = () => {
+    teachingMarqueeAnimation?.cancel();
+    teachingMarqueeAnimation = null;
+    teachingListClone?.remove();
+    teachingListClone = null;
+    teachingTrack?.style.removeProperty("transform");
+    teachingRail?.classList.remove("is-marquee");
+  };
+
+  const buildTeachingMarquee = () => {
+    if (!teachingRail || !teachingTrack || !teachingList) return;
+
+    clearTeachingMarquee();
+    const originalCardCount = teachingList.querySelectorAll(".teaching-card-item").length;
+    const isOverflowing = teachingList.scrollWidth > teachingRail.clientWidth + 8;
+    const canAutoplay = !reduceMotion
+      && originalCardCount >= 3
+      && isOverflowing
+      && window.matchMedia("(min-width: 1100px) and (hover: hover) and (pointer: fine)").matches;
+
+    teachingRail.classList.toggle("is-overflowing", isOverflowing);
+    if (!canAutoplay) return;
+
+    teachingListClone = teachingList.cloneNode(true);
+    teachingListClone.removeAttribute("data-teaching-list");
+    teachingListClone.setAttribute("aria-hidden", "true");
+    teachingListClone.querySelectorAll("button").forEach((button) => {
+      button.tabIndex = -1;
+      button.removeAttribute("data-teaching-case");
+    });
+    teachingListClone.querySelectorAll("img").forEach((image) => {
+      image.alt = "";
+    });
+    teachingTrack.append(teachingListClone);
+    teachingRail.classList.add("is-marquee", "is-overflowing");
+
+    const travelDistance = teachingListClone.offsetLeft;
+    const duration = Math.max(30000, (travelDistance / 16) * 1000);
+    teachingMarqueeAnimation = teachingTrack.animate(
+      [
+        { transform: "translate3d(0, 0, 0)" },
+        { transform: `translate3d(-${travelDistance}px, 0, 0)` }
+      ],
+      { duration, iterations: Infinity, easing: "linear" }
+    );
+    syncTeachingMarqueeState();
+  };
+
+  if (teachingRail) {
+    teachingRail.addEventListener("pointerenter", () => pauseTeachingMarquee("pointer"));
+    teachingRail.addEventListener("pointerleave", () => resumeTeachingMarquee("pointer"));
+    teachingRail.addEventListener("focusin", () => pauseTeachingMarquee("focus"));
+    teachingRail.addEventListener("focusout", () => {
+      requestAnimationFrame(() => {
+        if (!teachingRail.contains(document.activeElement)) resumeTeachingMarquee("focus");
+      });
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        pauseTeachingMarquee("visibility");
+      } else {
+        resumeTeachingMarquee("visibility");
+      }
+    });
+
+    let teachingResizeFrame = null;
+    const scheduleTeachingMarqueeBuild = () => {
+      if (teachingResizeFrame !== null) cancelAnimationFrame(teachingResizeFrame);
+      teachingResizeFrame = requestAnimationFrame(() => {
+        buildTeachingMarquee();
+        teachingResizeFrame = null;
+      });
+    };
+
+    if ("ResizeObserver" in window) {
+      const teachingRailObserver = new ResizeObserver(scheduleTeachingMarqueeBuild);
+      teachingRailObserver.observe(teachingRail);
+    } else {
+      window.addEventListener("resize", scheduleTeachingMarqueeBuild, { passive: true });
+    }
+
+    buildTeachingMarquee();
   }
 
   filterButtons.forEach((button) => {
@@ -359,6 +486,7 @@
     if (!dialog.open) dialog.showModal();
     document.body.classList.add("dialog-open");
     toolMarqueeAnimation?.pause();
+    pauseTeachingMarquee("dialog");
 
     if (updateHash) history.replaceState(null, "", `#${projectKey}`);
 
@@ -397,6 +525,7 @@
   const finishDialogClose = () => {
     document.body.classList.remove("dialog-open");
     toolMarqueeAnimation?.resume();
+    resumeTeachingMarquee("dialog");
     dialogMedia.replaceChildren();
     clearProjectHash();
     if (lastProjectTrigger) lastProjectTrigger.focus();
@@ -417,6 +546,200 @@
     if (event.target === dialog) dialog.close();
   });
   dialog.addEventListener("close", finishDialogClose);
+
+  const toArray = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
+
+  const renderTeachingList = (sectionSelector, listSelector, items) => {
+    const section = teachingDialog.querySelector(sectionSelector);
+    const list = teachingDialog.querySelector(listSelector);
+    const values = toArray(items);
+    section.hidden = values.length === 0;
+    list.replaceChildren(...values.map((value) => {
+      const item = document.createElement("li");
+      item.textContent = value;
+      return item;
+    }));
+  };
+
+  const setTeachingSlide = (selectedIndex) => {
+    const content = toArray(teachingCases[activeTeachingCase]?.selectedContent);
+    const selected = content[selectedIndex];
+    if (!selected) return;
+
+    activeTeachingSlideIndex = selectedIndex;
+    const image = document.createElement("img");
+    image.src = selected.src;
+    image.alt = selected.alt;
+    image.decoding = "async";
+    teachingSlide.replaceChildren(image);
+
+    let activeThumbnail = null;
+    teachingThumbnails.querySelectorAll(".teaching-thumbnail").forEach((button) => {
+      const isActive = Number(button.dataset.teachingSlideIndex) === selectedIndex;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+      if (isActive) activeThumbnail = button;
+    });
+
+    teachingDialog.querySelector("[data-teaching-slide-status]").textContent = `${selectedIndex + 1} / ${content.length}`;
+    if (activeThumbnail) {
+      activeThumbnail.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "nearest",
+        inline: "nearest"
+      });
+    }
+  };
+
+  const changeTeachingSlide = (direction) => {
+    const content = toArray(teachingCases[activeTeachingCase]?.selectedContent);
+    if (content.length < 2) return;
+    const nextIndex = (activeTeachingSlideIndex + direction + content.length) % content.length;
+    setTeachingSlide(nextIndex);
+  };
+
+  const renderTeachingCase = (caseId) => {
+    const course = teachingCases[caseId];
+    if (!course) return false;
+
+    activeTeachingCase = caseId;
+    teachingDialog.querySelector("[data-teaching-dialog-meta]").textContent = [course.type, course.category, course.year]
+      .filter(Boolean)
+      .join(" / ");
+    teachingDialog.querySelector("[data-teaching-dialog-title]").textContent = course.title;
+    teachingDialog.querySelector("[data-teaching-dialog-description]").textContent = course.description;
+
+    const facts = [
+      ["TYPE", [course.type, course.category].filter(Boolean).join(" / ")],
+      ["YEAR", course.year],
+      ["ROLE", toArray(course.roles).join(" · ")],
+      ["AUDIENCE", course.audience],
+      ["STUDENTS", course.students],
+      ["DURATION", course.duration],
+      ["FORMAT", course.format]
+    ].filter(([, value]) => Boolean(value));
+    const factsList = teachingDialog.querySelector("[data-teaching-overview-facts]");
+    factsList.hidden = facts.length === 0;
+    factsList.replaceChildren(...facts.map(([label, value]) => {
+      const group = document.createElement("div");
+      const term = document.createElement("dt");
+      const definition = document.createElement("dd");
+      term.textContent = label;
+      definition.textContent = value;
+      group.append(term, definition);
+      return group;
+    }));
+
+    const tools = toArray(course.tools);
+    const toolsSection = teachingDialog.querySelector("[data-teaching-tools-section]");
+    const toolsList = teachingDialog.querySelector("[data-teaching-tools]");
+    toolsSection.hidden = tools.length === 0;
+    toolsList.replaceChildren(...tools.map((tool) => {
+      const item = document.createElement("span");
+      item.textContent = tool;
+      return item;
+    }));
+
+    renderTeachingList("[data-teaching-context-section]", "[data-teaching-context]", course.context);
+    renderTeachingList("[data-teaching-objectives-section]", "[data-teaching-objectives]", course.learningObjectives);
+    renderTeachingList("[data-teaching-outcomes-section]", "[data-teaching-outcomes]", course.outcomes);
+    renderTeachingList("[data-teaching-reflection-section]", "[data-teaching-reflection]", course.reflection);
+
+    const technicalContent = toArray(course.technicalContent);
+    const technicalSection = teachingDialog.querySelector("[data-teaching-technical-section]");
+    const technicalGrid = teachingDialog.querySelector("[data-teaching-technical]");
+    technicalSection.hidden = technicalContent.length === 0;
+    technicalGrid.replaceChildren(...technicalContent.map((item) => {
+      const article = document.createElement("article");
+      const title = document.createElement("strong");
+      const content = document.createElement("p");
+      article.className = "teaching-technical-item";
+      title.textContent = item.title;
+      content.textContent = item.content;
+      article.append(title, content);
+      return article;
+    }));
+
+    const selectedContent = toArray(course.selectedContent);
+    const selectedSection = teachingDialog.querySelector("[data-teaching-selected-section]");
+    const hasMultipleSlides = selectedContent.length > 1;
+    selectedSection.hidden = selectedContent.length === 0;
+    previousTeachingSlideButton.hidden = !hasMultipleSlides;
+    nextTeachingSlideButton.hidden = !hasMultipleSlides;
+    teachingThumbnails.hidden = !hasMultipleSlides;
+    teachingThumbnails.replaceChildren(...selectedContent.map((item, index) => {
+      const button = document.createElement("button");
+      const image = document.createElement("img");
+      button.type = "button";
+      button.className = `teaching-thumbnail${index === 0 ? " is-active" : ""}`;
+      button.dataset.teachingSlideIndex = String(index);
+      button.setAttribute("aria-label", `顯示教學內容：${item.alt}`);
+      button.setAttribute("aria-pressed", String(index === 0));
+      image.src = item.src;
+      image.alt = "";
+      image.loading = "lazy";
+      image.decoding = "async";
+      button.append(image);
+      button.addEventListener("click", () => setTeachingSlide(index));
+      return button;
+    }));
+    if (selectedContent.length) {
+      setTeachingSlide(0);
+    } else {
+      teachingSlide.replaceChildren();
+    }
+
+    const privacySection = teachingDialog.querySelector("[data-teaching-privacy-section]");
+    const privacyCopy = teachingDialog.querySelector("[data-teaching-privacy]");
+    privacySection.hidden = !course.privacyNotice;
+    privacyCopy.textContent = course.privacyNotice || "";
+    return true;
+  };
+
+  const openTeachingCase = (caseId, trigger) => {
+    if (!renderTeachingCase(caseId)) return;
+    lastTeachingTrigger = trigger;
+    teachingDialog.querySelector(".teaching-dialog-layout").scrollTop = 0;
+    if (!teachingDialog.open) teachingDialog.showModal();
+    document.body.classList.add("dialog-open");
+    toolMarqueeAnimation?.pause();
+    pauseTeachingMarquee("dialog");
+    teachingDialog.querySelector("[data-teaching-dialog-close]").focus({ preventScroll: true });
+  };
+
+  const finishTeachingDialogClose = () => {
+    document.body.classList.remove("dialog-open");
+    toolMarqueeAnimation?.resume();
+    resumeTeachingMarquee("dialog");
+    teachingSlide.replaceChildren();
+    activeTeachingCase = null;
+    if (lastTeachingTrigger) lastTeachingTrigger.focus();
+  };
+
+  document.querySelectorAll("[data-teaching-case]").forEach((button) => {
+    button.addEventListener("click", () => openTeachingCase(button.dataset.teachingCase, button));
+    button.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openTeachingCase(button.dataset.teachingCase, button);
+    });
+  });
+  teachingDialog.querySelector("[data-teaching-dialog-close]").addEventListener("click", () => teachingDialog.close());
+  previousTeachingSlideButton.addEventListener("click", () => changeTeachingSlide(-1));
+  nextTeachingSlideButton.addEventListener("click", () => changeTeachingSlide(1));
+  teachingDialog.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      teachingDialog.close();
+      return;
+    }
+    if (event.key === "ArrowLeft") changeTeachingSlide(-1);
+    if (event.key === "ArrowRight") changeTeachingSlide(1);
+  });
+  teachingDialog.addEventListener("click", (event) => {
+    if (event.target === teachingDialog) teachingDialog.close();
+  });
+  teachingDialog.addEventListener("close", finishTeachingDialogClose);
 
   const initialProject = window.location.hash.slice(1);
   if (projects[initialProject]) openProject(initialProject, null, false);

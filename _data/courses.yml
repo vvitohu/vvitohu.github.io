@@ -2,12 +2,20 @@
   content: 從基礎介面開始，學習 3D 建模的核心邏輯
   permalink: /database_courses/onshape-basic
   img: /img/courses/onshape/onshape.jpg
+  alt: Onshape 基礎建模筆記的 CAD 零件模型畫面
 - title: "ZMK 設定教學"
   content: 從零掌握韌體編寫，打造專屬無線客製化鍵盤軟體
   permalink: /database_courses/zmk
   img: /img/courses/zmk/zmk.png
+  alt: ZMK 設定筆記的鍵盤韌體程式畫面
 - title: "MATLAB"
   content: 工程與科學運算設計程式平台-語法筆記整理
   permalink: /database_courses/matlab/basic
   img: /img/courses/matlab/MATLAB.png
+  alt: MATLAB 技術筆記的運算與繪圖介面
+- title: "Ergogen 鍵盤設計"
+  content: 開源鍵盤參數化繪圖工具
+  permalink: /database_courses/ergogen
+  img: /img/courses/ergogen/ergogen.png
+  alt: Ergogen 參數化鍵盤配置與外框預覽
 

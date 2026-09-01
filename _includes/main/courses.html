@@ -2,17 +2,75 @@
       <div class="section-intro reveal">
         <p class="section-index">04 / KNOWLEDGE SHARING</p>
         <div>
-          <h2 id="courses-title">Courses & notes</h2>
-          <p class="section-copy">從零開始的自學實戰筆記,將摸索經驗轉化為系統化課程.</p>
+          <h2 id="courses-title">Teaching &amp; Technical Notes</h2>
+          <p class="section-copy">將教學規劃、實作內容與自學經驗，整理成可檢視、可重複查閱的技術內容。</p>
         </div>
       </div>
 
-      <div class="course-grid">
-        {% for course in site.data.courses %}
-          <a class="course-card reveal" href="{{ course.permalink | relative_url }}">
-            <img src="{{ course.img | relative_url }}" alt="{{ course.title }}" loading="lazy">
-            <span><strong>{{ course.title }}</strong><small>{{ course.content }}</small></span>
-          </a>
-        {% endfor %}
-      </div>
+      <section class="teaching-experience" aria-labelledby="teaching-title">
+        <div class="course-subsection-heading reveal">
+          <h3 id="teaching-title">Teaching Experience</h3>
+          <p>精選課程規劃、教材製作與技術教學內容。</p>
+        </div>
+
+        <div class="teaching-rail reveal" data-teaching-rail aria-label="Teaching Experience 課程卡片">
+          <div class="teaching-track" data-teaching-track>
+            <ul class="teaching-card-list" data-teaching-list>
+              {% assign published_teaching_cases = site.data.teaching.teaching_cases | where: "published", true %}
+              {% for course in published_teaching_cases %}
+                <li class="teaching-card-item">
+                  <button
+                    class="teaching-card"
+                    type="button"
+                    data-teaching-case="{{ course.id }}"
+                    aria-label="查看教學案例：{{ course.title }}"
+                  >
+                    <span class="teaching-card-media">
+                      <img src="{{ course.image | relative_url }}" alt="{{ course.image_alt }}" loading="lazy">
+                    </span>
+                    <span class="teaching-card-body">
+                      <span class="teaching-card-meta">
+                        <span>{{ course.type }} / {{ course.category }}</span>
+                        {% if course.year %}<span>{{ course.year }}</span>{% endif %}
+                      </span>
+                      <strong class="teaching-card-title">{{ course.title }}</strong>
+                      <span class="teaching-card-description">{{ course.description }}</span>
+                      {% if course.roles and course.roles.size > 0 %}
+                        <span class="teaching-card-role">
+                          <span>ROLE</span>
+                          <span>{{ course.roles | join: ' · ' }}</span>
+                        </span>
+                      {% endif %}
+                      {% if course.students or course.duration or course.format %}
+                        <span class="teaching-card-facts">
+                          {% if course.students %}<span>{{ course.students }} STUDENTS</span>{% endif %}
+                          {% if course.duration %}<span>{{ course.duration }}</span>{% endif %}
+                          {% if course.format %}<span>{{ course.format }}</span>{% endif %}
+                        </span>
+                      {% endif %}
+                      <span class="teaching-card-action" aria-hidden="true">VIEW TEACHING CASE →</span>
+                    </span>
+                  </button>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="technical-notes" aria-labelledby="technical-notes-title">
+        <div class="course-subsection-heading reveal">
+          <h3 id="technical-notes-title">Technical Notes</h3>
+          <p>將專案與自學經驗整理為可重複查閱的技術筆記。</p>
+        </div>
+
+        <div class="course-grid">
+          {% for course in site.data.courses %}
+            <a class="course-card reveal" href="{{ course.permalink | relative_url }}">
+              <img src="{{ course.img | relative_url }}" alt="{{ course.alt | default: course.title }}" loading="lazy">
+              <span><strong>{{ course.title }}</strong><small>{{ course.content }}</small></span>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
     </section>
