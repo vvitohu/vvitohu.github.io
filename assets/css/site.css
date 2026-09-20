@@ -366,7 +366,11 @@ a:focus-visible {
   line-height: 0.76;
 }
 
-.hero h1 span:last-child {
+.hero-name-mobile {
+  display: none;
+}
+
+.hero-name-outline {
   color: transparent;
   -webkit-text-stroke: 1px rgba(245, 247, 250, 0.82);
 }
@@ -2368,6 +2372,18 @@ a:focus-visible {
     left: var(--page-padding);
   }
 
+  .tool-marquee {
+    display: none;
+  }
+
+  .hero-name-desktop {
+    display: none;
+  }
+
+  .hero-name-mobile {
+    display: block;
+  }
+
   .hero-shade {
     background:
       linear-gradient(0deg, rgba(3, 6, 10, 0.98) 0%, rgba(4, 8, 13, 0.82) 54%, rgba(4, 8, 13, 0.34) 100%),
@@ -2600,7 +2616,7 @@ a:focus-visible {
   }
 }
 
-/* 手機直向：使用較小位移，讓三行姓名在圖片內視覺置中。 */
+/* 手機直向：使用較小位移，讓兩行姓名在圖片內視覺置中。 */
 @media (orientation: portrait) and (max-width: 600px) {
   .hero {
     justify-content: flex-start;
@@ -2612,7 +2628,7 @@ a:focus-visible {
   }
 
   .hero-content {
-    /* 以視覺中心校正三行姓名，而不是只依元素外框置中。 */
+    /* 以視覺中心校正兩行姓名，而不是只依元素外框置中。 */
     margin-top: calc(25vw - 16px);
   }
 }
