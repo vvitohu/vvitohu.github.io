@@ -2616,11 +2616,11 @@ a:focus-visible {
   }
 }
 
-/* 手機直向：使用較小位移，讓兩行姓名在圖片內視覺置中。 */
+/* 手機直向：移除工具列預留空間，讓姓名覆在圖片、介紹接在圖片下方。 */
 @media (orientation: portrait) and (max-width: 600px) {
   .hero {
     justify-content: flex-start;
-    background-position: center calc(var(--header-height) + 91px);
+    background-position: center calc(var(--header-height) + 40px);
   }
 
   .tool-marquee {
@@ -2628,7 +2628,7 @@ a:focus-visible {
   }
 
   .hero-content {
-    /* 以視覺中心校正兩行姓名，而不是只依元素外框置中。 */
+    /* 2:1 圖片下緣與兩行姓名後的介紹文字起點對齊。 */
     margin-top: calc(25vw - 16px);
   }
 }
