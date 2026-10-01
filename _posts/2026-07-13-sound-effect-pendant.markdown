@@ -3,13 +3,14 @@ layout: none
 title: 低功耗音效吊飾
 subtitle: Embedded Systems, Program Design
 date: 2026-07-13
-img: []
-thumbnail: ""
+img:
+- /sound-effect-pendant/sound-effect-pendant-pcb.png
+thumbnail: /sound-effect-pendant/sound-effect-pendant-pcb.png
 alt: 低功耗音效吊飾
 project-date: July 2026
 type: Embedded Systems Project
 category: Embedded Systems, Program Design
-featured: false
+featured: true
 home_order: 0
 project_key: low-power-sound-effect-pendant
 project_categories:
@@ -17,7 +18,7 @@ project_categories:
 - hardware
 - education
 card_meta: EMBEDDED · ATtiny85
-thumbnail_alt: 低功耗音效吊飾
+thumbnail_alt: 低功耗音效吊飾 PCB 配置圖
 project_meta: EMBEDDED / HARDWARE / 2026
 project_summary: 以 ATtiny85、按鈕與被動蜂鳴器建構單鍵喚醒、播放旋律並返回深度睡眠的互動電子吊飾。
 project_results:
@@ -85,3 +86,7 @@ project_validation: 目前可靜態確認五份 sketch 的旋律與時間陣列�
 目前可確認專案包含五份完整 Arduino sketch 與一份進階課程講義。靜態核對顯示，各 sketch 的旋律陣列與對應時間陣列數量一致，並具備 `setup()`、`loop()` 及其呼叫的喚醒、播放、按鍵放開判定與睡眠函式。
 
 現有資料尚未提供可重現的建置設定、ATtiny85 board core 與版本、時脈／fuse、燒錄方式、BOM、原理圖、PCB 原始檔、外殼設計或展示素材；也沒有編譯輸出、燒錄紀錄、待機電流、續航、音量與實機播放測試。因此，程式的可編譯性、實體成品完成度、低功耗量測結果與課程實施成果均不在目前可確認範圍內。
+
+### 程式碼
+
+[在 GitHub 查看 Sound-effect-pendant 原始碼](https://github.com/vvitohu/Sound-effect-pendant)

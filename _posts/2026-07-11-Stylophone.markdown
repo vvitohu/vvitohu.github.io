@@ -3,13 +3,14 @@ layout: none
 title: Arduino 17 鍵觸控筆電子琴
 subtitle: Embedded Systems, PCB Design
 date: 2026-07-11
-img: []
-thumbnail: ""
+img:
+- /stylophone/stylophone-pcb.png
+thumbnail: /stylophone/stylophone-pcb.png
 alt: Arduino 17 鍵觸控筆電子琴
 project-date: July–August 2026
 type: Hardware Project
 category: Embedded Systems, PCB Design
-featured: false
+featured: true
 home_order: 0
 project_key: arduino-17-key-stylus-synth
 project_categories:
@@ -17,7 +18,7 @@ project_categories:
 - electronics
 - pcb
 card_meta: EMBEDDED · ARDUINO
-thumbnail_alt: Arduino 17 鍵觸控筆電子琴
+thumbnail_alt: Arduino 17 鍵觸控筆電子琴 PCB 配置圖
 project_meta: EMBEDDED / PCB / 2026
 project_summary: 以 Arduino Nano 讀取 17 個金屬琴鍵，讓接地觸控筆演奏三段音域，並整合雙層 PCB 設計與製造輸出。
 project_results:
