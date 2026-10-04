@@ -4,10 +4,10 @@ title: Arduino 17 鍵觸控筆電子琴
 subtitle: Embedded Systems, PCB Design
 date: 2026-07-11
 img:
-- /stylophone/stylophone.png
-- /stylophone/stylophone-front.png
+- /stylophone/stylophone.webp
+- /stylophone/stylophone-front.webp
 - /stylophone/stylophone-pcb.png
-thumbnail: /stylophone/stylophone-thumbnail.png
+thumbnail: /stylophone/stylophone-thumbnail.webp
 alt: Arduino 17 鍵觸控筆電子琴
 project-date: July–August 2026
 type: Hardware Project

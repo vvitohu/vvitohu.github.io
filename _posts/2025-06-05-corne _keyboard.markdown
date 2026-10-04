@@ -4,7 +4,7 @@ title: Corne Keyboard
 subtitle: 3D Design, Program Design
 date: 2025-06-05
 img: 
-- /keyboard/Corne Keyboard渲染.png
+- /keyboard/Corne Keyboard渲染.webp
 - /keyboard/keyboard.jpg
 - /keyboard/keyboard-side1.jpg
 - /keyboard/Corne keyboard.png
