@@ -4,8 +4,10 @@ title: 低功耗音效吊飾
 subtitle: Embedded Systems, Program Design
 date: 2026-07-13
 img:
+- /sound-effect-pendant/sound-effect-pendant.png
+- /sound-effect-pendant/sound-effect-pendant-back.png
 - /sound-effect-pendant/sound-effect-pendant-pcb.png
-thumbnail: /sound-effect-pendant/sound-effect-pendant-pcb.png
+thumbnail: /sound-effect-pendant/sound-effect-pendant-thumbnail.png
 alt: 低功耗音效吊飾
 project-date: July 2026
 type: Embedded Systems Project
